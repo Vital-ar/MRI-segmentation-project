@@ -1,0 +1,44 @@
+[ 2026-09-01 08:36:56,191 ] ::: INFO ::: FILE [root] --- LINE: [13]
+----------------stage [METADATA FORMATION STAGE] started--------------------------
+[ 2026-09-01 08:36:56,191 ] ::: INFO ::: FILE [root] --- LINE: [11]
+Metadata entity successfully created
+[ 2026-09-01 08:36:56,191 ] ::: INFO ::: FILE [root] --- LINE: [16]
+data\preprocessed_data\final_dataframe.csv does not exists. Entering metadata formation stage
+[ 2026-09-01 08:36:59,229 ] ::: INFO ::: FILE [root] --- LINE: [58]
+data\preprocessed_data\final_dataframe.csv successfully created
+[ 2026-09-01 08:36:59,270 ] ::: INFO ::: FILE [root] --- LINE: [18]
+================stage [METADATA FORMATION STAGE] ended==========================
+
+[ 2026-09-01 08:39:47,984 ] ::: INFO ::: FILE [root] --- LINE: [13]
+----------------stage [METADATA FORMATION STAGE] started--------------------------
+[ 2026-09-01 08:39:47,986 ] ::: INFO ::: FILE [root] --- LINE: [11]
+Metadata entity successfully created
+[ 2026-09-01 08:39:47,986 ] ::: INFO ::: FILE [root] --- LINE: [16]
+data\preprocessed_data\final_dataframe.csv does not exists. Entering metadata formation stage
+[ 2026-09-01 08:39:50,939 ] ::: INFO ::: FILE [root] --- LINE: [56]
+data\preprocessed_data\final_dataframe.csv successfully created
+[ 2026-09-01 08:39:50,987 ] ::: INFO ::: FILE [root] --- LINE: [18]
+================stage [METADATA FORMATION STAGE] ended==========================
+
+[ 2026-09-01 09:09:34,460 ] ::: INFO ::: FILE [root] --- LINE: [13]
+----------------stage [METADATA FORMATION STAGE] started--------------------------
+[ 2026-09-01 09:09:34,460 ] ::: INFO ::: FILE [root] --- LINE: [11]
+Metadata entity successfully created
+[ 2026-09-01 09:09:34,460 ] ::: INFO ::: FILE [root] --- LINE: [16]
+data\preprocessed_data\final_dataframe.csv does not exists. Entering metadata formation stage
+[ 2026-09-01 09:09:37,450 ] ::: INFO ::: FILE [root] --- LINE: [56]
+data\preprocessed_data\final_dataframe.csv successfully created
+[ 2026-09-01 09:09:37,495 ] ::: INFO ::: FILE [root] --- LINE: [18]
+================stage [METADATA FORMATION STAGE] ended==========================
+
+[ 2026-09-01 09:09:49,425 ] ::: INFO ::: FILE [root] --- LINE: [13]
+----------------stage [METADATA FORMATION STAGE] started--------------------------
+[ 2026-09-01 09:09:49,425 ] ::: INFO ::: FILE [root] --- LINE: [11]
+Metadata entity successfully created
+[ 2026-09-01 09:09:49,425 ] ::: INFO ::: FILE [root] --- LINE: [16]
+data\preprocessed_data\final_dataframe.csv does not exists. Entering metadata formation stage
+[ 2026-09-01 09:09:52,346 ] ::: INFO ::: FILE [root] --- LINE: [57]
+data\preprocessed_data\final_dataframe.csv successfully created
+[ 2026-09-01 09:09:52,388 ] ::: INFO ::: FILE [root] --- LINE: [18]
+================stage [METADATA FORMATION STAGE] ended==========================
+

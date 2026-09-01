@@ -1,0 +1,14 @@
+pillow
+ipykernel
+matplotlib
+seaborn
+numpy
+pandas
+kagglehub
+opencv-python
+torch
+torchvision
+torchmetrics
+optuna
+lightning
+dvc
