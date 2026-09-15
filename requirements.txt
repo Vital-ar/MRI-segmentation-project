@@ -12,3 +12,6 @@ torchmetrics
 optuna
 lightning
 dvc
+mlflow
+dvc-s3
+dagshub

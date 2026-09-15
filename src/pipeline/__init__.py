@@ -10,10 +10,10 @@ class MakePipe:
 
     def __call__(self, **kwargs):
         try:
-            logger.logging.info(f'----------------stage [{self.stage_name}] started--------------------------')
+            logger.logging.info(f'\n----------------stage [{self.stage_name}] started--------------------------')
 
             comp = self.component(self.entity())
-            comp(kwargs)
+            comp(**kwargs)
 
             logger.logging.info(f'================stage [{self.stage_name}] ended===========================\n')
         except Exception as e:
