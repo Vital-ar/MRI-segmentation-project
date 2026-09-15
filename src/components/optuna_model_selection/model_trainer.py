@@ -75,7 +75,7 @@ class ModelTrainer:
         dirpath = Path(self.checkpoint_dir, self.model_name)
 
         checkpoint_callback = ModelCheckpoint(
-            dirpath = dirpath, #! dvc data base url
+            dirpath = dirpath, 
             filename ='model-{epoch:02d}-{val_f1_score:.2f}',
             monitor = 'val_f1_score', 
             mode = 'max',    
@@ -114,12 +114,12 @@ class ModelTrainer:
             devices = 1
         ):
 
-        self.trainer = pl.Trainer(max_epochs=1,limit_train_batches=1, limit_val_batches=1, #!delete for real run
+        self.trainer = pl.Trainer(#max_epochs=1,limit_train_batches=1, limit_val_batches=1, #!delete for real run
              accelerator = accelerator, 
              devices = devices,
              logger = self.logger,
              callbacks = self.callbacks,  
-             #max_epochs = num_epochs, #* uncoment 
+             max_epochs = num_epochs, #* uncoment 
              enable_progress_bar = True,
              enable_model_summary = True)
         logger.logging.info(f'MRI model lightning trainer successfully initialized')

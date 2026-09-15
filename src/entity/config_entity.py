@@ -8,7 +8,11 @@ from torchvision.transforms import v2
 from torch.utils.data import DataLoader
 
 from src.logging import logger
-from src.constants import *
+if os.environ.get('KAGGLE_KERNEL_RUN_TYPE', None) is not None:
+    from src.constants.kaggle import *
+
+else:
+    from src.constants.local import *
 from src.components.optuna_model_selection.dataset import MRIDataset
 from src.components.optuna_model_selection.model import MRIFlexAttentionUNet
 from tqdm.auto import tqdm
