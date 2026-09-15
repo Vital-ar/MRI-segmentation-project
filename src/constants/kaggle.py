@@ -13,9 +13,9 @@ IMAGES_DIR = Path(EXTRACTED_DATA_DIR, 'train')
 
 #Mandatory constants for image preparation 
 _FINAL_DATA_DIR = Path(PREPROCESSED_DATA_DIR, 'final_data')
-TRAIN_CSV = Path(_FINAL_DATA_DIR, 'train.csv')
-DEV_CSV = Path(_FINAL_DATA_DIR, 'dev.csv')
-TEST_CSV = Path(_FINAL_DATA_DIR, 'test.csv')
+TRAIN_CSV = Path(_FINAL_DATA_DIR, 'train_kaggle.csv')
+DEV_CSV = Path(_FINAL_DATA_DIR, 'dev_kaggle.csv')
+TEST_CSV = Path(_FINAL_DATA_DIR, 'test_kaggle.csv')
 MANDAT_COLS = ['collapsed_id','case','slice','height','width','empty_slice','path','prev_path','next_path','large_bowel','small_bowel','stomach']
 
 INP_IMG_DIR = Path(_FINAL_DATA_DIR, 'input_images')
