@@ -20,10 +20,10 @@ class FormMetaDataComponent:
                     path_id_dict = get_path_id_dict(self.conf.train_dir)   
                     path_id_df = pd.DataFrame(path_id_dict)
                     full_df = pd.merge(inp_df, path_id_df, how = 'inner') 
-                    full_df['height'] = full_df['path'].apply(lambda p: int(p.parts[-1].split('_')[2]))
-                    full_df['width'] = full_df['path'].apply(lambda p: int(p.parts[-1].split('_')[3]))
-                    full_df['segmentation'] = full_df['segmentation'].fillna(value = '0')
-                    full_df['segmentation'] = full_df['segmentation'].apply(lambda n: [int(k) for k in n.split()] if n != '0' else int(n))
+                    full_df['width'] = full_df['path'].apply(lambda p: int(p.parts[-1].split('_')[2]))
+                    full_df['height'] = full_df['path'].apply(lambda p: int(p.parts[-1].split('_')[3]))
+                    #full_df['segmentation'] = full_df['segmentation'].fillna(value = '0')
+                    #full_df['segmentation'] = full_df['segmentation'].apply(lambda n: [int(k) for k in n.split()] if n != '0' else int(n))
                     print(type(full_df.iloc[38473]['segmentation']))
                     full_df = full_df.pivot(index = ['id', 'path', 'height', 'width'],
                                columns='class', 
@@ -46,11 +46,17 @@ class FormMetaDataComponent:
                     collapsed_df['collapsed_id'] = collapsed_df.groupby(['case', 'day']).ngroup()
                     collapsed_df = collapsed_df.drop(['day', 'id'], axis = 1)
                     collapsed_df = collapsed_df.sort_values(['collapsed_id', 'slice']).reset_index(drop=True)
+
                     collapsed_df['prev_path'] = collapsed_df.groupby('collapsed_id')['path'].shift(1)
                     collapsed_df['next_path'] = collapsed_df.groupby('collapsed_id')['path'].shift(-1)
                     collapsed_df['prev_path'] = collapsed_df['prev_path'].fillna(collapsed_df['path'])
                     collapsed_df['next_path'] = collapsed_df['next_path'].fillna(collapsed_df['path'])
-                    collapsed_df = collapsed_df[['collapsed_id', 'case', 'slice', 'height', 'width', 'path', 'prev_path', 'next_path', 'large_bowel','small_bowel','stomach']]
+
+                    collapsed_df['empty_slice'] = collapsed_df['large_bowel'].isna() & collapsed_df['small_bowel'].isna() & collapsed_df['stomach'].isna()
+
+                    collapsed_df = collapsed_df[['collapsed_id', 'case', 'slice', 'height', 'width', 
+                                                 'empty_slice', 'path', 'prev_path', 'next_path', 
+                                                 'large_bowel','small_bowel','stomach']]
 
                     os.makedirs(self.conf.processed_data_dir, exist_ok=True)
                     collapsed_df.to_csv(self.conf.processed_metadata_file, index=False)
