@@ -1,6 +1,7 @@
 import numpy as np
 from pathlib import Path
 import os
+import pandas as pd
 import matplotlib.pyplot as plt
 import cv2
 import torch
@@ -144,6 +145,12 @@ def show_mask_img_from_tensor(orig_img_tensor, mask_tensor, alpha=0.5):
 
 
 
+def generate_kaggle_csv(filepath: Path, columns: list, kaggle_dataset_path: str):
+    df = pd.read_csv(filepath)
 
+    for col in columns:
+        df[col] = df[col].apply(lambda f: str(Path(kaggle_dataset_path, *Path(f).parts[1:])))
 
-
+    new_filepath = Path(filepath.parent, f"{filepath.stem}_kaggle.csv")
+    df.to_csv(new_filepath, index=False)
+    print(f"Generated: {new_filepath}")
