@@ -62,7 +62,7 @@ class ModelCreationEntity:
                  safety_batch =True):'''
 
     def __init__(self,
-                 safety_batch =False):#!set to true
+                 safety_batch =True):#!set to true
 
 
         self.lr = LEARNING_RATE
@@ -130,6 +130,7 @@ class ModelCreationEntity:
         logger.logging.info(f'accelerator not passed as argument.')
         device = 'gpu' if torch.cuda.is_available() else 'cpu'
         logger.logging.info(f'Tested accelerator: {device}')
+        print(f'Tested accelerator: {device}')
         return device
 
 
@@ -141,12 +142,13 @@ class ModelCreationEntity:
         else:
             num = torch.cpu.device_count()
         logger.logging.info(f'Tested number of devices: {num}')
+        print(f'Tested number of devices: {num}')
         return num
     
 
 
     def num_workers_test(self, verbose = False, 
-                         early_stopping = True, 
+                         early_stopping = False, 
                          num_tested_batches = 52, warmup = 2 ):
 
         print(f"Benchmarking optimal number of workers...")
