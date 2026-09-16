@@ -6,7 +6,7 @@ RANDOM_STATE = 42
 DATA_DIR = Path('data')
 ZIPPED_DATA_FILE = Path(DATA_DIR, 'uw-madison-gi-tract-image-segmentation.zip')
 EXTRACTED_DATA_DIR = Path(DATA_DIR, 'extracted_data')
-PREPROCESSED_DATA_DIR = Path(DATA_DIR, 'preprocessed_data')
+PREPROCESSED_DATA_DIR = Path('/kaggle/input/mri-segmentation-dataset', 'preprocessed_data')
 METADATA_FILE = Path(PREPROCESSED_DATA_DIR, 'final_dataframe.csv')
 IMAGES_DIR = Path(EXTRACTED_DATA_DIR, 'train')
 
