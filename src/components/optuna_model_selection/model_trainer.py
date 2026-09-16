@@ -95,9 +95,10 @@ class ModelTrainer:
             verbose=True
         )
 
-        pruning_callback = PyTorchLightningPruningCallback(self.trial, monitor="val_loss")
+        #pruning_callback = PyTorchLightningPruningCallback(self.trial, monitor="val_loss")
 
-        self.callbacks = [pruning_callback, checkpoint_callback, early_stop_callback, TQDMProgressBar(refresh_rate=20)]
+        #self.callbacks = [pruning_callback, checkpoint_callback, early_stop_callback, TQDMProgressBar(refresh_rate=20)]
+        self.callbacks = [checkpoint_callback, early_stop_callback, TQDMProgressBar(refresh_rate=20)]
 
 
     def _get_def_loggers(self):
