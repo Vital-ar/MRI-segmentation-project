@@ -10,9 +10,9 @@ from src.logging import logger
 class OptunaModelSelectionComponent:
     def __init__(self, config: ModelCreationEntity):
 
-        self.study = optuna.create_study(study_name= 'mri_unet_optuna_search', 
+        self.study = optuna.create_study(study_name= 'mri_unet_optuna_search_v2', 
                                          storage = config.optuna_database_url, 
-                                         direction='maximize', load_if_exists=True)
+                                         direction='minimize', load_if_exists=True)
         self.config = config
         self.counter = 0
         
@@ -61,7 +61,7 @@ class OptunaModelSelectionComponent:
 
         logger.logging.info(f'model {self.config.model_name}-{self.counter} successfully trained')
 
-        f1, _ = model_trainer.get_best_model_info()
+        loss, _ = model_trainer.get_best_model_info()
         self.counter += 1
         
         del model_trainer
@@ -71,7 +71,7 @@ class OptunaModelSelectionComponent:
 
         
 
-        return f1
+        return loss
 
     
     def __call__(self):

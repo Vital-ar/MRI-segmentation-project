@@ -1,8 +1,8 @@
 import lightning.pytorch as pl
-from lightning.pytorch.callbacks import EarlyStopping, ModelCheckpoint
+from lightning.pytorch.callbacks import EarlyStopping, ModelCheckpoint, TQDMProgressBar
 from lightning.pytorch.loggers import MLFlowLogger
 from pathlib import Path
-from optuna.integration import PyTorchLightningPruningCallback
+from optuna_integration.pytorch_lightning import PyTorchLightningPruningCallback
 
 from src.components.optuna_model_selection.lightning_modules import MRIDataModule, MRIModule
 from src.logging import logger
@@ -79,7 +79,7 @@ class ModelTrainer:
         checkpoint_callback = ModelCheckpoint(
             dirpath = dirpath, 
             filename ='model-{epoch:02d}-{val_f1_score:.2f}',
-            monitor = 'val_f1_score', 
+            monitor = 'val_loss', 
             mode = 'max',    
             verbose = True,           
             save_last = True,
@@ -97,7 +97,7 @@ class ModelTrainer:
 
         pruning_callback = PyTorchLightningPruningCallback(self.trial, monitor="val_loss")
 
-        self.callbacks = [pruning_callback, checkpoint_callback, early_stop_callback]
+        self.callbacks = [pruning_callback, checkpoint_callback, early_stop_callback, TQDMProgressBar(refresh_rate=20)]
 
 
     def _get_def_loggers(self):
@@ -133,9 +133,9 @@ class ModelTrainer:
 
     def get_best_model_info(self):
 
-        f1_score =  self.trainer.checkpoint_callback.best_model_score
+        loss =  self.trainer.checkpoint_callback.best_model_score
         path = self.trainer.checkpoint_callback.best_model_path
-        if f1_score is None:
+        if loss is None:
             raise ValueError(f"No checkpoint score recorded for monitored metric. Ensure the validation loop completed.")
-        return f1_score.item(), path 
+        return loss.item(), path 
 

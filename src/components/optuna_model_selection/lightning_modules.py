@@ -9,7 +9,7 @@ from torchmetrics import F1Score, Recall
 from src.components.optuna_model_selection.dataset import MRIDataset
 from src.components.optuna_model_selection.model import MRIFlexAttentionUNet
 from src.logging import logger
-
+from src.components.optuna_model_selection.dice_bce_loss import DiceBCELoss
 
 
 
@@ -101,7 +101,7 @@ class MRIModule(pl.LightningModule):
                                           n_decoder_conv_layers, 
                                           kernel_sizes)
 
-        self.loss_fn = nn.BCEWithLogitsLoss()
+        self.loss_fn = DiceBCELoss()
 
         self.f1score = F1Score('multilabel', num_labels=3, average='macro')
         self.recall = Recall('multilabel', num_labels = 3, average = 'macro')
