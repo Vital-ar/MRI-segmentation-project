@@ -61,7 +61,7 @@ class MRIDataModule(pl.LightningDataModule):
         return DataLoader(self.train_ds, self.batch_size, shuffle = True, num_workers=self.num_workers)
 
     def val_dataloader(self):
-        return DataLoader(self.val_ds, self.batch_size, shuffle = False, num_workers=self.num_workers)
+        return DataLoader(self.dev_ds, self.batch_size, shuffle = False, num_workers=self.num_workers)
     
     def test_dataloader(self):
         return DataLoader(self.test_ds, self.batch_size, shuffle = False, num_workers=self.num_workers)
