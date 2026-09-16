@@ -27,6 +27,7 @@ class OptunaModelSelectionComponent:
         empty_mri_ratio = trial.suggest_float('empty_mri_ratio', 0.1, 0.3, step = 0.05)
         
         model_trainer = ModelTrainer(
+            trial = trial,
             learning_rate = self.config.lr,
             weight_decay = self.config.weight_decay,                     
             inp_channels = self.config.inp_channels,
@@ -36,7 +37,7 @@ class OptunaModelSelectionComponent:
             n_encoder_conv_layers = n_encoder_conv_layers,
             n_decoder_conv_layers = n_decoder_conv_layers,
             kernel_sizes = kernel_sizes,
-
+            
             train_csv = self.config.train_csv,
             dev_csv= self.config.dev_csv,
             test_csv = self.config.test_csv,

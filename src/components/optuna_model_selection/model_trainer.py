@@ -2,7 +2,7 @@ import lightning.pytorch as pl
 from lightning.pytorch.callbacks import EarlyStopping, ModelCheckpoint
 from lightning.pytorch.loggers import MLFlowLogger
 from pathlib import Path
-
+from optuna.integration import PyTorchLightningPruningCallback
 
 from src.components.optuna_model_selection.lightning_modules import MRIDataModule, MRIModule
 from src.logging import logger
@@ -16,6 +16,7 @@ class ModelTrainer:
 
 
     def __init__(self,
+                 trial,
                  learning_rate = 0.001,
                  weight_decay = 0.01,
                  inp_channels = 3,
@@ -65,6 +66,7 @@ class ModelTrainer:
         self.callbacks = None
         self.logger = None
         self.database_url = database_url
+        self.trial = trial
         self._get_def_callbacks()
         self._get_def_loggers()
 
@@ -88,12 +90,14 @@ class ModelTrainer:
         early_stop_callback = EarlyStopping(
             monitor='val_loss',
             min_delta=0.00,
-            patience=7,
+            patience=3,#! 7 
             mode='min',
             verbose=True
         )
 
-        self.callbacks = [checkpoint_callback, early_stop_callback]
+        pruning_callback = PyTorchLightningPruningCallback(self.trial, monitor="val_loss")
+
+        self.callbacks = [pruning_callback, checkpoint_callback, early_stop_callback]
 
 
     def _get_def_loggers(self):
