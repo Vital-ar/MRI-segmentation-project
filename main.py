@@ -26,9 +26,6 @@ os.environ["AWS_ACCESS_KEY_ID"] = os.environ.get("DAGSHUB_TOKEN")
 os.environ["AWS_SECRET_ACCESS_KEY"] = os.environ.get("DAGSHUB_TOKEN")
 
 
-
-from src.pipeline.meta_data_pipe import run_meta_data_pipe
-from src.pipeline.image_pipe import run_image_preparation_pipe
 from src.pipeline.model_selction_pipe import run_model_selection_pipe
 
 import lightning.pytorch as pl
