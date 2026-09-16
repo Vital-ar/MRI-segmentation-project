@@ -173,7 +173,7 @@ class ModelCreationEntity:
         best_time = float('inf')
         best_worker = 0
 
-        for workers in range(0, os.cpu_count()-1, 2):
+        for workers in range(0, os.cpu_count()+1, 2):
             wait_times, work_times = [], []
 
             dataloader = DataLoader(dataset, self.batch_size, True, num_workers=workers)
