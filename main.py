@@ -6,12 +6,12 @@ load_dotenv()
 
 # 2. Load cloud variables if running on Kaggle
 if os.environ.get('KAGGLE_KERNEL_RUN_TYPE', None) is not None:
-    """from kaggle_secrets import UserSecretsClient
+    from kaggle_secrets import UserSecretsClient
     user_secrets = UserSecretsClient()
-    
+    print('KAGGLE_KERNEL_RUN_TYPE')
     os.environ["MLFLOW_TRACKING_URI"] = user_secrets.get_secret("MLFLOW_TRACKING_URI")
     os.environ["DAGSHUB_USERNAME"] = user_secrets.get_secret("DAGSHUB_USERNAME")
-    os.environ["DAGSHUB_TOKEN"] = user_secrets.get_secret("DAGSHUB_TOKEN")"""
+    os.environ["DAGSHUB_TOKEN"] = user_secrets.get_secret("DAGSHUB_TOKEN")
 
     from src.constants.kaggle import RANDOM_STATE
 
