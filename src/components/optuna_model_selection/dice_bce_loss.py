@@ -4,7 +4,7 @@ import torch.nn.functional as F
 
 class DiceBCELoss(nn.Module):
     def init(self, smooth=1.0):
-        super(DiceBCELoss, self).init()
+        super(DiceBCELoss, self).__init__()
         self.smooth = smooth
 
     def forward(self, inputs, targets):
