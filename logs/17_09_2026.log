@@ -1,0 +1,73 @@
+[ 2026-09-17 08:59:36,869 ] ::: INFO ::: FILE [numexpr.utils] --- LINE: [164]
+NumExpr defaulting to 4 threads.
+[ 2026-09-17 08:59:54,949 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-17 08:59:54,955 ] ::: INFO ::: FILE [root] --- LINE: [13]
+
+----------------stage [MODEL CRETION STAGE] started--------------------------
+[ 2026-09-17 08:59:54,956 ] ::: INFO ::: FILE [root] --- LINE: [130]
+accelerator not passed as argument.
+[ 2026-09-17 08:59:54,989 ] ::: INFO ::: FILE [root] --- LINE: [132]
+Tested accelerator: gpu
+[ 2026-09-17 08:59:54,989 ] ::: INFO ::: FILE [root] --- LINE: [139]
+Number of devices not passed as argument.
+[ 2026-09-17 08:59:54,990 ] ::: INFO ::: FILE [root] --- LINE: [144]
+Tested number of devices: 2
+[ 2026-09-17 08:59:54,990 ] ::: INFO ::: FILE [root] --- LINE: [260]
+Batch size of 32 . Checking whether it is valid...
+[ 2026-09-17 08:59:54,990 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-17 08:59:55,530 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-17 09:00:02,819 ] ::: INFO ::: FILE [root] --- LINE: [284]
+Batch size 16 is valid
+[ 2026-09-17 09:00:02,867 ] ::: INFO ::: FILE [root] --- LINE: [155]
+number of workers not passed as argument.
+[ 2026-09-17 09:00:02,867 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-17 09:00:03,184 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-17 09:02:15,946 ] ::: INFO ::: FILE [root] --- LINE: [248]
+Tested nuber of workers: 4
+[ 2026-09-17 09:02:17,170 ] ::: INFO ::: FILE [root] --- LINE: [125]
+Model creation entity successfully created
+[ 2026-09-17 09:02:18,845 ] ::: INFO ::: FILE [root] --- LINE: [78]
+Start of optuna opitmization process...
+[ 2026-09-17 09:02:18,980 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-17 09:02:19,120 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-17 09:02:19,124 ] ::: INFO ::: FILE [root] --- LINE: [109]
+MRI lightning module successfully initialized
+[ 2026-09-17 09:02:19,124 ] ::: INFO ::: FILE [root] --- LINE: [47]
+MRI lightning data module successfully initialized
+[ 2026-09-17 09:02:21,857 ] ::: INFO ::: FILE [root] --- LINE: [73]
+MRI model trainer successfully initialized
+[ 2026-09-17 09:02:21,903 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [164]
+GPU available: True (cuda), used: True
+[ 2026-09-17 09:02:21,904 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [167]
+TPU available: False, using: 0 TPU cores
+[ 2026-09-17 09:02:21,905 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [91]
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+[ 2026-09-17 09:02:21,905 ] ::: INFO ::: FILE [root] --- LINE: [131]
+MRI model lightning trainer successfully initialized
+[ 2026-09-17 09:02:34,328 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-17 09:02:34,328 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-17 09:02:34,632 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-17 09:02:34,633 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-17 09:02:34,639 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-17 09:02:34,640 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-17 09:02:34,651 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-17 09:02:34,657 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-17 10:43:27,387 ] ::: INFO ::: FILE [root] --- LINE: [62]
+model MRI-Unet-0 successfully trained
+[ 2026-09-17 10:43:27,408 ] ::: ERROR ::: FILE [root] --- LINE: [20]
+SOME TROUBLES WITH STAGE [MODEL CRETION STAGE]

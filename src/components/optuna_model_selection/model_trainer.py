@@ -80,7 +80,7 @@ class ModelTrainer:
             dirpath = dirpath, 
             filename ='model-{epoch:02d}-{val_f1_score:.2f}',
             monitor = 'val_loss', 
-            mode = 'max',    
+            mode = 'min',    
             verbose = True,           
             save_last = True,
             every_n_epochs = 1
