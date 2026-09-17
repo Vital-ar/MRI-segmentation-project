@@ -8,6 +8,7 @@ from src.components.optuna_model_selection.lightning_modules import MRIDataModul
 from src.logging import logger
 
 
+from src.components.optuna_model_selection.custom_callbacks import BestValLossCallback
 
 
 
@@ -78,7 +79,7 @@ class ModelTrainer:
 
         checkpoint_callback = ModelCheckpoint(
             dirpath = dirpath, 
-            filename ='model-{epoch:02d}-{val_f1_score:.2f}',
+            filename ='model-{epoch:02d}-{val_loss:.2f}',
             monitor = 'val_loss', 
             mode = 'min',    
             verbose = True,           
@@ -94,11 +95,11 @@ class ModelTrainer:
             mode='min',
             verbose=True
         )
-
+        best_val_loss_callback = BestValLossCallback()
         #pruning_callback = PyTorchLightningPruningCallback(self.trial, monitor="val_loss")
 
         #self.callbacks = [pruning_callback, checkpoint_callback, early_stop_callback, TQDMProgressBar(refresh_rate=20)]
-        self.callbacks = [checkpoint_callback, early_stop_callback, TQDMProgressBar(refresh_rate=20)]
+        self.callbacks = [best_val_loss_callback, checkpoint_callback, early_stop_callback, TQDMProgressBar(refresh_rate=20)]
 
 
     def _get_def_loggers(self):
@@ -131,7 +132,12 @@ class ModelTrainer:
         logger.logging.info(f'MRI model lightning trainer successfully initialized')
         self.trainer.fit(self.model, self.data_module)
 
-
+        print("callback_metrics:", self.trainer.callback_metrics)
+        print("best_model_path:", self.trainer.checkpoint_callback.best_model_path)
+        print("best_model_score:", self.trainer.checkpoint_callback.best_model_score)
+        
+        return self.best_val_loss_callback.best_val_loss
+    
     def get_best_model_info(self):
 
         loss =  self.trainer.checkpoint_callback.best_model_score

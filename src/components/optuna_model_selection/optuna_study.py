@@ -53,7 +53,7 @@ class OptunaModelSelectionComponent:
         )
 
         
-        model_trainer(
+        best_val_loss = model_trainer(
             num_epochs = self.config.num_epochs,
             accelerator= self.config.accelerator, # defined by test in config entity
             devices = self.config.devices # defined by test in config entity
@@ -61,7 +61,7 @@ class OptunaModelSelectionComponent:
 
         logger.logging.info(f'model {self.config.model_name}-{self.counter} successfully trained')
 
-        loss, _ = model_trainer.get_best_model_info()
+        
         self.counter += 1
         
         del model_trainer
@@ -71,7 +71,7 @@ class OptunaModelSelectionComponent:
 
         
 
-        return loss
+        return best_val_loss
 
     
     def __call__(self):

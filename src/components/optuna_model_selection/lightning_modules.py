@@ -123,7 +123,7 @@ class MRIModule(pl.LightningModule):
 
         loss = self.loss_fn(logits, masks)
 
-        self.log('train_loss', loss, prog_bar=True)
+        self.log('train_loss', loss, prog_bar=True, sync_dist=True)
 
         return loss
 
@@ -141,9 +141,9 @@ class MRIModule(pl.LightningModule):
         f1_score = self.f1score(probs, masks)
         recall = self.recall(probs, masks)
 
-        self.log('val_loss', loss, prog_bar = True)
-        self.log('val_f1_score', f1_score, prog_bar = True, on_epoch=True)
-        self.log('val_recall', recall)
+        self.log('val_loss', loss, prog_bar = True, on_epoch=True, sync_dist=True)
+        self.log('val_f1_score', f1_score, prog_bar = True, on_epoch=True, sync_dist=True)
+        self.log('val_recall', recall, sync_dist=True)
 
 
 
@@ -159,9 +159,9 @@ class MRIModule(pl.LightningModule):
             f1_score = self.f1score(probs, masks)
             recall = self.recall(probs, masks)
     
-            self.log('test_loss', loss)
-            self.log('test_f1_score', f1_score)
-            self.log('test_recall', recall)
+            self.log('test_loss', loss, sync_dist=True)
+            self.log('test_f1_score', f1_score, sync_dist=True)
+            self.log('test_recall', recall, sync_dist=True)
 
 
 
@@ -200,6 +200,20 @@ class MRIModule(pl.LightningModule):
         masks = (prob > 0.5).int()
 
         return masks
+
+
+
+    def on_validation_epoch_end(self):
+
+        if self.trainer.is_global_zero:
+            current_loss = self.trainer.callback_metrics.get("val_loss")
+
+            if current_loss is not None:
+                current_loss = current_loss.item()
+
+                if current_loss < self.best_val_loss:
+                    self.best_val_loss = current_loss
+                    print(self.best_val_loss)
 
 
 

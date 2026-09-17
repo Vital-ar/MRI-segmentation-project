@@ -103,3 +103,27 @@ class MLflowLoggingCallback(Callback):
         )
         
         print(f'\nFinished Training. Best f1 score: {self.best_f1:.4f}%')
+
+
+
+
+
+
+
+
+class BestValLossCallback(pl.Callback):
+
+    def __init__(self):
+        self.best_val_loss = float("inf")
+
+    def on_validation_epoch_end(self, trainer, pl_module):
+        if trainer.sanity_checking:
+            return
+
+        val_loss = trainer.callback_metrics.get("val_loss")
+
+        if val_loss is not None:
+            val_loss = val_loss.detach().item()
+
+            if val_loss < self.best_val_loss:
+                self.best_val_loss = val_loss
