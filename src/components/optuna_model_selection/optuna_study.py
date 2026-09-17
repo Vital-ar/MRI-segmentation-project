@@ -10,7 +10,7 @@ from src.logging import logger
 class OptunaModelSelectionComponent:
     def __init__(self, config: ModelCreationEntity):
 
-        self.study = optuna.create_study(study_name= 'mri_unet_optuna_search_v3', 
+        self.study = optuna.create_study(study_name= 'mri_unet_optuna_search_v4', 
                                          storage = config.optuna_database_url, 
                                          direction='minimize', load_if_exists=True)
         self.config = config
