@@ -1,3 +1,5 @@
 /trash
 /data
 /.env
+*.ckpt
+models/checkpoints/
