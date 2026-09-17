@@ -203,20 +203,6 @@ class MRIModule(pl.LightningModule):
 
 
 
-    def on_validation_epoch_end(self):
-
-        if self.trainer.is_global_zero:
-            current_loss = self.trainer.callback_metrics.get("val_loss")
-
-            if current_loss is not None:
-                current_loss = current_loss.item()
-
-                if current_loss < self.best_val_loss:
-                    self.best_val_loss = current_loss
-                    print(self.best_val_loss)
-
-
-
     def get_img_masks(self, image):
 
         self.eval()
