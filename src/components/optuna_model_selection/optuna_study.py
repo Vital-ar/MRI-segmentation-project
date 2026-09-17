@@ -19,8 +19,8 @@ class OptunaModelSelectionComponent:
 
     def _objective(self, trial: optuna.Trial):
 
-        first_conv_out_channels = trial.suggest_categorical('first_conv_out_channels', [32,64,128])
-        depth = trial.suggest_int('depth', 3, 5)
+        first_conv_out_channels = trial.suggest_categorical('first_conv_out_channels', [32,64])
+        depth = trial.suggest_int('depth', 3, 4)
         n_encoder_conv_layers = trial.suggest_int('n_encoder_conv_layers',1, 3)
         n_decoder_conv_layers = trial.suggest_int('n_decoder_conv_layers',1, 3)
         kernel_sizes = [trial.suggest_categorical(f'kernel_sizes_{i}', [3, 5]) for i in range(depth*2)]

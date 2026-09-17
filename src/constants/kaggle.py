@@ -29,8 +29,8 @@ CHECKPOINT_DIR = Path('models', 'checkpoints')
 
 MODEL_NAME = 'MRI-Unet' # general model name for different versions e.g. MRI-Unet-1 
 NUMBER_OPTUNA_TRIALS = 40  # optuna study parameter #! change this
-BATCH_SIZE = 4 # dataloader parameter #! set to 32
-NUM_WORKERS = 4 # dataloader parameter #!  SET TO NONE
+BATCH_SIZE = 32 # dataloader parameter #! set to 32
+NUM_WORKERS = None # dataloader parameter #!  SET TO NONE
 DEVICES = None # trainer parameter  #!  SET TO NONE
 ACCELERATOR = None # trainerr parameter  #!  SET TO NONE
 NUM_EPOCHS = 5  # lightning trainer parameter

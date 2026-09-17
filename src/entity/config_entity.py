@@ -263,7 +263,7 @@ class ModelCreationEntity:
         else:
             device = torch.device('cpu')
             
-        model = MRIFlexAttentionUNet(self.inp_channels, 128, self.num_classes, 5, 3, 3, 5 ).to(device) #established max model hyperparameters
+        model = MRIFlexAttentionUNet(self.inp_channels, 64, self.num_classes, 4, 3, 3, 5 ).to(device) #established max model hyperparameters
         model.train()
         
         current_batch = self.batch_size
