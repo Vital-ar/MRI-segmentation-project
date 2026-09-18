@@ -10,6 +10,7 @@ from src.components.optuna_model_selection.dataset import MRIDataset
 from src.components.optuna_model_selection.model import MRIFlexAttentionUNet
 from src.logging import logger
 from src.components.optuna_model_selection.dice_bce_loss import DiceBCELoss
+from src.components.optuna_model_selection.DebugModel import Debug
 
 
 
@@ -51,14 +52,14 @@ class MRIDataModule(pl.LightningDataModule):
         
         if stage == 'fit' or stage is None:
             self.train_ds = MRIDataset(self.train_csv, self.train_empty_mri_ratio, self.train_transform, self.random_state)
-            self.dev_ds = MRIDataset(self.dev_csv, 1.0, self.dev_transform, self.random_state)
+            self.dev_ds = MRIDataset(self.dev_csv, 0, self.dev_transform, self.random_state)#!
 
         if stage == 'test' or stage is None:
             self.test_ds = MRIDataset(self.test_csv, 1.0, self.dev_transform, self.random_state)
         
 
     def train_dataloader(self):
-        return DataLoader(self.train_ds, self.batch_size, shuffle = True, num_workers=self.num_workers)
+        return DataLoader(self.dev_ds, self.batch_size, shuffle = True, num_workers=self.num_workers)#!
 
     def val_dataloader(self):
         return DataLoader(self.dev_ds, self.batch_size, shuffle = False, num_workers=self.num_workers)
@@ -93,14 +94,16 @@ class MRIModule(pl.LightningModule):
 
         self.save_hyperparameters()
 
-        self.model = MRIFlexAttentionUNet(inp_channels, 
+        """self.model = MRIFlexAttentionUNet(inp_channels, 
                                           first_conv_out_channels, 
                                           num_classes, 
                                           depth, 
                                           n_encoder_conv_layers, 
                                           n_decoder_conv_layers, 
-                                          kernel_sizes)
+                                          kernel_sizes)"""
 
+
+        self.model = Debug()#!
         self.loss_fn = DiceBCELoss()
 
         self.f1score = F1Score('multilabel', num_labels=3, average='macro')
@@ -185,7 +188,6 @@ class MRIModule(pl.LightningModule):
 
 
     def on_train_epoch_end(self):
-
         if self.trainer.datamodule:
             self.trainer.datamodule.train_ds.on_epoch_end()
 

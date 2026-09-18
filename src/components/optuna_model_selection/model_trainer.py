@@ -95,17 +95,17 @@ class ModelTrainer:
             mode='min',
             verbose=True
         )
-        best_val_loss_callback = BestValLossCallback()
+        self.best_val_loss_callback = BestValLossCallback()
         #pruning_callback = PyTorchLightningPruningCallback(self.trial, monitor="val_loss")
 
         #self.callbacks = [pruning_callback, checkpoint_callback, early_stop_callback, TQDMProgressBar(refresh_rate=20)]
-        self.callbacks = [best_val_loss_callback, checkpoint_callback, early_stop_callback, TQDMProgressBar(refresh_rate=20)]
+        self.callbacks = [self.best_val_loss_callback, checkpoint_callback, early_stop_callback, TQDMProgressBar(refresh_rate=20)]
 
 
     def _get_def_loggers(self):
 
             self.logger = MLFlowLogger(
-                experiment_name="MRI_Segmentation",
+                experiment_name="Debug",#!"MRI_Segmentation",
                 tracking_uri=self.database_url, 
                 run_name=self.model_name,
                 log_model=True 

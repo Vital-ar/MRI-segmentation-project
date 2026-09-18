@@ -28,12 +28,12 @@ OPTUNA_DATABASE_URL = 'sqlite:///optuna.db'
 CHECKPOINT_DIR = Path('models', 'checkpoints') 
 
 MODEL_NAME = 'MRI-Unet' # general model name for different versions e.g. MRI-Unet-1 
-NUMBER_OPTUNA_TRIALS = 40  # optuna study parameter #! change this
-BATCH_SIZE = 16 # dataloader parameter #! set to 32
+NUMBER_OPTUNA_TRIALS = 5  # optuna study parameter #! change this
+BATCH_SIZE = 64 # dataloader parameter #! set to 32
 NUM_WORKERS = 4 # dataloader parameter #!  SET TO NONE
-DEVICES = None # trainer parameter  #!  SET TO NONE
-ACCELERATOR = None # trainerr parameter  #!  SET TO NONE
-NUM_EPOCHS = 5  # lightning trainer parameter
+DEVICES = 2 # trainer parameter  #!  SET TO NONE
+ACCELERATOR = 'gpu' # trainerr parameter  #!  SET TO NONE
+NUM_EPOCHS = 1  # lightning trainer parameter
 LEARNING_RATE = 0.001 # opitmizer parameter
 WEIGHT_DECAY = 0.01 # optimizer parameter
 INPUT_CHANNELS = 3 # model input parameter
