@@ -52,14 +52,14 @@ class MRIDataModule(pl.LightningDataModule):
         
         if stage == 'fit' or stage is None:
             self.train_ds = MRIDataset(self.train_csv, self.train_empty_mri_ratio, self.train_transform, self.random_state)
-            self.dev_ds = MRIDataset(self.dev_csv, 0, self.dev_transform, self.random_state)#!
+            self.dev_ds = MRIDataset(self.dev_csv, 1.0, self.dev_transform, self.random_state)
 
         if stage == 'test' or stage is None:
             self.test_ds = MRIDataset(self.test_csv, 1.0, self.dev_transform, self.random_state)
         
 
     def train_dataloader(self):
-        return DataLoader(self.dev_ds, self.batch_size, shuffle = True, num_workers=self.num_workers)#!
+        return DataLoader(self.train_ds, self.batch_size, shuffle = True, num_workers=self.num_workers)
 
     def val_dataloader(self):
         return DataLoader(self.dev_ds, self.batch_size, shuffle = False, num_workers=self.num_workers)
@@ -103,7 +103,7 @@ class MRIModule(pl.LightningModule):
                                           kernel_sizes)"""
 
 
-        self.model = Debug()#!
+        self.model = MRIFlexAttentionUNet()
         self.loss_fn = DiceBCELoss()
 
         self.f1score = F1Score('multilabel', num_labels=3, average='macro')

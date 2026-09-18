@@ -58,7 +58,6 @@ class OptunaModelSelectionComponent:
             accelerator= self.config.accelerator, # defined by test in config entity
             devices = self.config.devices # defined by test in config entity
         )
-        print(f'[[[[[[[[[[[[[[[[[[[[[[[[[[[[{best_val_loss}]]]]]]]]]]]]]]]]]]]]]]]]]]]]')
         logger.logging.info(f'model {self.config.model_name}-{self.counter} successfully trained')
 
         

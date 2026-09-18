@@ -143,7 +143,4 @@ class BestValLossCallback(pl.Callback):
                 with open(self.save_path, "w") as f:
                     f.write(str(self.best_val_loss))
 
-                print(
-                    f"Best validation loss saved: -----------------------------------------"
-                    f"{self.best_val_loss}"
-                )
+                print(f'Best validation loss saved:\n{self.best_val_loss}')

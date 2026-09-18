@@ -113,8 +113,8 @@ class ModelCreationEntity:
             self.devices = self.devices_test()
         
 
-        #!if safety_batch:
-            #!self.safe_batch_size_test()
+        if safety_batch:
+            self.safe_batch_size_test()
         
         if self.num_workers is None:
             self.num_workers, _ = self.num_workers_test()
