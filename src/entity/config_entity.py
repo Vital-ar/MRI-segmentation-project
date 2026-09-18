@@ -114,7 +114,7 @@ class ModelCreationEntity:
         
 
         if safety_batch:
-            self.safe_batch_size_test()
+            #!self.safe_batch_size_test()
         
         if self.num_workers is None:
             self.num_workers, _ = self.num_workers_test()
@@ -261,8 +261,8 @@ class ModelCreationEntity:
         else:
             device = torch.device('cpu')
             
-        #!model = MRIFlexAttentionUNet(self.inp_channels, 64, self.num_classes, 4, 3, 3, 5 ).to(device) #established max model hyperparameters
-        model =  Debug()
+        model = MRIFlexAttentionUNet(self.inp_channels, 64, self.num_classes, 4, 3, 3, 5 ).to(device) #established max model hyperparameters
+        
         model.train()
         
         current_batch = self.batch_size
