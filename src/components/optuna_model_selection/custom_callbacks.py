@@ -3,7 +3,7 @@ import lightning.pytorch as pl
 import mlflow
 import torch
 import os
-
+from pathlib import Path
 
 class MLflowLoggingCallback(Callback):
 
@@ -113,20 +113,37 @@ class MLflowLoggingCallback(Callback):
 
 class BestValLossCallback(pl.Callback):
 
-    def __init__(self):
+    def __init__(self, save_path = 'models/temp.txt'):
+        super().__init__()
+        self.save_path = Path(save_path)
         self.best_val_loss = float("inf")
 
     def on_validation_epoch_end(self, trainer, pl_module):
+
         if trainer.sanity_checking:
             return
-    
+
         val_loss = trainer.callback_metrics.get("val_loss")
 
-        if val_loss is not None:
-            val_loss = val_loss.detach().item()
+        if val_loss is None:
+            return
 
-            if val_loss < self.best_val_loss:
-                self.best_val_loss = val_loss
-                print(self.best_val_loss, '----------------------------------------------')
+        val_loss = val_loss.detach().item()
 
- 
+        if val_loss < self.best_val_loss:
+
+            self.best_val_loss = val_loss
+
+            if trainer.is_global_zero:
+                self.save_path.parent.mkdir(
+                    parents=True,
+                    exist_ok=True
+                )
+
+                with open(self.save_path, "w") as f:
+                    f.write(str(self.best_val_loss))
+
+                print(
+                    f"Best validation loss saved: -----------------------------------------"
+                    f"{self.best_val_loss}"
+                )

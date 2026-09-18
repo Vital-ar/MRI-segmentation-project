@@ -95,10 +95,10 @@ class ModelTrainer:
             mode='min',
             verbose=True
         )
-        self.best_val_loss_callback = BestValLossCallback()
+        self.best_val_loss_path = Path(self.checkpoint_dir, 'best_val_loss.txt')
+        self.best_val_loss_callback = BestValLossCallback(self.best_val_loss_path)
         #pruning_callback = PyTorchLightningPruningCallback(self.trial, monitor="val_loss")
 
-        #self.callbacks = [pruning_callback, checkpoint_callback, early_stop_callback, TQDMProgressBar(refresh_rate=20)]
         self.callbacks = [self.best_val_loss_callback, self.checkpoint_callback, early_stop_callback, TQDMProgressBar(refresh_rate=20)]
 
 
@@ -132,11 +132,18 @@ class ModelTrainer:
         logger.logging.info(f'MRI model lightning trainer successfully initialized')
         self.trainer.fit(self.model, self.data_module)
 
-        print("callback_metrics:", self.trainer.callback_metrics)
-        print("best_model_path:", self.trainer.checkpoint_callback.best_model_path)
-        print("best_model_score:", self.trainer.checkpoint_callback.best_model_score)
-        print(f'((((((((((((((((((((((((((((((({self.best_val_loss_callback.best_val_loss})))))))))))))))))))))))))))))))')
-        return self.best_val_loss_callback.best_val_loss
+      
+        with open(self.best_val_loss_path, "r") as f:
+            best_val_loss = float(f.read())
+
+        print(
+            f"Best validation loss returned to parent: "
+            f"{best_val_loss}"
+        )
+
+        return best_val_loss
+
+       
     
     def get_best_model_info(self):
 
