@@ -10,7 +10,6 @@ from src.components.optuna_model_selection.dataset import MRIDataset
 from src.components.optuna_model_selection.model import MRIFlexAttentionUNet
 from src.logging import logger
 from src.components.optuna_model_selection.dice_bce_loss import DiceBCELoss
-from src.components.optuna_model_selection.DebugModel import Debug
 
 
 
@@ -103,8 +102,16 @@ class MRIModule(pl.LightningModule):
                                           kernel_sizes)"""
 
 
-        self.model = MRIFlexAttentionUNet()
-        self.loss_fn = DiceBCELoss()
+        self.model = MRIFlexAttentionUNet(
+            inp_channels,
+            first_conv_out_channels,
+            num_classes,
+            depth,
+            n_encoder_conv_layers,
+            n_decoder_conv_layers,
+            kernel_sizes
+        )
+        self.loss_fn = DiceBCELoss(1,1,1)#*hyperparameters search
 
         self.f1score = F1Score('multilabel', num_labels=3, average='macro')
         self.recall = Recall('multilabel', num_labels = 3, average = 'macro')
