@@ -10,7 +10,7 @@ from src.logging import logger
 class OptunaModelSelectionComponent:
     def __init__(self, config: ModelCreationEntity):
 
-        self.study = optuna.create_study(study_name='debug', #! 'mri_unet_optuna_search_v5', 
+        self.study = optuna.create_study(study_name='mri_unet_optuna_search_v2-1: more models less epochs', 
                                          storage = config.optuna_database_url, 
                                          direction='minimize', load_if_exists=True)
         self.config = config
@@ -47,7 +47,7 @@ class OptunaModelSelectionComponent:
             dev_transform=self.config.dev_transform,
             train_empty_mri_ratio = empty_mri_ratio, 
             random_state=self.config.random_state,
-            model_name = f'debug_model-{self.counter}',#! f'{self.config.model_name}-{self.counter}',
+            model_name = f'{self.config.model_name}-{self.counter}',
             database_url=self.config.mlflow_database_url,
             checkpoint_dir= self.config.checkpoint_dir
         )
