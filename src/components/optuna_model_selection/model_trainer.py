@@ -135,7 +135,7 @@ class ModelTrainer:
         print("callback_metrics:", self.trainer.callback_metrics)
         print("best_model_path:", self.trainer.checkpoint_callback.best_model_path)
         print("best_model_score:", self.trainer.checkpoint_callback.best_model_score)
-        
+        print(f'((((((((((((((((((((((((((((((({self.best_val_loss_callback.best_val_loss})))))))))))))))))))))))))))))))')
         return self.best_val_loss_callback.best_val_loss
     
     def get_best_model_info(self):
