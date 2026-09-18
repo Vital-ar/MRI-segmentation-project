@@ -121,10 +121,10 @@ class BestValLossCallback(pl.Callback):
             return
 
         val_loss = trainer.callback_metrics.get("val_loss")
-        print('[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]')
 
         if val_loss is not None:
             val_loss = val_loss.detach().item()
-            print('(((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))')
+            print(f'((((((((((((((((({val_loss})))))))))))))))))')
             if val_loss < self.best_val_loss:
                 self.best_val_loss = val_loss
+                print('(((((((((((((((((((())))))))))))))))))))')

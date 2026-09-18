@@ -58,7 +58,7 @@ class OptunaModelSelectionComponent:
             accelerator= self.config.accelerator, # defined by test in config entity
             devices = self.config.devices # defined by test in config entity
         )
-
+        print(f'[[[[[[[[[[[[[[[[[[[[[[[[[[[[{best_val_loss}]]]]]]]]]]]]]]]]]]]]]]]]]]]]')
         logger.logging.info(f'model {self.config.model_name}-{self.counter} successfully trained')
 
         
@@ -76,6 +76,6 @@ class OptunaModelSelectionComponent:
     
     def __call__(self):
         logger.logging.info('Start of optuna opitmization process...')
-        self.study.optimize(self._objective, n_trials=self.config.n_trials, show_progress_bar = True)
+        self.study.optimize(lambda trial: self._objective(trial), n_trials=self.config.n_trials, show_progress_bar = True)
         self.counter = 0
         logger.logging.info('Optuna optimization successfully finished')

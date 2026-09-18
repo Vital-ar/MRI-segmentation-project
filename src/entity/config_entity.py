@@ -17,6 +17,7 @@ from src.components.optuna_model_selection.dataset import MRIDataset
 from src.components.optuna_model_selection.model import MRIFlexAttentionUNet
 from tqdm.auto import tqdm
 
+from src.components.optuna_model_selection.DebugModel import Debug
 
 
 
@@ -230,10 +231,7 @@ class ModelCreationEntity:
 
 
             except StopIteration:
-
-                print(
-                    1
-                )
+                print('super')
 
             except RuntimeError as e:
                 print(2)
@@ -263,7 +261,8 @@ class ModelCreationEntity:
         else:
             device = torch.device('cpu')
             
-        model = MRIFlexAttentionUNet(self.inp_channels, 64, self.num_classes, 4, 3, 3, 5 ).to(device) #established max model hyperparameters
+        #!model = MRIFlexAttentionUNet(self.inp_channels, 64, self.num_classes, 4, 3, 3, 5 ).to(device) #established max model hyperparameters
+        model =  Debug()
         model.train()
         
         current_batch = self.batch_size
