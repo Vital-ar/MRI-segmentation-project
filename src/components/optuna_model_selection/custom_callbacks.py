@@ -119,13 +119,14 @@ class BestValLossCallback(pl.Callback):
     def on_validation_epoch_end(self, trainer, pl_module):
         if trainer.sanity_checking:
             return
-        if trainer.is_global_zero:
-            val_loss = trainer.callback_metrics.get("val_loss")
+    
+        val_loss = trainer.callback_metrics.get("val_loss")
 
-            if val_loss is not None:
-                val_loss = val_loss.detach().item()
+        if val_loss is not None:
+            val_loss = val_loss.detach().item()
 
-                if val_loss < self.best_val_loss:
-                    self.best_val_loss = val_loss
+            if val_loss < self.best_val_loss:
+                self.best_val_loss = val_loss
+                print(self.best_val_loss, '----------------------------------------------')
 
-        else: self.best_val_loss = 7
+ 
