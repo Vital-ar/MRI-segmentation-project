@@ -77,7 +77,7 @@ class ModelTrainer:
     def _get_def_callbacks(self):
         dirpath = Path(self.checkpoint_dir, self.model_name)
 
-        checkpoint_callback = ModelCheckpoint(
+        self.checkpoint_callback = ModelCheckpoint(
             dirpath = dirpath, 
             filename ='model-{epoch:02d}-{val_loss:.2f}',
             monitor = 'val_loss', 
@@ -99,7 +99,7 @@ class ModelTrainer:
         #pruning_callback = PyTorchLightningPruningCallback(self.trial, monitor="val_loss")
 
         #self.callbacks = [pruning_callback, checkpoint_callback, early_stop_callback, TQDMProgressBar(refresh_rate=20)]
-        self.callbacks = [self.best_val_loss_callback, checkpoint_callback, early_stop_callback, TQDMProgressBar(refresh_rate=20)]
+        self.callbacks = [self.best_val_loss_callback, self.checkpoint_callback, early_stop_callback, TQDMProgressBar(refresh_rate=20)]
 
 
     def _get_def_loggers(self):
@@ -136,7 +136,7 @@ class ModelTrainer:
         print("best_model_path:", self.trainer.checkpoint_callback.best_model_path)
         print("best_model_score:", self.trainer.checkpoint_callback.best_model_score)
         
-        return self.best_val_loss_callback.best_val_loss
+        return self.checkpoint_callback.best_model_score()
     
     def get_best_model_info(self):
 

@@ -119,12 +119,11 @@ class BestValLossCallback(pl.Callback):
     def on_validation_epoch_end(self, trainer, pl_module):
         if trainer.sanity_checking:
             return
-
+       # if torch.distributed.get_rank() == 1:
         val_loss = trainer.callback_metrics.get("val_loss")
 
         if val_loss is not None:
             val_loss = val_loss.detach().item()
-            print(f'((((((((((((((((({val_loss})))))))))))))))))')
+
             if val_loss < self.best_val_loss:
                 self.best_val_loss = val_loss
-                print('(((((((((((((((((((())))))))))))))))))))')
