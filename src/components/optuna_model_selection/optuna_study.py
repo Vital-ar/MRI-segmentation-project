@@ -25,11 +25,15 @@ class OptunaModelSelectionComponent:
         n_decoder_conv_layers = trial.suggest_int('n_decoder_conv_layers',1, 3)
         kernel_sizes = [trial.suggest_categorical(f'kernel_sizes_{i}', [3, 5]) for i in range(depth*2)]
         empty_mri_ratio = trial.suggest_float('empty_mri_ratio', 0.1, 0.3, step = 0.05)
-        
+        lr = trial.suggest_float('learning_rate_start', 1e-4, 1e-2, log = True )
+        w = trial.suggest_float('weight decay', 1e-4, 1e-2, log = True)
+
+
+
         model_trainer = ModelTrainer(
             trial = trial,
-            learning_rate = self.config.lr,
-            weight_decay = self.config.weight_decay,                     
+            learning_rate = lr,
+            weight_decay = w,                     
             inp_channels = self.config.inp_channels,
             first_conv_out_channels = first_conv_out_channels,
             num_classes = self.config.num_classes,
