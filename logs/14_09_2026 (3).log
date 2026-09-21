@@ -1,0 +1,269 @@
+[ 2026-09-13 16:38:12,583 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:38:46,536 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:40:51,013 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:41:21,363 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:41:21,366 ] ::: INFO ::: FILE [root] --- LINE: [13]
+
+----------------stage [METADATA FORMATION STAGE] started--------------------------
+[ 2026-09-13 16:41:21,367 ] ::: INFO ::: FILE [root] --- LINE: [123]
+accelerator not passed as argument.
+[ 2026-09-13 16:41:21,367 ] ::: INFO ::: FILE [root] --- LINE: [125]
+Tested accelerator: cpu
+[ 2026-09-13 16:41:21,376 ] ::: INFO ::: FILE [root] --- LINE: [131]
+Number of devices not passed as argument.
+[ 2026-09-13 16:41:21,376 ] ::: INFO ::: FILE [root] --- LINE: [136]
+Tested number of devices: 1
+[ 2026-09-13 16:41:21,376 ] ::: INFO ::: FILE [root] --- LINE: [251]
+Batch size of 32 . Checking whether it is valid...
+[ 2026-09-13 16:41:21,376 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-13 16:41:25,254 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-13 16:48:09,942 ] ::: INFO ::: FILE [root] --- LINE: [275]
+Batch size 32 is valid
+[ 2026-09-13 16:48:10,142 ] ::: INFO ::: FILE [root] --- LINE: [146]
+number of workers not passed as argument.
+[ 2026-09-13 16:48:10,145 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-13 16:48:10,498 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-13 16:48:58,226 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:49:02,075 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:49:48,721 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:49:52,603 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:49:56,409 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:50:00,503 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:50:27,450 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:50:31,193 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:50:34,942 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:50:38,772 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:50:42,621 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:50:46,680 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:51:10,368 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:51:14,122 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:51:17,893 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:51:21,743 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:51:25,661 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:51:29,463 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:51:33,462 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:51:37,279 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:52:00,721 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:52:04,484 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:52:08,218 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:52:11,972 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:52:15,810 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:52:19,512 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:52:23,580 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:52:27,324 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:52:31,036 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:52:34,787 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:52:56,398 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:53:00,163 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:53:03,988 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:53:07,773 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:53:11,467 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:53:15,148 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:53:18,857 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:53:22,568 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:53:26,230 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:53:29,920 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:53:33,633 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:53:37,348 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:53:56,464 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:54:00,252 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:54:04,016 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:54:07,755 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:54:11,477 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:54:15,180 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:54:18,901 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:54:22,602 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:54:26,471 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:54:30,228 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:54:33,954 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:54:37,665 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:54:41,405 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:54:45,122 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:55:03,113 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:55:06,851 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:55:10,576 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:55:14,619 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:55:18,473 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:55:22,178 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:55:25,980 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:55:29,689 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:55:33,373 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:55:37,042 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:55:40,945 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:55:44,876 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:55:48,742 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:55:52,566 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:55:56,388 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:56:00,215 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 16:56:13,824 ] ::: INFO ::: FILE [root] --- LINE: [239]
+Tested nuber of workers: 14
+[ 2026-09-13 16:56:18,217 ] ::: INFO ::: FILE [root] --- LINE: [118]
+Model creation entity successfully created
+[ 2026-09-13 16:56:18,218 ] ::: INFO ::: FILE [root] --- LINE: [77]
+Start of optuna opitmization process...
+[ 2026-09-13 16:56:18,233 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-13 16:56:18,723 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-13 16:56:18,730 ] ::: INFO ::: FILE [root] --- LINE: [109]
+MRI lightning module successfully initialized
+[ 2026-09-13 16:56:18,730 ] ::: INFO ::: FILE [root] --- LINE: [47]
+MRI lightning data module successfully initialized
+[ 2026-09-13 16:56:21,358 ] ::: ERROR ::: FILE [root] --- LINE: [20]
+SOME TROUBLES WITH STAGE [METADATA FORMATION STAGE]
+[ 2026-09-13 17:54:54,138 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 17:54:54,142 ] ::: INFO ::: FILE [root] --- LINE: [13]
+
+----------------stage [METADATA FORMATION STAGE] started--------------------------
+[ 2026-09-13 17:54:54,142 ] ::: INFO ::: FILE [root] --- LINE: [120]
+Model creation entity successfully created
+[ 2026-09-13 17:54:56,102 ] ::: INFO ::: FILE [root] --- LINE: [77]
+Start of optuna opitmization process...
+[ 2026-09-13 17:54:56,258 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-13 17:54:56,785 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-13 17:54:56,794 ] ::: INFO ::: FILE [root] --- LINE: [109]
+MRI lightning module successfully initialized
+[ 2026-09-13 17:54:56,794 ] ::: INFO ::: FILE [root] --- LINE: [47]
+MRI lightning data module successfully initialized
+[ 2026-09-13 17:55:11,332 ] ::: ERROR ::: FILE [root] --- LINE: [20]
+SOME TROUBLES WITH STAGE [METADATA FORMATION STAGE]
+[ 2026-09-13 18:03:05,943 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 18:03:05,946 ] ::: INFO ::: FILE [root] --- LINE: [13]
+
+----------------stage [METADATA FORMATION STAGE] started--------------------------
+[ 2026-09-13 18:03:05,946 ] ::: INFO ::: FILE [root] --- LINE: [120]
+Model creation entity successfully created
+[ 2026-09-13 18:03:06,420 ] ::: INFO ::: FILE [root] --- LINE: [77]
+Start of optuna opitmization process...
+[ 2026-09-13 18:03:06,563 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-13 18:03:06,965 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-13 18:03:06,969 ] ::: INFO ::: FILE [root] --- LINE: [109]
+MRI lightning module successfully initialized
+[ 2026-09-13 18:03:06,969 ] ::: INFO ::: FILE [root] --- LINE: [47]
+MRI lightning data module successfully initialized
+[ 2026-09-13 18:03:08,476 ] ::: ERROR ::: FILE [root] --- LINE: [20]
+SOME TROUBLES WITH STAGE [METADATA FORMATION STAGE]
+[ 2026-09-13 18:15:23,943 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 18:15:23,946 ] ::: INFO ::: FILE [root] --- LINE: [13]
+
+----------------stage [METADATA FORMATION STAGE] started--------------------------
+[ 2026-09-13 18:15:23,947 ] ::: INFO ::: FILE [root] --- LINE: [120]
+Model creation entity successfully created
+[ 2026-09-13 18:15:24,593 ] ::: INFO ::: FILE [root] --- LINE: [77]
+Start of optuna opitmization process...
+[ 2026-09-13 18:15:24,735 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-13 18:15:24,846 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-13 18:15:24,851 ] ::: INFO ::: FILE [root] --- LINE: [109]
+MRI lightning module successfully initialized
+[ 2026-09-13 18:15:24,852 ] ::: INFO ::: FILE [root] --- LINE: [47]
+MRI lightning data module successfully initialized
+[ 2026-09-13 18:15:25,952 ] ::: ERROR ::: FILE [root] --- LINE: [20]
+SOME TROUBLES WITH STAGE [METADATA FORMATION STAGE]
+[ 2026-09-13 18:41:14,685 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-13 18:41:14,688 ] ::: INFO ::: FILE [root] --- LINE: [13]
+
+----------------stage [METADATA FORMATION STAGE] started--------------------------
+[ 2026-09-13 18:41:14,689 ] ::: INFO ::: FILE [root] --- LINE: [120]
+Model creation entity successfully created
+[ 2026-09-13 18:41:15,337 ] ::: INFO ::: FILE [root] --- LINE: [77]
+Start of optuna opitmization process...
+[ 2026-09-13 18:41:15,457 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-13 18:41:15,468 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-13 18:41:15,472 ] ::: INFO ::: FILE [root] --- LINE: [109]
+MRI lightning module successfully initialized
+[ 2026-09-13 18:41:15,472 ] ::: INFO ::: FILE [root] --- LINE: [47]
+MRI lightning data module successfully initialized
+[ 2026-09-13 18:41:16,591 ] ::: ERROR ::: FILE [root] --- LINE: [20]
+SOME TROUBLES WITH STAGE [METADATA FORMATION STAGE]

@@ -14,7 +14,7 @@ class OptunaModelSelectionComponent:
                                          storage = config.optuna_database_url, 
                                          direction='minimize', load_if_exists=True)
         self.config = config
-        self.counter = 0
+        self.counter = 23
         
 
     def _objective(self, trial: optuna.Trial):
@@ -79,6 +79,6 @@ class OptunaModelSelectionComponent:
     
     def __call__(self):
         logger.logging.info('Start of optuna opitmization process...')
-        self.study.optimize(lambda trial: self._objective(trial), n_trials=self.config.n_trials, show_progress_bar = True)
+        self.study.optimize(lambda trial: self._objective(trial), n_trials=self.config.n_trials, show_progress_bar = True, timeout = 21100)
         self.counter = 0
         logger.logging.info('Optuna optimization successfully finished')
