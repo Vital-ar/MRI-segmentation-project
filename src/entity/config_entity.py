@@ -10,7 +10,7 @@ from torch.utils.data import DataLoader
 from src.logging import logger
 if os.environ.get('KAGGLE_KERNEL_RUN_TYPE', None) is not None:
     from src.constants.kaggle import *
-    import torch_xla.core.xla_model as xm
+    
 
 else:
     from src.constants.local import *
@@ -148,8 +148,8 @@ class ModelCreationEntity:
             num = torch.cuda.device_count()
 
         elif self.accelerator == 'tpu':
-            if os.environ.get('KAGGLE_KERNEL_RUN_TYPE', None) is not None:
-                num = len(xm.get_xla_supported_devices())
+            import torch_xla.core.xla_model as xm
+            num = len(xm.get_xla_supported_devices())
 
         else:
             num = torch.cpu.device_count()
@@ -177,8 +177,8 @@ class ModelCreationEntity:
             device = torch.device('cuda')
 
         elif self.accelerator == 'tpu':
-                    if os.environ.get('KAGGLE_KERNEL_RUN_TYPE', None) is not None:
-                        device = xm.xla_device()
+            import torch_xla.core.xla_model as xm
+            device = xm.xla_device()
 
         else:
             device = torch.device('cpu')
@@ -275,8 +275,9 @@ class ModelCreationEntity:
             device = torch.device('cuda')
 
         elif self.accelerator == 'tpu':
-            if os.environ.get('KAGGLE_KERNEL_RUN_TYPE', None) is not None:
-                device = xm.xla_device()
+          
+            import torch_xla.core.xla_model as xm
+            device = xm.xla_device()
 
         else:
             device = torch.device('cpu')
