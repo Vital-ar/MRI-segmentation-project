@@ -66,7 +66,7 @@ class ModelCreationEntity:
                  safety_batch =True):'''
 
     def __init__(self,
-                 safety_batch =True):#!set to true
+                 safety_batch =False):#!set to true
 
 
         self.lr = LEARNING_RATE
@@ -147,9 +147,9 @@ class ModelCreationEntity:
         if self.accelerator == 'gpu':
             num = torch.cuda.device_count()
 
-        elif self.accelerator == 'tpu':
-            import torch_xla.core.xla_model as xm
-            num = len(xm.get_xla_supported_devices())
+        #elif self.accelerator == 'tpu':
+            #import torch_xla.core.xla_model as xm
+            #num = len(xm.get_xla_supported_devices())
 
         else:
             num = torch.cpu.device_count()
@@ -176,16 +176,16 @@ class ModelCreationEntity:
         if self.accelerator == 'gpu':
             device = torch.device('cuda')
 
-        elif self.accelerator == 'tpu':
-            import torch_xla.core.xla_model as xm
-            device = xm.xla_device()
+        #elif self.accelerator == 'tpu':
+            #import torch_xla.core.xla_model as xm
+            #device = xm.xla_device()
 
         else:
             device = torch.device('cpu')
 
         was_better = True
 
-        device = xm.xla_device()
+        #device = xm.xla_device()
         best_time = float('inf')
         best_worker = 0
 
@@ -274,10 +274,10 @@ class ModelCreationEntity:
         if self.accelerator == 'gpu':
             device = torch.device('cuda')
 
-        elif self.accelerator == 'tpu':
+        #elif self.accelerator == 'tpu':
           
-            import torch_xla.core.xla_model as xm
-            device = xm.xla_device()
+            #import torch_xla.core.xla_model as xm
+            #device = xm.xla_device()
 
         else:
             device = torch.device('cpu')
