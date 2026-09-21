@@ -10,12 +10,17 @@ from torch.utils.data import DataLoader
 from src.logging import logger
 if os.environ.get('KAGGLE_KERNEL_RUN_TYPE', None) is not None:
     from src.constants.kaggle import *
+    import torch_xla.core.xla_model as xm
 
 else:
     from src.constants.local import *
 from src.components.optuna_model_selection.dataset import MRIDataset
 from src.components.optuna_model_selection.model import MRIFlexAttentionUNet
 from tqdm.auto import tqdm
+from lightning.pytorch.accelerators import TPUAccelerator
+
+
+
 
 
 
@@ -31,7 +36,6 @@ class MetaDataEntity:
         self.processed_data_dir = PREPROCESSED_DATA_DIR
 
         logger.logging.info('Metadata entity successfully created')
-        
 
 
 
@@ -79,7 +83,8 @@ class ModelCreationEntity:
         self.random_state = RANDOM_STATE
         self.model_name = MODEL_NAME
         self.checkpoint_dir = CHECKPOINT_DIR
-        self.num_epochs = NUM_EPOCHS
+        self.optuna_epochs = OPTUNA_EPOCHS
+        self.final_epochs = FINAL_EPOCHS
         self.n_trials = NUMBER_OPTUNA_TRIALS
         self.mlflow_database_url = MLFLOW_DATABASE_URL
         self.optuna_database_url = OPTUNA_DATABASE_URL
@@ -128,7 +133,9 @@ class ModelCreationEntity:
 
     def accelerator_test(self):
         logger.logging.info(f'accelerator not passed as argument.')
-        device = 'gpu' if torch.cuda.is_available() else 'cpu'
+        device = 'gpu' if torch.cuda.is_available() else None
+        if not device:
+            device = 'tpu' if TPUAccelerator.is_available() else 'cpu'
         logger.logging.info(f'Tested accelerator: {device}')
         print(f'Tested accelerator: {device}')
         return device
@@ -139,6 +146,11 @@ class ModelCreationEntity:
         logger.logging.info(f'Number of devices not passed as argument.')
         if self.accelerator == 'gpu':
             num = torch.cuda.device_count()
+
+        elif self.accelerator == 'tpu':
+            if os.environ.get('KAGGLE_KERNEL_RUN_TYPE', None) is not None:
+                num = len(xm.get_xla_supported_devices())
+
         else:
             num = torch.cpu.device_count()
         logger.logging.info(f'Tested number of devices: {num}')
@@ -164,12 +176,16 @@ class ModelCreationEntity:
         if self.accelerator == 'gpu':
             device = torch.device('cuda')
 
+        elif self.accelerator == 'tpu':
+                    if os.environ.get('KAGGLE_KERNEL_RUN_TYPE', None) is not None:
+                        device = xm.xla_device()
+
         else:
             device = torch.device('cpu')
 
         was_better = True
 
-        
+        device = xm.xla_device()
         best_time = float('inf')
         best_worker = 0
 
@@ -257,9 +273,14 @@ class ModelCreationEntity:
         logger.logging.info(f'Batch size of {self.batch_size} . Checking whether it is valid...')
         if self.accelerator == 'gpu':
             device = torch.device('cuda')
+
+        elif self.accelerator == 'tpu':
+            if os.environ.get('KAGGLE_KERNEL_RUN_TYPE', None) is not None:
+                device = xm.xla_device()
+
         else:
             device = torch.device('cpu')
-            
+        print(f'------------------------------------------------{device}')
         model = MRIFlexAttentionUNet(self.inp_channels, 64, self.num_classes, 4, 3, 3, 5 ).to(device) #established max model hyperparameters
         
         model.train()

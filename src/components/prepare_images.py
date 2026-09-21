@@ -11,7 +11,6 @@ import os
 
 
 
-
 class ImagePreparation:
     def __init__(self, conf: ImagePrepEntity):
         self.conf = conf
@@ -135,7 +134,30 @@ class ImagePreparation:
             raise e
                 
 
+    def add_data(self,old_data_path, new_data_path, destination_path = None):
 
+        try:
+            new_df = pd.read_csv(new_data_path)
+            old_df = pd.read_csv(old_data_path)
+            new_df = pd.concat([new_df, old_df], axis = 0, ignore_index= True)
+
+            if old_df.columns == new_df.columns:
+
+                if not destination_path:
+                    destination_path = old_data_path
+
+                new_df.to_csv(destination_path, index = False)
+                
+                logger.logging.info(f'the new data from {new_data_path} successfully added to {destination_path}')
+            else:
+                logger.logging.error(f'collumns does not match with data in {old_data_path} \nEnsure the structure of your new data {new_data_path}')
+                raise FileNotFoundError
+
+        except Exception as e:
+            logger.logging.error(e)
+            raise e
+                
+            
 
 
         
