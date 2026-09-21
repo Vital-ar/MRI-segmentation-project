@@ -79,6 +79,6 @@ class OptunaModelSelectionComponent:
     
     def __call__(self):
         logger.logging.info('Start of optuna opitmization process...')
-        self.study.optimize(lambda trial: self._objective(trial), n_trials=self.config.n_trials, show_progress_bar = True, timeout = 21100)
+        self.study.optimize(lambda trial: self._objective(trial), n_trials=self.config.n_trials, show_progress_bar = True, timeout = 20650)
         self.counter = 0
         logger.logging.info('Optuna optimization successfully finished')
