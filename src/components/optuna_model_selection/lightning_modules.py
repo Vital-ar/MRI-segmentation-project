@@ -58,13 +58,13 @@ class MRIDataModule(pl.LightningDataModule):
         
 
     def train_dataloader(self):
-        return DataLoader(self.train_ds, self.batch_size, shuffle = True, num_workers=self.num_workers)
+        return DataLoader(self.train_ds, self.batch_size, shuffle = True, num_workers=self.num_workers, drop_last=True)#! only for tpu drop_last=True
 
     def val_dataloader(self):
-        return DataLoader(self.dev_ds, self.batch_size, shuffle = False, num_workers=self.num_workers)
+        return DataLoader(self.dev_ds, self.batch_size, shuffle = False, num_workers=self.num_workers, drop_last=True)
     
     def test_dataloader(self):
-        return DataLoader(self.test_ds, self.batch_size, shuffle = False, num_workers=self.num_workers)
+        return DataLoader(self.test_ds, self.batch_size, shuffle = False, num_workers=self.num_workers, drop_last=True)
 
 
 
