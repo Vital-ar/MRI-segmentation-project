@@ -131,7 +131,7 @@ class ModelTrainer:
              enable_progress_bar = True,
              enable_model_summary = True)
         logger.logging.info(f'MRI model lightning trainer successfully initialized')
-        self.trainer.fit(self.model, self.data_module, self.ckpt_path)
+        self.trainer.fit(self.model, self.data_module, ckpt_path=self.ckpt_path)
 
       
         with open(self.best_val_loss_path, "r") as f:
