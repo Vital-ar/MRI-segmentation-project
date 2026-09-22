@@ -21,3 +21,76 @@ Seed set to 42
 ----------------stage [MODEL SELECTION STAGE] started--------------------------
 [ 2026-09-22 22:01:30,235 ] ::: ERROR ::: FILE [root] --- LINE: [25]
 SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-22 22:03:09,686 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-22 22:03:09,690 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-22 22:03:10,080 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-22 22:03:40,835 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-22 22:03:40,839 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-22 22:03:41,257 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-22 22:03:55,943 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-22 22:03:55,946 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-22 22:03:56,343 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-22 22:04:41,928 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-22 22:04:41,931 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-22 22:04:42,304 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-22 22:04:42,326 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-22 22:07:16,367 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-22 22:07:16,370 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-22 22:07:16,737 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-22 22:07:16,740 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-22 22:11:52,014 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-22 22:11:52,018 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-22 22:11:52,385 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-22 22:11:52,501 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-22 22:11:52,522 ] ::: INFO ::: FILE [root] --- LINE: [119]
+MRI lightning module successfully initialized
+[ 2026-09-22 22:11:52,522 ] ::: INFO ::: FILE [root] --- LINE: [47]
+MRI lightning data module successfully initialized
+[ 2026-09-22 22:11:52,531 ] ::: INFO ::: FILE [root] --- LINE: [75]
+MRI model trainer successfully initialized
+[ 2026-09-22 22:11:52,532 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-22 22:12:36,482 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-22 22:12:36,485 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-22 22:12:36,878 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-22 22:12:36,995 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-22 22:12:37,004 ] ::: INFO ::: FILE [root] --- LINE: [119]
+MRI lightning module successfully initialized
+[ 2026-09-22 22:12:37,004 ] ::: INFO ::: FILE [root] --- LINE: [47]
+MRI lightning data module successfully initialized
+[ 2026-09-22 22:12:37,007 ] ::: INFO ::: FILE [root] --- LINE: [75]
+MRI model trainer successfully initialized
+[ 2026-09-22 22:12:37,007 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]

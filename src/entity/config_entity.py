@@ -356,7 +356,7 @@ class SelectedModelsCreationEntity:
         self.epochs = V2_EPOCHS
         self.mlflow_database_url = MLFLOW_DATABASE_URL
         self.labels = LABELS
-
+        self.index = index
         self.dev_transform = v2.Compose([
             v2.Resize(256),
             v2.CenterCrop(256)
@@ -383,14 +383,23 @@ class SelectedModelsCreationEntity:
 
             
 
-        self.first_conv_out_channels = df.iloc[index]['params_first_conv_out_channels']
-        self.depth = df.iloc[index]['params_depth']
-        self.n_encoder_conv_layers=df.iloc[index]['params_n_encoder_conv_layers']
-        self.n_decoder_conv_layers = df.iloc[index]['params_n_decoder_conv_layers']
-        self.kernel_sizes = [df.iloc[index][f'params_kernel_sizes_{x}'] for x in range(self.depth*2)]
+        self.first_conv_out_channels = int(df.iloc[index]['params_first_conv_out_channels'])
+        self.depth = int(df.iloc[index]['params_depth'])
+        self.n_encoder_conv_layers=int(df.iloc[index]['params_n_encoder_conv_layers'])
+        self.n_decoder_conv_layers = int(df.iloc[index]['params_n_decoder_conv_layers'])
+        self.kernel_sizes = [int(df.iloc[index][f'params_kernel_sizes_{x}']) for x in range(self.depth*2)]
         self.empty_mri_ratio = df.iloc[index]['params_empty_mri_ratio']
         self.lr = df.iloc[index]['params_learning_rate_start']
         self.w=df.iloc[index]['params_weight decay']
         self.ckpt_inp_model_pathes=Path(f'models/v2_inp/model_{index}.ckpt')
+        print(self.first_conv_out_channels,
+                self.depth,
+                self.n_encoder_conv_layers,
+                self.n_decoder_conv_layers,
+                self.kernel_sizes,
+                self.empty_mri_ratio,
+                self.lr,
+                self.w,
+                self.ckpt_inp_model_pathes)
 
             

@@ -35,14 +35,14 @@ class V2TtrainingComponent:
             dev_transform=self.config.dev_transform,
             train_empty_mri_ratio = self.config.empty_mri_ratio, 
             random_state=self.config.random_state,
-            model_name = f'{self.config.model_name}-{self.convig.index}',
+            model_name = f'{self.config.model_name}-{self.config.index}',
             database_url=self.config.mlflow_database_url,
             checkpoint_dir= self.config.checkpoint_dir
         )
 
         
         best_val_loss = model_trainer(
-            num_epochs = self.config.optuna_epochs,
+            num_epochs = self.config.epochs,
             accelerator= self.config.accelerator, # defined by test in config entity
             devices = self.config.devices # defined by test in config entity
         )
