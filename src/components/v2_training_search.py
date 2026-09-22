@@ -10,9 +10,7 @@ from src.logging import logger
 class V2TtrainingComponent:
     def __init__(self, config: SelectedModelsCreationEntity):
 
-        self.study = optuna.create_study(study_name='mri_unet_optuna_search_v2-1: more models less epochs', 
-                                         storage = config.optuna_database_url, 
-                                         direction='minimize', load_if_exists=True)
+       
         self.config = config
         self.counter = 27
         
