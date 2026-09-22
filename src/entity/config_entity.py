@@ -344,8 +344,8 @@ class SelectedModelsCreationEntity:
         self.inp_channels = INPUT_CHANNELS
         self.num_classes = NUM_CLASSES
         self.batch_size = BATCH_SIZE
-        self.accelerator = ACCELERATOR
-        self.devices = DEVICES
+        #self.accelerator = ACCELERATOR
+        #self.devices = DEVICES
         self.num_workers = NUM_WORKERS
         self.train_csv = TRAIN_CSV
         self.dev_csv = DEV_CSV
@@ -379,16 +379,15 @@ class SelectedModelsCreationEntity:
 
         df = df[df['value'].notna()]
         df = df.sort_values(axis = 0, by = 'value', ignore_index=True )
-        df = df.sort_valu
         df = df.drop(['datetime_start', 'datetime_complete', 'duration'],axis = 1)
 
             
 
         self.first_conv_out_channels = df.iloc[index]['params_first_conv_out_channels']
-        self.depth_arr = df.iloc[index]['depth']
+        self.depth_arr = df.iloc[index]['params_depth']
         self.n_encoder_conv_layers=df.iloc[index]['params_n_encoder_conv_layers']
         self.n_decoder_conv_layers = df.iloc[index]['params_n_decoder_conv_layers']
-        self.kernel_sizes = [df.iloc[index][f'params_kernel_sizes_{x}'] for x in range(self.depth_arr[-1]*2)]
+        self.kernel_sizes = [df.iloc[index][f'params_kernel_sizes_{x}'] for x in range(self.depth*2)]
         self.empty_mri_ratio = df.iloc[index]['params_empty_mri_ratio']
         self.lr = df.iloc[index]['params_learning_rate_start']
         self.w=df.iloc[index]['params_weight decay']

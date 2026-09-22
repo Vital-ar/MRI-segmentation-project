@@ -178,7 +178,7 @@ class MRIModule(pl.LightningModule):
     def configure_optimizers(self):
 
         optimizer = optim.AdamW(self.parameters(), lr = self.hparams.learning_rate, weight_decay = self.hparams.weight_decay)
-        scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode = 'max', factor = 0.1, patience = 2)#! 5
+        scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode = 'max', factor = 0.1, patience = 3)#! 5
 
         return {
             "optimizer": optimizer,
