@@ -106,7 +106,7 @@ class ModelTrainer:
     def _get_def_loggers(self):
 
             self.logger = MLFlowLogger(
-                experiment_name="MRI_Segmentation_v2-1",
+                experiment_name="MRI_Segmentation_v2-2",
                 tracking_uri=self.database_url, 
                 run_name=self.model_name,
                 log_model=True 
