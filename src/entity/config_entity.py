@@ -384,7 +384,7 @@ class SelectedModelsCreationEntity:
             
 
         self.first_conv_out_channels = df.iloc[index]['params_first_conv_out_channels']
-        self.depth_arr = df.iloc[index]['params_depth']
+        self.depth = df.iloc[index]['params_depth']
         self.n_encoder_conv_layers=df.iloc[index]['params_n_encoder_conv_layers']
         self.n_decoder_conv_layers = df.iloc[index]['params_n_decoder_conv_layers']
         self.kernel_sizes = [df.iloc[index][f'params_kernel_sizes_{x}'] for x in range(self.depth*2)]

@@ -1,0 +1,16 @@
+[ 2026-09-22 21:55:27,275 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-22 21:56:16,443 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-22 21:56:16,447 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-22 21:56:16,447 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-22 21:57:53,170 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-22 21:57:53,173 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-22 21:57:53,636 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
