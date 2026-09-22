@@ -14,7 +14,7 @@ class V2TtrainingComponent:
         self.config = config
         self.counter = 27
         
-        model_trainer = ModelTrainer(
+        self.model_trainer = ModelTrainer(
             trial = None,
             learning_rate = self.config.lr,
             weight_decay = self.config.w,                     
@@ -47,7 +47,7 @@ class V2TtrainingComponent:
     
     def __call__(self):
         logger.logging.info('Start of optuna opitmization process...')
-        best_val_loss = model_trainer(
+        best_val_loss = self.model_trainer(
             num_epochs = self.config.optuna_epochs,
             accelerator= self.config.accelerator, # defined by test in config entity
             devices = self.config.devices # defined by test in config entity
@@ -55,10 +55,6 @@ class V2TtrainingComponent:
         logger.logging.info(f'model {self.config.model_name}-{self.config.index} successfully trained')
                 
                 
-        del model_trainer
-        gc.collect()
-        if torch.cuda.is_available():
-            torch.cuda.empty_cache()
+        
                 
         
-        logger.logging.info('Optuna optimization successfully finished')
