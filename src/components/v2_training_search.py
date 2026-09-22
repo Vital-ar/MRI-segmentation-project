@@ -37,7 +37,8 @@ class V2TtrainingComponent:
             random_state=self.config.random_state,
             model_name = f'{self.config.model_name}-{self.config.index}',
             database_url=self.config.mlflow_database_url,
-            checkpoint_dir= self.config.checkpoint_dir
+            checkpoint_dir= self.config.checkpoint_dir,
+            ckpt_path= self.config.ckpt_inp_model_pathes
         )
 
         
