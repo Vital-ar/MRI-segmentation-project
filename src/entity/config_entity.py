@@ -344,8 +344,8 @@ class SelectedModelsCreationEntity:
         self.inp_channels = INPUT_CHANNELS
         self.num_classes = NUM_CLASSES
         self.batch_size = BATCH_SIZE
-        #self.accelerator = ACCELERATOR
-        #self.devices = DEVICES
+        self.accelerator = ACCELERATOR
+        self.devices = DEVICES
         self.num_workers = NUM_WORKERS
         self.train_csv = TRAIN_CSV
         self.dev_csv = DEV_CSV

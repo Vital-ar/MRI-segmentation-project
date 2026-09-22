@@ -94,3 +94,36 @@ MRI lightning data module successfully initialized
 MRI model trainer successfully initialized
 [ 2026-09-22 22:12:37,007 ] ::: ERROR ::: FILE [root] --- LINE: [25]
 SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-22 22:14:24,703 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-22 22:14:24,706 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-22 22:14:25,072 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-22 22:14:25,191 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-22 22:14:25,201 ] ::: INFO ::: FILE [root] --- LINE: [119]
+MRI lightning module successfully initialized
+[ 2026-09-22 22:14:25,201 ] ::: INFO ::: FILE [root] --- LINE: [47]
+MRI lightning data module successfully initialized
+[ 2026-09-22 22:14:25,204 ] ::: INFO ::: FILE [root] --- LINE: [75]
+MRI model trainer successfully initialized
+[ 2026-09-22 22:14:25,230 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [164]
+GPU available: False, used: False
+[ 2026-09-22 22:14:25,230 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [167]
+TPU available: False, using: 0 TPU cores
+[ 2026-09-22 22:14:25,231 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [91]
+\U0001f4a1 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+[ 2026-09-22 22:14:25,233 ] ::: INFO ::: FILE [root] --- LINE: [133]
+MRI model lightning trainer successfully initialized
+[ 2026-09-22 22:14:37,284 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-22 22:14:37,522 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-22 22:14:37,522 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-22 22:14:37,536 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-22 22:14:53,115 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
