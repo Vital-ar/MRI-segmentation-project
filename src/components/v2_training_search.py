@@ -42,14 +42,6 @@ class V2TtrainingComponent:
         )
 
         
-        best_val_loss = model_trainer(
-            num_epochs = self.config.epochs,
-            accelerator= self.config.accelerator, # defined by test in config entity
-            devices = self.config.devices # defined by test in config entity
-        )
-        logger.logging.info(f'model {self.config.model_name}-{self.config.index} successfully trained')
-
-        
         
     
     
