@@ -48,7 +48,7 @@ class V2TtrainingComponent:
     def __call__(self):
         logger.logging.info('Start of optuna opitmization process...')
         best_val_loss = self.model_trainer(
-            num_epochs = self.config.optuna_epochs,
+            num_epochs = self.config.epochs,
             accelerator= self.config.accelerator, # defined by test in config entity
             devices = self.config.devices # defined by test in config entity
         )
