@@ -51,16 +51,7 @@ class V2TtrainingComponent:
 
         
         
-        
-        del model_trainer
-        gc.collect()
-        if torch.cuda.is_available():
-            torch.cuda.empty_cache()
-
-        
-
-        return best_val_loss
-
+    
     
     def __call__(self):
         logger.logging.info('Start of optuna opitmization process...')
