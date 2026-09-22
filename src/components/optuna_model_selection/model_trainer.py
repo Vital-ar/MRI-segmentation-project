@@ -40,7 +40,8 @@ class ModelTrainer:
                  random_state = 42, 
                  model_name = 'unet',
                  database_url="sqlite:///mlflow.db",#!
-                 checkpoint_dir = '/models/checkpoints'):
+                 checkpoint_dir = '/models/checkpoints',
+                 ckpt_path = None):
 
         self.model = MRIModule(learning_rate, 
                                weight_decay, 
@@ -70,7 +71,7 @@ class ModelTrainer:
         self.trial = trial
         self._get_def_callbacks()
         self._get_def_loggers()
-
+        self.ckpt_path = ckpt_path
         logger.logging.info(f'MRI model trainer successfully initialized')
 
 
@@ -121,16 +122,16 @@ class ModelTrainer:
         ):
 
         self.trainer = pl.Trainer(#max_epochs=1,limit_train_batches=1, limit_val_batches=1, #!delete for real run
-             accelerator = accelerator, 
-             devices = devices,
-             #strategy='ddp_spawn',
+             accelerator = 'auto', #!accelerator, 
+             devices ='auto',#! devices,
+             #strategy='ddp_spawn', #* uncoment
              logger = self.logger,
              callbacks = self.callbacks,  
              max_epochs = num_epochs, #* uncoment 
              enable_progress_bar = True,
              enable_model_summary = True)
         logger.logging.info(f'MRI model lightning trainer successfully initialized')
-        self.trainer.fit(self.model, self.data_module)
+        self.trainer.fit(self.model, self.data_module, self.ckpt_path)
 
       
         with open(self.best_val_loss_path, "r") as f:

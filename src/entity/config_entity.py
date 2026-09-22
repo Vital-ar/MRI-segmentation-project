@@ -19,7 +19,7 @@ from src.components.optuna_model_selection.model import MRIFlexAttentionUNet
 from tqdm.auto import tqdm
 from lightning.pytorch.accelerators import TPUAccelerator
 
-
+import optuna
 
 
 
@@ -334,4 +334,64 @@ class ModelCreationEntity:
 
 
 
- 
+
+
+class SelectedModelsCreationEntity:
+
+
+    def __init__(self, index):
+  
+        self.inp_channels = INPUT_CHANNELS
+        self.num_classes = NUM_CLASSES
+        self.batch_size = BATCH_SIZE
+        self.accelerator = ACCELERATOR
+        self.devices = DEVICES
+        self.num_workers = NUM_WORKERS
+        self.train_csv = TRAIN_CSV
+        self.dev_csv = DEV_CSV
+        self.test_csv = TEST_CSV
+        self.random_state = RANDOM_STATE
+        self.model_name = MODEL_NAME
+        self.checkpoint_dir = CHECKPOINT_V2_DIR
+        self.epochs = V2_EPOCHS
+        self.mlflow_database_url = MLFLOW_DATABASE_URL
+        self.labels = LABELS
+
+        self.dev_transform = v2.Compose([
+            v2.Resize(256),
+            v2.CenterCrop(256)
+            ])
+        
+        
+        self.train_transform = v2.Compose([
+            v2.Resize(280),
+            v2.RandomCrop(256),
+            v2.RandomHorizontalFlip(0.5),
+            v2.RandomVerticalFlip(0.5),
+            v2.RandomRotation(15),
+            v2.RandomApply([v2.ElasticTransform()], p=0.5),
+            v2.RandomApply([v2.ColorJitter(brightness=0.2, contrast=0.2)], p=0.5)
+            ])
+        
+
+        study = optuna.load_study(study_name='mri_unet_optuna_search_v2-1: more models less epochs', storage = OPTUNA_DATABASE_URL)
+        df = study.trials_dataframe()
+
+        df = df[df['value'].notna()]
+        df = df.sort_values(axis = 0, by = 'value', ignore_index=True )
+        df = df.sort_valu
+        df = df.drop(['datetime_start', 'datetime_complete', 'duration'],axis = 1)
+
+            
+
+        self.first_conv_out_channels = df.iloc[index]['params_first_conv_out_channels']
+        self.depth_arr = df.iloc[index]['depth']
+        self.n_encoder_conv_layers=df.iloc[index]['params_n_encoder_conv_layers']
+        self.n_decoder_conv_layers = df.iloc[index]['params_n_decoder_conv_layers']
+        self.kernel_sizes = [df.iloc[index][f'params_kernel_sizes_{x}'] for x in range(self.depth_arr[-1]*2)]
+        self.empty_mri_ratio = df.iloc[index]['params_empty_mri_ratio']
+        self.lr = df.iloc[index]['params_learning_rate_start']
+        self.w=df.iloc[index]['params_weight decay']
+        self.ckpt_inp_model_pathes=Path(f'models/v2_inp/model_{index}.ckpt')
+
+            
