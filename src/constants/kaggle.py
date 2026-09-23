@@ -49,7 +49,7 @@ LABELS = {
 
 
 CHECKPOINT_V2_DIR = Path('models', 'v2_out') 
-V2_EPOCHS = 6
+V2_EPOCHS = 30
 
 
 
