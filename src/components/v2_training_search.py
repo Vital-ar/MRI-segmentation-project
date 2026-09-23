@@ -1,8 +1,7 @@
 import optuna
 from src.components.optuna_model_selection.model_trainer import ModelTrainer
 from src.entity.config_entity import SelectedModelsCreationEntity
-import gc
-import torch
+
 from src.logging import logger
 
 
@@ -12,7 +11,7 @@ class V2TtrainingComponent:
 
        
         self.config = config
-        self.counter = 27
+        
         
         self.model_trainer = ModelTrainer(
             trial = None,
@@ -38,7 +37,8 @@ class V2TtrainingComponent:
             model_name = f'{self.config.model_name}-{self.config.index}',
             database_url=self.config.mlflow_database_url,
             checkpoint_dir= self.config.checkpoint_dir,
-            ckpt_path= self.config.ckpt_inp_model_pathes
+            ckpt_path= self.config.ckpt_inp_model_pathes,
+            drop_last_batch = self.config.drop_last_batch
         )
 
         
@@ -50,7 +50,8 @@ class V2TtrainingComponent:
         best_val_loss = self.model_trainer(
             num_epochs = self.config.epochs,
             accelerator= self.config.accelerator, # defined by test in config entity
-            devices = self.config.devices # defined by test in config entity
+            devices = self.config.devices, # defined by test in config entity
+            strategy= self.config.strategy,
         )
         logger.logging.info(f'model {self.config.model_name}-{self.config.index} successfully trained')
                 

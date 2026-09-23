@@ -41,7 +41,8 @@ class ModelTrainer:
                  model_name = 'unet',
                  database_url="sqlite:///mlflow.db",#!
                  checkpoint_dir = '/models/checkpoints',
-                 ckpt_path = None):
+                 ckpt_path = None,
+                 drop_last_batch = False):
 
         self.model = MRIModule(learning_rate, 
                                weight_decay, 
@@ -61,7 +62,8 @@ class ModelTrainer:
                                          dev_transform, 
                                          num_workers, 
                                          train_empty_mri_ratio, 
-                                         random_state)
+                                         random_state,
+                                         drop_last_batch)
 
         self.model_name = model_name
         self.checkpoint_dir = checkpoint_dir
@@ -118,13 +120,14 @@ class ModelTrainer:
             self,
             num_epochs = 50,
             accelerator = 'auto',
-            devices = 1
+            devices = 1,
+            strategy = 'auto'
         ):
 
         self.trainer = pl.Trainer(#max_epochs=1,limit_train_batches=1, limit_val_batches=1, #!delete for real run
              accelerator = accelerator, 
              devices = devices,
-             #strategy='ddp_spawn', #* uncoment
+             strategy = strategy,
              logger = self.logger,
              callbacks = self.callbacks,  
              max_epochs = num_epochs, #* uncoment 

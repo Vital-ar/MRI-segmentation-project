@@ -16,6 +16,7 @@ else:
     from src.constants.local import *
 from src.components.optuna_model_selection.dataset import MRIDataset
 from src.components.optuna_model_selection.model import MRIFlexAttentionUNet
+from src.components.optuna_model_selection.lightning_modules import MRIModule
 from tqdm.auto import tqdm
 from lightning.pytorch.accelerators import TPUAccelerator
 
@@ -66,7 +67,7 @@ class ModelCreationEntity:
                  safety_batch =True):'''
 
     def __init__(self,
-                 safety_batch =False):#!set to true
+                 safety_batch =True):#!set to true
 
 
         self.lr = LEARNING_RATE
@@ -122,7 +123,18 @@ class ModelCreationEntity:
         
         if self.num_workers is None:
             self.num_workers, _ = self.num_workers_test()
-        
+
+        if self.accelerator == 'tpu':
+            self.drop_last_batch = True
+        else:
+            self.drop_last_batch = False
+
+
+
+        if self.accelerator == 'gpu':
+            self.strategy = GPU_DDP
+        else:
+            self.strategy = 'auto'
 
 
         
@@ -281,7 +293,7 @@ class ModelCreationEntity:
 
         else:
             device = torch.device('cpu')
-        print(f'------------------------------------------------{device}')
+        
         model = MRIFlexAttentionUNet(self.inp_channels, 64, self.num_classes, 4, 3, 3, 5 ).to(device) #established max model hyperparameters
         
         model.train()
@@ -336,44 +348,17 @@ class ModelCreationEntity:
 
 
 
-class SelectedModelsCreationEntity:
+class SelectedModelsCreationEntity(ModelCreationEntity):
 
 
     def __init__(self, index):
-  
-        self.inp_channels = INPUT_CHANNELS
-        self.num_classes = NUM_CLASSES
-        self.batch_size = BATCH_SIZE
-        self.accelerator = ACCELERATOR
-        self.devices = DEVICES
-        self.num_workers = NUM_WORKERS
-        self.train_csv = TRAIN_CSV
-        self.dev_csv = DEV_CSV
-        self.test_csv = TEST_CSV
-        self.random_state = RANDOM_STATE
-        self.model_name = MODEL_NAME
+        super().__init__(safety_batch=False)
+        
         self.checkpoint_dir = CHECKPOINT_V2_DIR
         self.epochs = V2_EPOCHS
-        self.mlflow_database_url = MLFLOW_DATABASE_URL
-        self.labels = LABELS
+        
         self.index = index
-        self.dev_transform = v2.Compose([
-            v2.Resize(256),
-            v2.CenterCrop(256)
-            ])
         
-        
-        self.train_transform = v2.Compose([
-            v2.Resize(280),
-            v2.RandomCrop(256),
-            v2.RandomHorizontalFlip(0.5),
-            v2.RandomVerticalFlip(0.5),
-            v2.RandomRotation(15),
-            v2.RandomApply([v2.ElasticTransform()], p=0.5),
-            v2.RandomApply([v2.ColorJitter(brightness=0.2, contrast=0.2)], p=0.5)
-            ])
-        
-
         study = optuna.load_study(study_name='mri_unet_optuna_search_v2-1: more models less epochs', storage = OPTUNA_DATABASE_URL)
         df = study.trials_dataframe()
 
@@ -392,14 +377,38 @@ class SelectedModelsCreationEntity:
         self.lr = df.iloc[index]['params_learning_rate_start']
         self.w=df.iloc[index]['params_weight decay']
         self.ckpt_inp_model_pathes=Path(f'models/v2_inp/model_{index}.ckpt')
-        print(self.first_conv_out_channels,
-                self.depth,
-                self.n_encoder_conv_layers,
-                self.n_decoder_conv_layers,
-                self.kernel_sizes,
-                self.empty_mri_ratio,
-                self.lr,
-                self.w,
-                self.ckpt_inp_model_pathes)
+        logger.logging.info('Model creation entity for second version of search created')
 
-            
+
+from src.components.prepare_images import add_data
+
+class FinalModelCreationEntity(ModelCreationEntity):
+
+
+    def __init__(self):
+  
+        super().__init__(safety_batch=False)
+        add_data(TRAIN_CSV, DEV_CSV, FINAL_CSV)
+        self.train_csv = FINAL_CSV
+
+        self.dev_csv = TEST_CSV
+        
+        self.checkpoint_dir = FINAL_MODEL_CHECKPOINT
+        self.epochs = FINAL_EPOCHS
+        self.inp_model_path = INPUT_CHECKPOINT_FOR_FINAL_MODEL
+        model = MRIModule.load_from_checkpoint(INPUT_CHECKPOINT_FOR_FINAL_MODEL)
+        hparams = model.hparams
+        del model
+        torch.cuda.empty_cache()
+
+        self.first_conv_out_channels = hparams['first_conv_out_channels']
+        self.depth = hparams['depth']
+        self.n_encoder_conv_layers = hparams['n_encoder_conv_layers']
+        self.n_decoder_conv_layers = hparams['n_decoder_conv_layers']
+        self.kernel_sizes = hparams['kernel_sizes']
+        self.empty_mri_ratio = hparams['empty_mri_ratio']
+        self.lr = hparams['learning_rate']
+        self.w = hparams['weight_decay']
+        
+
+        logger.logging.info('Final model creation entity created')

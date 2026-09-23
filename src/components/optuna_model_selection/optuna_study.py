@@ -53,14 +53,16 @@ class OptunaModelSelectionComponent:
             random_state=self.config.random_state,
             model_name = f'{self.config.model_name}-{self.counter}',
             database_url=self.config.mlflow_database_url,
-            checkpoint_dir= self.config.checkpoint_dir
+            checkpoint_dir= self.config.checkpoint_dir,
+            drop_last_batch = self.config.drop_last_batch
         )
 
         
         best_val_loss = model_trainer(
             num_epochs = self.config.optuna_epochs,
             accelerator= self.config.accelerator, # defined by test in config entity
-            devices = self.config.devices # defined by test in config entity
+            devices = self.config.devices, # defined by test in config entity
+            strategy= self.config.strategy
         )
         logger.logging.info(f'model {self.config.model_name}-{self.counter} successfully trained')
 

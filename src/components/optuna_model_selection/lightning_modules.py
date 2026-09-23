@@ -28,7 +28,8 @@ class MRIDataModule(pl.LightningDataModule):
                  dev_transform = None,
                  num_workers = 2, 
                  train_empty_mri_ratio = 0.2,
-                 random_state = 42):
+                 random_state = 42,
+                 drop_last_batch = False):
         super().__init__()
 
 
@@ -39,7 +40,7 @@ class MRIDataModule(pl.LightningDataModule):
         self.num_workers = num_workers
         self.train_empty_mri_ratio = train_empty_mri_ratio
         self.random_state = random_state
-
+        self.drop_last_batch = drop_last_batch
 
         self.dev_transform = dev_transform
         self.train_transform = train_transform
@@ -58,13 +59,13 @@ class MRIDataModule(pl.LightningDataModule):
         
 
     def train_dataloader(self):
-        return DataLoader(self.train_ds, self.batch_size, shuffle = True, num_workers=self.num_workers, drop_last=True)#! only for tpu drop_last=True
+        return DataLoader(self.train_ds, self.batch_size, shuffle = True, num_workers=self.num_workers, drop_last=self.drop_last_batch) 
 
     def val_dataloader(self):
-        return DataLoader(self.dev_ds, self.batch_size, shuffle = False, num_workers=self.num_workers, drop_last=True)
+        return DataLoader(self.dev_ds, self.batch_size, shuffle = False, num_workers=self.num_workers, drop_last=self.drop_last_batch)
     
     def test_dataloader(self):
-        return DataLoader(self.test_ds, self.batch_size, shuffle = False, num_workers=self.num_workers, drop_last=True)
+        return DataLoader(self.test_ds, self.batch_size, shuffle = False, num_workers=self.num_workers, drop_last=self.drop_last_batch)
 
 
 
@@ -178,7 +179,7 @@ class MRIModule(pl.LightningModule):
     def configure_optimizers(self):
 
         optimizer = optim.AdamW(self.parameters(), lr = self.hparams.learning_rate, weight_decay = self.hparams.weight_decay)
-        scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode = 'max', factor = 0.1, patience = 3)#! 5
+        scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode = 'min', factor = 0.1, patience = 3)#! 5
 
         return {
             "optimizer": optimizer,
@@ -186,7 +187,7 @@ class MRIModule(pl.LightningModule):
         "scheduler": scheduler,
         "interval": "epoch",
         "frequency": 1,
-        "monitor": "val_f1_score",
+        "monitor": "val_loss",#"val_f1_score",
         "strict": True,
         "name": None,
     },

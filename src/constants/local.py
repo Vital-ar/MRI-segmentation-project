@@ -53,16 +53,16 @@ RANDOM_STATE = 42
 DATA_DIR = Path('data')
 ZIPPED_DATA_FILE = Path(DATA_DIR, 'uw-madison-gi-tract-image-segmentation.zip')
 EXTRACTED_DATA_DIR = Path(DATA_DIR, 'extracted_data')
-PREPROCESSED_DATA_DIR = Path('/kaggle/input/mri-segmentation-dataset', 'preprocessed_data')
+PREPROCESSED_DATA_DIR = Path(DATA_DIR, 'preprocessed_data')
 METADATA_FILE = Path(PREPROCESSED_DATA_DIR, 'final_dataframe.csv')
 IMAGES_DIR = Path(EXTRACTED_DATA_DIR, 'train')
 
 
 #Mandatory constants for image preparation 
 _FINAL_DATA_DIR = Path(PREPROCESSED_DATA_DIR, 'final_data')
-TRAIN_CSV = Path('data_csv', 'train_kaggle.csv')
-DEV_CSV = Path('data_csv', 'dev_kaggle.csv')
-TEST_CSV = Path('data_csv', 'test_kaggle.csv')
+TRAIN_CSV = Path(_FINAL_DATA_DIR, 'train.csv')
+DEV_CSV = Path(_FINAL_DATA_DIR, 'dev.csv')
+TEST_CSV = Path(_FINAL_DATA_DIR, 'test.csv')
 MANDAT_COLS = ['collapsed_id','case','slice','height','width','empty_slice','path','prev_path','next_path','large_bowel','small_bowel','stomach']
 
 INP_IMG_DIR = Path(_FINAL_DATA_DIR, 'input_images')
@@ -79,7 +79,7 @@ NUMBER_OPTUNA_TRIALS = 40  # optuna study parameter #! change this
 BATCH_SIZE = 4 # dataloader parameter #! set to 32
 NUM_WORKERS = 4 # dataloader parameter #!  SET TO NONE
 DEVICES = 8 # trainer parameter  #!  SET TO NONE
-ACCELERATOR = 'tpu' # trainerr parameter  #!  SET TO NONE
+ACCELERATOR = 'cpu' # trainerr parameter  #!  SET TO NONE
 OPTUNA_EPOCHS = 4 # lightning trainer parameter
 FINAL_EPOCHS = 40
 LEARNING_RATE = 0.001 # opitmizer parameter
