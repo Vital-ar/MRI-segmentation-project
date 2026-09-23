@@ -122,8 +122,8 @@ class ModelTrainer:
         ):
 
         self.trainer = pl.Trainer(#max_epochs=1,limit_train_batches=1, limit_val_batches=1, #!delete for real run
-             accelerator = 'auto', #!accelerator, 
-             devices ='auto',#! devices,
+             accelerator = accelerator, 
+             devices = devices,
              #strategy='ddp_spawn', #* uncoment
              logger = self.logger,
              callbacks = self.callbacks,  
