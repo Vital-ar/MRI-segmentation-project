@@ -4,7 +4,7 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
 from torchvision.transforms import v2
-from torchmetrics import F1Score, Recall     
+from torchmetrics import F1Score, Recall, Precision     
 
 from src.components.optuna_model_selection.dataset import MRIDataset
 from src.components.optuna_model_selection.model import MRIFlexAttentionUNet
@@ -80,6 +80,7 @@ class MRIModule(pl.LightningModule):
 
 
     def __init__(self, 
+                bce_loss_pos_weight = None,
                 learning_rate: float = 0.001,
                 weight_decay: float = 0.01, 
                 inp_channels: int = 3, 
@@ -112,11 +113,11 @@ class MRIModule(pl.LightningModule):
             n_decoder_conv_layers,
             kernel_sizes
         )
-        self.loss_fn = DiceBCELoss(1,1,1)#*hyperparameters search
+        self.loss_fn = DiceBCELoss(bce_loss_pos_weight,num_classes,1,1, 0.8)#*hyperparameters search
 
         self.f1score = F1Score('multilabel', num_labels=3, average='macro')
         self.recall = Recall('multilabel', num_labels = 3, average = 'macro')
-
+        self.precision = Precision('multilabel', num_labels = 3, average = 'macro')
         logger.logging.info(f'MRI lightning module successfully initialized')
 
 
@@ -132,9 +133,12 @@ class MRIModule(pl.LightningModule):
         images, masks = batch
         logits = self(images)
 
-        loss = self.loss_fn(logits, masks)
-
+        loss, dice, bce = self.loss_fn(logits, masks)
+        
         self.log('train_loss', loss, prog_bar=True, sync_dist=True)
+        self.log('train_dice', dice, prog_bar = True, sync_dist=True)
+        self.log('train_bce', bce, prog_bar = True, sync_dist=True)
+
 
         return loss
 
@@ -145,17 +149,20 @@ class MRIModule(pl.LightningModule):
         images, masks = batch
         logits = self(images)
 
-        loss = self.loss_fn(logits, masks)
+        loss, dice, bce = self.loss_fn(logits, masks)
 
         probs = torch.sigmoid(logits)
 
         f1_score = self.f1score(probs, masks)
         recall = self.recall(probs, masks)
+        precision = self.precision(probs, masks)
 
         self.log('val_loss', loss, prog_bar = True, on_epoch=True, sync_dist=True)
+        self.log('val_dice', dice, prog_bar = True, on_epoch=True, sync_dist=True)
+        self.log('val_bce', bce, prog_bar = True, on_epoch=True, sync_dist=True)
         self.log('val_f1_score', f1_score, prog_bar = True, on_epoch=True, sync_dist=True)
         self.log('val_recall', recall, sync_dist=True)
-
+        self.log('val_precision', precision, sync_dist=True)
 
 
     def test_step(self, batch, batch_idx = None):
@@ -163,23 +170,26 @@ class MRIModule(pl.LightningModule):
             images, masks = batch
             logits = self(images)
     
-            loss = self.loss_fn(logits, masks)
+            loss, dice, bce = self.loss_fn(logits, masks)
     
             probs = torch.sigmoid(logits)
     
             f1_score = self.f1score(probs, masks)
             recall = self.recall(probs, masks)
-    
+            precision = self.precision(probs, masks)
+
             self.log('test_loss', loss, sync_dist=True)
+            self.log('test_dice', dice, prog_bar = True, on_epoch=True, sync_dist=True)
+            self.log('test_bce', bce, prog_bar = True, on_epoch=True, sync_dist=True)
             self.log('test_f1_score', f1_score, sync_dist=True)
             self.log('test_recall', recall, sync_dist=True)
-
+            self.log('test_precision', precision, sync_dist=True)
 
 
     def configure_optimizers(self):
 
         optimizer = optim.AdamW(self.parameters(), lr = self.hparams.learning_rate, weight_decay = self.hparams.weight_decay)
-        scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode = 'min', factor = 0.1, patience = 3)#! 5
+        scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode = 'min', factor = 0.1, patience = 4)#! 5
 
         return {
             "optimizer": optimizer,
@@ -207,7 +217,7 @@ class MRIModule(pl.LightningModule):
         logits = self(images)
         prob = torch.sigmoid(logits)
 
-        masks = (prob > 0.5).int()
+        masks = (prob > 0.8).int()
 
         return masks
 

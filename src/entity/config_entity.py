@@ -90,6 +90,7 @@ class ModelCreationEntity:
         self.mlflow_database_url = MLFLOW_DATABASE_URL
         self.optuna_database_url = OPTUNA_DATABASE_URL
         self.labels = LABELS
+        self.pos_weight = POS_WEIGHT
 
         self.dev_transform = v2.Compose([
             v2.Resize(256),
@@ -358,26 +359,38 @@ class SelectedModelsCreationEntity(ModelCreationEntity):
         self.epochs = V2_EPOCHS
         
         self.index = index
-        
-        study = optuna.load_study(study_name='mri_unet_optuna_search_v2-1: more models less epochs', storage = OPTUNA_DATABASE_URL)
-        df = study.trials_dataframe()
 
-        df = df[df['value'].notna()]
-        df = df.sort_values(axis = 0, by = 'value', ignore_index=True )
-        df = df.drop(['datetime_start', 'datetime_complete', 'duration'],axis = 1)
+        if index > 100:
+            self.first_conv_out_channels = 64
+            self.depth = 5
+            self.n_encoder_conv_layers = 2
+            self.n_decoder_conv_layers = 2
+            self.kernel_sizes = [5,3,5,3,3,3,3,5,3,5]
+            self.empty_mri_ratio = 0.1
+            self.lr = 0.0005
+            self.w = 0.005
+            self.ckpt_inp_model_pathes=None
 
-            
 
-        self.first_conv_out_channels = int(df.iloc[index]['params_first_conv_out_channels'])
-        self.depth = int(df.iloc[index]['params_depth'])
-        self.n_encoder_conv_layers=int(df.iloc[index]['params_n_encoder_conv_layers'])
-        self.n_decoder_conv_layers = int(df.iloc[index]['params_n_decoder_conv_layers'])
-        self.kernel_sizes = [int(df.iloc[index][f'params_kernel_sizes_{x}']) for x in range(self.depth*2)]
-        self.empty_mri_ratio = df.iloc[index]['params_empty_mri_ratio']
-        self.lr = df.iloc[index]['params_learning_rate_start']
-        self.w=df.iloc[index]['params_weight decay']
-        self.ckpt_inp_model_pathes=Path(f'models/v2_inp/model_{index}.ckpt')
-        logger.logging.info('Model creation entity for second version of search created')
+        else:        
+            study = optuna.load_study(study_name='mri_unet_optuna_search_v2-1: more models less epochs', storage = OPTUNA_DATABASE_URL)
+            df = study.trials_dataframe()
+
+            df = df[df['value'].notna()]
+            df = df.sort_values(axis = 0, by = 'value', ignore_index=True )
+            df = df.drop(['datetime_start', 'datetime_complete', 'duration'],axis = 1)
+
+
+            self.first_conv_out_channels = int(df.iloc[index]['params_first_conv_out_channels'])
+            self.depth = int(df.iloc[index]['params_depth'])
+            self.n_encoder_conv_layers=int(df.iloc[index]['params_n_encoder_conv_layers'])
+            self.n_decoder_conv_layers = int(df.iloc[index]['params_n_decoder_conv_layers'])
+            self.kernel_sizes = [int(df.iloc[index][f'params_kernel_sizes_{x}']) for x in range(self.depth*2)]
+            self.empty_mri_ratio = df.iloc[index]['params_empty_mri_ratio']
+            self.lr = df.iloc[index]['params_learning_rate_start']
+            self.w=df.iloc[index]['params_weight decay']
+            self.ckpt_inp_model_pathes=None #Path(f'models/v2_inp/model_{index}.ckpt')
+            logger.logging.info('Model creation entity for second version of search created')
 
 
 from src.components.prepare_images import add_data

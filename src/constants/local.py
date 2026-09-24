@@ -97,3 +97,13 @@ LABELS = {
 
 CHECKPOINT_V2_DIR = Path('models', 'v2_out') 
 V2_EPOCHS = 6
+
+
+#* calculated in /exploritary/optuna_exp.ipynb end section 
+#* (parameter for bce loss calculated for full train dataset, and for partial train dataset with empty img ratio: 0.1, 0.2, 0.3)
+
+POS_WEIGHT_FULL = [139.66749294, 152.21774755, 272.26512968]
+POS_WEIGHT_0_1 = [ 66.76699651,  72.81312019, 130.64631503]
+POS_WEIGHT_0_2 = [ 75.23487254,  82.03649415, 147.09627935]
+POS_WEIGHT_0_3 = [ 86.12556861,  93.89885046, 168.25289069]
+POS_WEIGHT = POS_WEIGHT_0_1

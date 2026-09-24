@@ -54,7 +54,8 @@ class OptunaModelSelectionComponent:
             model_name = f'{self.config.model_name}-{self.counter}',
             database_url=self.config.mlflow_database_url,
             checkpoint_dir= self.config.checkpoint_dir,
-            drop_last_batch = self.config.drop_last_batch
+            drop_last_batch = self.config.drop_last_batch,
+            bce_loss_pos_weight=self.config.pos_weight
         )
 
         

@@ -38,7 +38,8 @@ class V2TtrainingComponent:
             database_url=self.config.mlflow_database_url,
             checkpoint_dir= self.config.checkpoint_dir,
             ckpt_path= self.config.ckpt_inp_model_pathes,
-            drop_last_batch = self.config.drop_last_batch
+            drop_last_batch = self.config.drop_last_batch,
+            bce_loss_pos_weight=self.config.pos_weight
         )
 
         

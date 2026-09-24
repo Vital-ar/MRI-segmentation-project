@@ -34,6 +34,7 @@ class ModelTrainer:
                  batch_size = 32,
                  num_workers = 2,
                  train_empty_mri_ratio = 0.2,
+                 bce_loss_pos_weight = None,
                  train_transform = None,
                  dev_transform = None,
                  
@@ -44,7 +45,8 @@ class ModelTrainer:
                  ckpt_path = None,
                  drop_last_batch = False):
 
-        self.model = MRIModule(learning_rate, 
+        self.model = MRIModule(bce_loss_pos_weight,
+                               learning_rate, 
                                weight_decay, 
                                inp_channels, 
                                first_conv_out_channels, 
@@ -94,7 +96,7 @@ class ModelTrainer:
         early_stop_callback = EarlyStopping(
             monitor='val_loss',
             min_delta=0.00,
-            patience=4,#! 7 
+            patience=9,#! 7 
             mode='min',
             verbose=True
         )
@@ -123,6 +125,10 @@ class ModelTrainer:
             devices = 1,
             strategy = 'auto'
         ):
+        #if accelerator == 'cpu':
+        #     sync_bn = False
+        #else:
+        #     sync_bn = True
 
         self.trainer = pl.Trainer(#max_epochs=1,limit_train_batches=1, limit_val_batches=1, #!delete for real run
              accelerator = accelerator, 
@@ -132,7 +138,8 @@ class ModelTrainer:
              callbacks = self.callbacks,  
              max_epochs = num_epochs, #* uncoment 
              enable_progress_bar = True,
-             enable_model_summary = True)
+             enable_model_summary = True,
+             precision='32')
         logger.logging.info(f'MRI model lightning trainer successfully initialized')
         self.trainer.fit(self.model, self.data_module, ckpt_path=self.ckpt_path)
 
