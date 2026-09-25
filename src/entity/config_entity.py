@@ -91,6 +91,7 @@ class ModelCreationEntity:
         self.optuna_database_url = OPTUNA_DATABASE_URL
         self.labels = LABELS
         self.pos_weight = POS_WEIGHT
+        self.accum_batch = 1
 
         self.dev_transform = v2.Compose([
             v2.Resize(256),
@@ -117,6 +118,7 @@ class ModelCreationEntity:
 
         if not self.devices: 
             self.devices = self.devices_test()
+
         
 
         if safety_batch:
@@ -356,21 +358,29 @@ class SelectedModelsCreationEntity(ModelCreationEntity):
         super().__init__(safety_batch=False)
         
         self.checkpoint_dir = CHECKPOINT_V2_DIR
-        self.epochs = V2_EPOCHS
-        
+        self.epochs = V3_EPOCHS
         self.index = index
+
+        if index == 10:
+            index_10 = True
+            index = 0
+            
+        else:
+            index_10 = False
+
 
         if index > 100:
             self.first_conv_out_channels = 64
             self.depth = 5
-            self.n_encoder_conv_layers = 2
-            self.n_decoder_conv_layers = 2
-            self.kernel_sizes = [5,3,5,3,3,3,3,5,3,5]
+            self.n_encoder_conv_layers = 1
+            self.n_decoder_conv_layers = 1
+            self.kernel_sizes = [3,3,3,3,3,3,3,3,3,3]
             self.empty_mri_ratio = 0.1
             self.lr = 0.0005
             self.w = 0.005
             self.ckpt_inp_model_pathes=None
 
+        
 
         else:        
             study = optuna.load_study(study_name='mri_unet_optuna_search_v2-1: more models less epochs', storage = OPTUNA_DATABASE_URL)
@@ -389,9 +399,25 @@ class SelectedModelsCreationEntity(ModelCreationEntity):
             self.empty_mri_ratio = df.iloc[index]['params_empty_mri_ratio']
             self.lr = df.iloc[index]['params_learning_rate_start']
             self.w=df.iloc[index]['params_weight decay']
-            self.ckpt_inp_model_pathes=None #Path(f'models/v2_inp/model_{index}.ckpt')
+            self.ckpt_inp_model_pathes=Path(f'models/v3_inp/model_{index}.ckpt')
             logger.logging.info('Model creation entity for second version of search created')
 
+
+        if index == 0 or index == 777:
+            self.epochs = V2_EPOCHS
+            self.batch_size = 2
+            self.accum_batch = 2
+            self.ckpt_inp_model_pathes=None
+
+        if index == 888:
+            self.epochs = V2_EPOCHS
+            self.batch_size = 1
+            self.accum_batch = 4
+            self.ckpt_inp_model_pathes=None
+
+        if index_10:
+            self.batch_size = 1
+            self.accum_batch = 4
 
 from src.components.prepare_images import add_data
 

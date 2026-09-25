@@ -110,7 +110,7 @@ class ModelTrainer:
     def _get_def_loggers(self):
 
             self.logger = MLFlowLogger(
-                experiment_name="MRI_Segmentation_v2-2",
+                experiment_name="MRI_Segmentation_v3-1",
                 tracking_uri=self.database_url, 
                 run_name=self.model_name,
                 log_model=True 
@@ -123,7 +123,8 @@ class ModelTrainer:
             num_epochs = 50,
             accelerator = 'auto',
             devices = 1,
-            strategy = 'auto'
+            strategy = 'auto',
+            accum_batch = 1,
         ):
         #if accelerator == 'cpu':
         #     sync_bn = False
@@ -139,7 +140,8 @@ class ModelTrainer:
              max_epochs = num_epochs, #* uncoment 
              enable_progress_bar = True,
              enable_model_summary = True,
-             precision='32')
+             precision='32',
+             accumulate_grad_batches=accum_batch)
         logger.logging.info(f'MRI model lightning trainer successfully initialized')
         self.trainer.fit(self.model, self.data_module, ckpt_path=self.ckpt_path)
 

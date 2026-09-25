@@ -1,0 +1,1054 @@
+[ 2026-09-25 14:43:48,580 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-25 14:43:48,586 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 14:43:48,587 ] ::: INFO ::: FILE [root] --- LINE: [144]
+Model creation entity successfully created
+[ 2026-09-25 14:43:48,587 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:43:48,997 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:43:49,012 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 14:43:49,013 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 14:43:49,016 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 14:43:49,016 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 14:43:49,030 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [164]
+GPU available: False, used: False
+[ 2026-09-25 14:43:49,031 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [167]
+TPU available: False, using: 0 TPU cores
+[ 2026-09-25 14:43:49,032 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [91]
+\U0001f4a1 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+[ 2026-09-25 14:43:49,032 ] ::: INFO ::: FILE [root] --- LINE: [143]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 14:43:49,221 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/8
+[ 2026-09-25 14:43:56,030 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 2] Seed set to 42
+[ 2026-09-25 14:43:56,037 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 14:43:56,038 ] ::: INFO ::: FILE [root] --- LINE: [144]
+Model creation entity successfully created
+[ 2026-09-25 14:43:56,039 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:43:56,041 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 7] Seed set to 42
+[ 2026-09-25 14:43:56,046 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 14:43:56,048 ] ::: INFO ::: FILE [root] --- LINE: [144]
+Model creation entity successfully created
+[ 2026-09-25 14:43:56,048 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:43:56,059 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 3] Seed set to 42
+[ 2026-09-25 14:43:56,064 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 14:43:56,066 ] ::: INFO ::: FILE [root] --- LINE: [144]
+Model creation entity successfully created
+[ 2026-09-25 14:43:56,066 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:43:56,106 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 4] Seed set to 42
+[ 2026-09-25 14:43:56,113 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 14:43:56,114 ] ::: INFO ::: FILE [root] --- LINE: [144]
+Model creation entity successfully created
+[ 2026-09-25 14:43:56,114 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:43:56,114 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 6] Seed set to 42
+[ 2026-09-25 14:43:56,119 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 14:43:56,121 ] ::: INFO ::: FILE [root] --- LINE: [144]
+Model creation entity successfully created
+[ 2026-09-25 14:43:56,121 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:43:56,218 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 5] Seed set to 42
+[ 2026-09-25 14:43:56,223 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 14:43:56,224 ] ::: INFO ::: FILE [root] --- LINE: [144]
+Model creation entity successfully created
+[ 2026-09-25 14:43:56,225 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:43:56,240 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 1] Seed set to 42
+[ 2026-09-25 14:43:56,245 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 14:43:56,246 ] ::: INFO ::: FILE [root] --- LINE: [144]
+Model creation entity successfully created
+[ 2026-09-25 14:43:56,247 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:43:56,580 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:43:56,583 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:43:56,591 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 14:43:56,591 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 14:43:56,594 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 14:43:56,594 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 14:43:56,595 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 14:43:56,595 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 14:43:56,599 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 14:43:56,599 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 14:43:56,602 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:43:56,613 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 14:43:56,613 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 14:43:56,614 ] ::: INFO ::: FILE [root] --- LINE: [143]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 14:43:56,617 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 14:43:56,617 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 14:43:56,617 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/8
+[ 2026-09-25 14:43:56,619 ] ::: INFO ::: FILE [root] --- LINE: [143]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 14:43:56,622 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:43:56,623 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/8
+[ 2026-09-25 14:43:56,636 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 14:43:56,636 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 14:43:56,636 ] ::: INFO ::: FILE [root] --- LINE: [143]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 14:43:56,641 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 14:43:56,642 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 14:43:56,641 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 7, MEMBER: 8/8
+[ 2026-09-25 14:43:56,665 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:43:56,669 ] ::: INFO ::: FILE [root] --- LINE: [143]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 14:43:56,672 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 4, MEMBER: 5/8
+[ 2026-09-25 14:43:56,676 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 14:43:56,677 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 14:43:56,680 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 14:43:56,680 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 14:43:56,701 ] ::: INFO ::: FILE [root] --- LINE: [143]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 14:43:56,704 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 6, MEMBER: 7/8
+[ 2026-09-25 14:43:56,759 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:43:56,768 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 14:43:56,768 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 14:43:56,769 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:43:56,771 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 14:43:56,771 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 14:43:56,777 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 14:43:56,777 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 14:43:56,780 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 14:43:56,780 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 14:43:56,785 ] ::: INFO ::: FILE [root] --- LINE: [143]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 14:43:56,789 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 5, MEMBER: 6/8
+[ 2026-09-25 14:43:56,802 ] ::: INFO ::: FILE [root] --- LINE: [143]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 14:43:56,806 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/8
+[ 2026-09-25 14:43:56,844 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [290]
+----------------------------------------------------------------------------------------------------
+distributed_backend=gloo
+All distributed processes registered. Starting with 8 processes
+----------------------------------------------------------------------------------------------------
+
+[ 2026-09-25 14:43:58,296 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:43:58,297 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:43:58,297 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:43:58,297 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:43:58,297 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:43:58,297 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:43:58,297 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:43:58,550 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:43:58,550 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:43:58,550 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:43:58,551 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:43:58,551 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:43:58,551 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:43:58,551 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:43:58,551 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:43:58,555 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:43:58,555 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:43:58,560 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:43:58,560 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:43:58,563 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:43:58,564 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:43:58,564 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:43:58,565 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:43:58,565 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:43:58,566 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:43:58,566 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:43:58,567 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:43:58,568 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:43:58,574 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:43:58,574 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:43:58,575 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:49:40,739 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-25 14:49:40,742 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 14:49:40,743 ] ::: INFO ::: FILE [root] --- LINE: [144]
+Model creation entity successfully created
+[ 2026-09-25 14:49:40,743 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:49:40,957 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:49:40,978 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 14:49:40,978 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 14:49:40,981 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 14:49:40,981 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 14:49:40,995 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [164]
+GPU available: False, used: False
+[ 2026-09-25 14:49:40,996 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [167]
+TPU available: False, using: 0 TPU cores
+[ 2026-09-25 14:49:40,997 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [91]
+\U0001f4a1 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+[ 2026-09-25 14:49:40,997 ] ::: INFO ::: FILE [root] --- LINE: [143]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 14:49:41,147 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/8
+[ 2026-09-25 14:49:47,308 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 2] Seed set to 42
+[ 2026-09-25 14:49:47,314 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 14:49:47,315 ] ::: INFO ::: FILE [root] --- LINE: [144]
+Model creation entity successfully created
+[ 2026-09-25 14:49:47,316 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:49:47,420 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 5] Seed set to 42
+[ 2026-09-25 14:49:47,423 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 1] Seed set to 42
+[ 2026-09-25 14:49:47,424 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 14:49:47,425 ] ::: INFO ::: FILE [root] --- LINE: [144]
+Model creation entity successfully created
+[ 2026-09-25 14:49:47,426 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:49:47,427 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 14:49:47,428 ] ::: INFO ::: FILE [root] --- LINE: [144]
+Model creation entity successfully created
+[ 2026-09-25 14:49:47,428 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:49:47,441 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 3] Seed set to 42
+[ 2026-09-25 14:49:47,446 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 14:49:47,448 ] ::: INFO ::: FILE [root] --- LINE: [144]
+Model creation entity successfully created
+[ 2026-09-25 14:49:47,448 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:49:47,454 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 4] Seed set to 42
+[ 2026-09-25 14:49:47,460 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 14:49:47,461 ] ::: INFO ::: FILE [root] --- LINE: [144]
+Model creation entity successfully created
+[ 2026-09-25 14:49:47,462 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:49:47,475 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 7] Seed set to 42
+[ 2026-09-25 14:49:47,480 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 14:49:47,481 ] ::: INFO ::: FILE [root] --- LINE: [144]
+Model creation entity successfully created
+[ 2026-09-25 14:49:47,482 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:49:47,520 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 6] Seed set to 42
+[ 2026-09-25 14:49:47,526 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 14:49:47,527 ] ::: INFO ::: FILE [root] --- LINE: [144]
+Model creation entity successfully created
+[ 2026-09-25 14:49:47,528 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:49:47,637 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:49:47,652 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 14:49:47,653 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 14:49:47,658 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 14:49:47,658 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 14:49:47,686 ] ::: INFO ::: FILE [root] --- LINE: [143]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 14:49:47,691 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/8
+[ 2026-09-25 14:49:47,719 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:49:47,729 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 14:49:47,729 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 14:49:47,730 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:49:47,731 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 14:49:47,731 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 14:49:47,738 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 14:49:47,738 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 14:49:47,741 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 14:49:47,741 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 14:49:47,747 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:49:47,747 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:49:47,748 ] ::: INFO ::: FILE [root] --- LINE: [143]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 14:49:47,752 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 5, MEMBER: 6/8
+[ 2026-09-25 14:49:47,755 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 14:49:47,755 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 14:49:47,757 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 14:49:47,757 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 14:49:47,757 ] ::: INFO ::: FILE [root] --- LINE: [143]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 14:49:47,758 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 14:49:47,758 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 14:49:47,760 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/8
+[ 2026-09-25 14:49:47,762 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 14:49:47,762 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 14:49:47,784 ] ::: INFO ::: FILE [root] --- LINE: [143]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 14:49:47,787 ] ::: INFO ::: FILE [root] --- LINE: [143]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 14:49:47,787 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/8
+[ 2026-09-25 14:49:47,790 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 4, MEMBER: 5/8
+[ 2026-09-25 14:49:47,795 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:49:47,805 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 14:49:47,805 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 14:49:47,811 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 14:49:47,811 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 14:49:47,846 ] ::: INFO ::: FILE [root] --- LINE: [143]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 14:49:47,851 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 7, MEMBER: 8/8
+[ 2026-09-25 14:49:47,859 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:49:47,870 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 14:49:47,870 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 14:49:47,874 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 14:49:47,874 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 14:49:47,893 ] ::: INFO ::: FILE [root] --- LINE: [143]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 14:49:47,896 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 6, MEMBER: 7/8
+[ 2026-09-25 14:49:47,941 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [290]
+----------------------------------------------------------------------------------------------------
+distributed_backend=gloo
+All distributed processes registered. Starting with 8 processes
+----------------------------------------------------------------------------------------------------
+
+[ 2026-09-25 14:49:49,348 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:49:49,348 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:49:49,348 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:49:49,349 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:49:49,349 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:49:49,568 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:49:49,569 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:49:49,569 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:49:49,569 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:49:49,571 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:49:49,571 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:49:49,572 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:49:49,572 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:49:49,572 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:49:49,572 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:49:49,573 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:49:49,573 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:49:49,574 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:49:49,575 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:49:49,581 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:49:49,582 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:49:49,585 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:49:49,587 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:49:49,587 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:49:49,588 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:49:49,588 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:49:49,592 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:49:49,592 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 14:49:49,601 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 14:52:12,626 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-25 14:52:12,687 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-25 14:52:12,759 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-25 14:52:12,761 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-25 14:52:12,784 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-25 14:52:12,822 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-25 14:52:12,940 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-25 14:52:13,068 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-25 15:07:34,969 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-25 15:07:34,974 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 15:07:34,975 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-09-25 15:07:34,975 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 15:07:35,196 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 15:07:35,209 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 15:07:35,209 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 15:07:35,213 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 15:07:35,213 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 15:07:35,227 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [164]
+GPU available: False, used: False
+[ 2026-09-25 15:07:35,228 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [167]
+TPU available: False, using: 0 TPU cores
+[ 2026-09-25 15:07:35,228 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [91]
+\U0001f4a1 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+[ 2026-09-25 15:07:35,228 ] ::: INFO ::: FILE [root] --- LINE: [145]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 15:07:35,403 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/8
+[ 2026-09-25 15:07:41,774 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 1] Seed set to 42
+[ 2026-09-25 15:07:41,777 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 3] Seed set to 42
+[ 2026-09-25 15:07:41,778 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 15:07:41,779 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-09-25 15:07:41,780 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 15:07:41,780 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 15:07:41,781 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-09-25 15:07:41,782 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 15:07:41,783 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 4] Seed set to 42
+[ 2026-09-25 15:07:41,785 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 6] Seed set to 42
+[ 2026-09-25 15:07:41,788 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 15:07:41,788 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-09-25 15:07:41,789 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 15:07:41,792 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 15:07:41,793 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 5] Seed set to 42
+[ 2026-09-25 15:07:41,794 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-09-25 15:07:41,795 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 15:07:41,798 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 15:07:41,799 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-09-25 15:07:41,799 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 15:07:41,823 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 7] Seed set to 42
+[ 2026-09-25 15:07:41,827 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 15:07:41,828 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-09-25 15:07:41,828 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 15:07:41,863 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 2] Seed set to 42
+[ 2026-09-25 15:07:41,870 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 15:07:41,871 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-09-25 15:07:41,872 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 15:07:42,091 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 15:07:42,103 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 15:07:42,104 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 15:07:42,104 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 15:07:42,104 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 15:07:42,108 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 15:07:42,108 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 15:07:42,116 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 15:07:42,116 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 15:07:42,119 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 15:07:42,119 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 15:07:42,120 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 15:07:42,120 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 15:07:42,123 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 15:07:42,124 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 15:07:42,133 ] ::: INFO ::: FILE [root] --- LINE: [145]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 15:07:42,134 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 15:07:42,138 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/8
+[ 2026-09-25 15:07:42,139 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 15:07:42,140 ] ::: INFO ::: FILE [root] --- LINE: [145]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 15:07:42,141 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 15:07:42,143 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 4, MEMBER: 5/8
+[ 2026-09-25 15:07:42,146 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 15:07:42,146 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 15:07:42,149 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 15:07:42,149 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 15:07:42,150 ] ::: INFO ::: FILE [root] --- LINE: [145]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 15:07:42,153 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 15:07:42,153 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 15:07:42,155 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 15:07:42,155 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 15:07:42,155 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/8
+[ 2026-09-25 15:07:42,158 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 15:07:42,158 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 15:07:42,161 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 15:07:42,161 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 15:07:42,182 ] ::: INFO ::: FILE [root] --- LINE: [145]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 15:07:42,182 ] ::: INFO ::: FILE [root] --- LINE: [145]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 15:07:42,185 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 7, MEMBER: 8/8
+[ 2026-09-25 15:07:42,186 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 6, MEMBER: 7/8
+[ 2026-09-25 15:07:42,188 ] ::: INFO ::: FILE [root] --- LINE: [145]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 15:07:42,191 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 5, MEMBER: 6/8
+[ 2026-09-25 15:07:42,216 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 15:07:42,225 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 15:07:42,225 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 15:07:42,228 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 15:07:42,228 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 15:07:42,244 ] ::: INFO ::: FILE [root] --- LINE: [145]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 15:07:42,246 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/8
+[ 2026-09-25 15:07:42,281 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [290]
+----------------------------------------------------------------------------------------------------
+distributed_backend=gloo
+All distributed processes registered. Starting with 8 processes
+----------------------------------------------------------------------------------------------------
+
+[ 2026-09-25 15:07:43,677 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:07:43,677 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:07:43,677 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:07:43,677 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:07:43,900 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:07:43,901 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:07:43,901 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:07:43,901 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:07:43,902 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:07:43,902 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:07:43,903 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:07:43,903 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:07:43,904 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:07:43,905 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:07:43,906 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:07:43,912 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:07:43,915 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:07:43,916 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:07:43,916 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:07:43,917 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:07:43,917 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:07:43,926 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:07:43,926 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:07:43,927 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:07:43,927 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:07:43,936 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:07:43,936 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:08:48,100 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-25 15:08:48,316 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-25 15:08:48,336 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
+[ 2026-09-25 15:08:55,426 ] ::: INFO ::: FILE [lightning.fabric.strategies.launchers.subprocess_script] --- LINE: [224]
+[rank: 2] Child process with PID 2724 terminated with code 1. Forcefully terminating all other processes to avoid zombies \U0001f9df
+[ 2026-09-25 15:26:17,947 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-09-25 15:26:17,953 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 15:26:17,954 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-09-25 15:26:18,477 ] ::: INFO ::: FILE [root] --- LINE: [403]
+Model creation entity for second version of search created
+[ 2026-09-25 15:26:18,478 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 15:26:18,596 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 15:26:18,610 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 15:26:18,610 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 15:26:18,615 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 15:26:18,615 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 15:26:18,633 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [164]
+GPU available: False, used: False
+[ 2026-09-25 15:26:18,635 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [167]
+TPU available: False, using: 0 TPU cores
+[ 2026-09-25 15:26:18,635 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [91]
+\U0001f4a1 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+[ 2026-09-25 15:26:18,636 ] ::: INFO ::: FILE [root] --- LINE: [145]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 15:26:18,814 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/8
+[ 2026-09-25 15:26:25,076 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 2] Seed set to 42
+[ 2026-09-25 15:26:25,080 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 1] Seed set to 42
+[ 2026-09-25 15:26:25,082 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 15:26:25,083 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-09-25 15:26:25,085 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 15:26:25,086 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-09-25 15:26:25,094 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 7] Seed set to 42
+[ 2026-09-25 15:26:25,095 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 4] Seed set to 42
+[ 2026-09-25 15:26:25,098 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 15:26:25,099 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 15:26:25,099 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-09-25 15:26:25,100 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-09-25 15:26:25,118 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 3] Seed set to 42
+[ 2026-09-25 15:26:25,125 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 15:26:25,127 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-09-25 15:26:25,134 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 5] Seed set to 42
+[ 2026-09-25 15:26:25,141 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 15:26:25,142 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-09-25 15:26:25,287 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+[rank: 6] Seed set to 42
+[ 2026-09-25 15:26:25,291 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [MODEL SELECTION STAGE] started--------------------------
+[ 2026-09-25 15:26:25,292 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-09-25 15:26:25,572 ] ::: INFO ::: FILE [root] --- LINE: [403]
+Model creation entity for second version of search created
+[ 2026-09-25 15:26:25,572 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 15:26:25,573 ] ::: INFO ::: FILE [root] --- LINE: [403]
+Model creation entity for second version of search created
+[ 2026-09-25 15:26:25,574 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 15:26:25,578 ] ::: INFO ::: FILE [root] --- LINE: [403]
+Model creation entity for second version of search created
+[ 2026-09-25 15:26:25,579 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 15:26:25,596 ] ::: INFO ::: FILE [root] --- LINE: [403]
+Model creation entity for second version of search created
+[ 2026-09-25 15:26:25,597 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 15:26:25,603 ] ::: INFO ::: FILE [root] --- LINE: [403]
+Model creation entity for second version of search created
+[ 2026-09-25 15:26:25,603 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 15:26:25,642 ] ::: INFO ::: FILE [root] --- LINE: [403]
+Model creation entity for second version of search created
+[ 2026-09-25 15:26:25,643 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 15:26:25,729 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 15:26:25,729 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 15:26:25,738 ] ::: INFO ::: FILE [root] --- LINE: [403]
+Model creation entity for second version of search created
+[ 2026-09-25 15:26:25,739 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 15:26:25,740 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 15:26:25,740 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 15:26:25,740 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 15:26:25,741 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 15:26:25,742 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 15:26:25,743 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 15:26:25,743 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 15:26:25,744 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 15:26:25,744 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 15:26:25,751 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 15:26:25,751 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 15:26:25,755 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 15:26:25,755 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 15:26:25,757 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 15:26:25,760 ] ::: INFO ::: FILE [root] --- LINE: [145]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 15:26:25,763 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 7, MEMBER: 8/8
+[ 2026-09-25 15:26:25,764 ] ::: INFO ::: FILE [root] --- LINE: [145]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 15:26:25,767 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 2, MEMBER: 3/8
+[ 2026-09-25 15:26:25,769 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 15:26:25,769 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 15:26:25,770 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 15:26:25,773 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 15:26:25,773 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 15:26:25,777 ] ::: INFO ::: FILE [root] --- LINE: [145]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 15:26:25,782 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 5, MEMBER: 6/8
+[ 2026-09-25 15:26:25,784 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 15:26:25,784 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 15:26:25,790 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 15:26:25,790 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 15:26:25,794 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 15:26:25,797 ] ::: INFO ::: FILE [root] --- LINE: [145]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 15:26:25,801 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/8
+[ 2026-09-25 15:26:25,805 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 15:26:25,805 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 15:26:25,809 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 15:26:25,809 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 15:26:25,814 ] ::: INFO ::: FILE [root] --- LINE: [145]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 15:26:25,817 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 4, MEMBER: 5/8
+[ 2026-09-25 15:26:25,829 ] ::: INFO ::: FILE [root] --- LINE: [145]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 15:26:25,832 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 3, MEMBER: 4/8
+[ 2026-09-25 15:26:25,892 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 15:26:25,900 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-09-25 15:26:25,901 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-09-25 15:26:25,903 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-09-25 15:26:25,903 ] ::: INFO ::: FILE [root] --- LINE: [50]
+Start of optuna opitmization process...
+[ 2026-09-25 15:26:25,918 ] ::: INFO ::: FILE [root] --- LINE: [145]
+MRI model lightning trainer successfully initialized
+[ 2026-09-25 15:26:25,920 ] ::: INFO ::: FILE [lightning.fabric.utilities.distributed] --- LINE: [282]
+Initializing distributed: GLOBAL_RANK: 6, MEMBER: 7/8
+[ 2026-09-25 15:26:25,961 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [290]
+----------------------------------------------------------------------------------------------------
+distributed_backend=gloo
+All distributed processes registered. Starting with 8 processes
+----------------------------------------------------------------------------------------------------
+
+[ 2026-09-25 15:26:26,815 ] ::: WARNING ::: FILE [lightning.pytorch.loggers.mlflow] --- LINE: [184]
+Experiment with name MRI_Segmentation_v3-1 not found. Creating it.
+[ 2026-09-25 15:26:27,621 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:26:27,621 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:26:27,621 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:26:27,622 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:26:27,835 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:26:27,835 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:26:27,835 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:26:27,840 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:26:27,840 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:26:27,844 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:26:27,845 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:26:27,844 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:26:27,845 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:26:27,846 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:26:27,846 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:26:27,848 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:26:27,848 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:26:27,849 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:26:27,850 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:26:27,853 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:26:27,855 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:26:27,855 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-09-25 15:26:27,856 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:26:27,857 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:26:27,857 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:26:27,861 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-25 15:26:27,864 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION

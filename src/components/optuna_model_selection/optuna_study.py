@@ -63,7 +63,8 @@ class OptunaModelSelectionComponent:
             num_epochs = self.config.optuna_epochs,
             accelerator= self.config.accelerator, # defined by test in config entity
             devices = self.config.devices, # defined by test in config entity
-            strategy= self.config.strategy
+            strategy= self.config.strategy,
+            accum_batch= self.config.accum_batch
         )
         logger.logging.info(f'model {self.config.model_name}-{self.counter} successfully trained')
 

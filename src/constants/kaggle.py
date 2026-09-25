@@ -27,7 +27,7 @@ MLFLOW_DATABASE_URL = os.environ.get('MLFLOW_TRACKING_URI', 'sqlite:///mlflow.db
 OPTUNA_DATABASE_URL = 'sqlite:///optuna.db'
 CHECKPOINT_DIR = Path('models', 'checkpoints') 
 
-MODEL_NAME = 'MRI-Unet_v2-2' # general model name for different versions e.g. MRI-Unet-1 
+MODEL_NAME = 'MRI-Unet_v3-1' # general model name for different versions e.g. MRI-Unet-1 
 NUMBER_OPTUNA_TRIALS = 40  # optuna study parameter #! change this
 BATCH_SIZE = 4 # dataloader parameter #! set to 32
 NUM_WORKERS = 0 # dataloader parameter #!  SET TO NONE
@@ -67,3 +67,6 @@ POS_WEIGHT_0_1 = [ 66.76699651,  72.81312019, 130.64631503]
 POS_WEIGHT_0_2 = [ 75.23487254,  82.03649415, 147.09627935]
 POS_WEIGHT_0_3 = [ 86.12556861,  93.89885046, 168.25289069]
 POS_WEIGHT = POS_WEIGHT_0_1
+EFFECTIVE_BATCH_SIZE = 32
+
+V3_EPOCHS = 60
