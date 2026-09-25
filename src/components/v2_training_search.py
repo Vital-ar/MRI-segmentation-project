@@ -4,8 +4,6 @@ from src.entity.config_entity import SelectedModelsCreationEntity
 
 from src.logging import logger
 
-
-
 class V2TtrainingComponent:
     def __init__(self, config: SelectedModelsCreationEntity):
 

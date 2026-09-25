@@ -372,12 +372,12 @@ class SelectedModelsCreationEntity(ModelCreationEntity):
         if index > 100:
             self.first_conv_out_channels = 64
             self.depth = 5
-            self.n_encoder_conv_layers = 1
-            self.n_decoder_conv_layers = 1
+            self.n_encoder_conv_layers = 2
+            self.n_decoder_conv_layers = 2
             self.kernel_sizes = [3,3,3,3,3,3,3,3,3,3]
             self.empty_mri_ratio = 0.1
-            self.lr = 0.0005
-            self.w = 0.005
+            self.lr = 0.0001
+            self.w = 0.001
             self.ckpt_inp_model_pathes=None
 
         
@@ -403,7 +403,7 @@ class SelectedModelsCreationEntity(ModelCreationEntity):
             logger.logging.info('Model creation entity for second version of search created')
 
 
-        if index == 0 or index == 777:
+        if index == 0 or index == 555 or index == 777:
             self.epochs = V2_EPOCHS
             self.batch_size = 2
             self.accum_batch = 2

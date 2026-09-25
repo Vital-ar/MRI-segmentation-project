@@ -143,7 +143,7 @@ class ModelTrainer:
              precision='32',
              accumulate_grad_batches=accum_batch)
         logger.logging.info(f'MRI model lightning trainer successfully initialized')
-        self.trainer.fit(self.model, self.data_module, ckpt_path=self.ckpt_path)
+        self.trainer.fit(self.model, self.data_module, ckpt_path=self.ckpt_path, weights_only=False)
 
       
         with open(self.best_val_loss_path, "r") as f:
