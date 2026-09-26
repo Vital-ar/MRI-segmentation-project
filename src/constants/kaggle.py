@@ -70,3 +70,6 @@ POS_WEIGHT = POS_WEIGHT_0_1
 EFFECTIVE_BATCH_SIZE = 32
 
 V3_EPOCHS = 90
+
+FINAL_CSV = Path('data_csv', 'final_csv')
+FINAL_MODEL_CHECKPOINT = Path('models', 'v3_out') 

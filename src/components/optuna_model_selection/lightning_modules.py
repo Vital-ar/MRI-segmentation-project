@@ -7,7 +7,7 @@ from torchvision.transforms import v2
 from torchmetrics import F1Score, Recall, Precision     
 
 from src.components.optuna_model_selection.dataset import MRIDataset
-from src.components.optuna_model_selection.model import MRIFlexAttentionUNet
+from src.components.optuna_model_selection.model import MRIFlexAttentionUNet, MRIFlexAttentionUNetGroupNorm
 from src.logging import logger
 from src.components.optuna_model_selection.dice_bce_loss import DiceBCELoss
 
@@ -104,7 +104,7 @@ class MRIModule(pl.LightningModule):
                                           kernel_sizes)"""
 
 
-        self.model = MRIFlexAttentionUNet(
+        self.model = MRIFlexAttentionUNetGroupNorm( #!MRIFlexAttentionUNet(
             inp_channels,
             first_conv_out_channels,
             num_classes,

@@ -372,9 +372,9 @@ class SelectedModelsCreationEntity(ModelCreationEntity):
         if index > 100:
             self.first_conv_out_channels = 64
             self.depth = 5
-            self.n_encoder_conv_layers = 2
-            self.n_decoder_conv_layers = 2
-            self.kernel_sizes = [3,3,3,3,3,3,3,3,3,3]
+            self.n_encoder_conv_layers = 1
+            self.n_decoder_conv_layers = 1
+            self.kernel_sizes = [5,3,3,3,3,3,3,3,3,5]
             self.empty_mri_ratio = 0.1
             self.lr = 0.0001
             self.w = 0.001
@@ -403,14 +403,14 @@ class SelectedModelsCreationEntity(ModelCreationEntity):
             logger.logging.info('Model creation entity for second version of search created')
 
 
-        if index == 0 or index == 555 or index == 777:
-            self.epochs = V2_EPOCHS
+        if index == 0 or index == 555 or index == 777 or index == 999:
+            #self.epochs = 60#V2_EPOCHS
             self.batch_size = 2
             self.accum_batch = 2
             self.ckpt_inp_model_pathes=None
 
         if index == 888:
-            self.epochs = V2_EPOCHS
+            #self.epochs = #V2_EPOCHS
             self.batch_size = 1
             self.accum_batch = 4
             self.ckpt_inp_model_pathes=None
@@ -424,7 +424,7 @@ from src.components.prepare_images import add_data
 class FinalModelCreationEntity(ModelCreationEntity):
 
 
-    def __init__(self):
+    def __init__(self, index):
   
         super().__init__(safety_batch=False)
         add_data(TRAIN_CSV, DEV_CSV, FINAL_CSV)
@@ -434,8 +434,7 @@ class FinalModelCreationEntity(ModelCreationEntity):
         
         self.checkpoint_dir = FINAL_MODEL_CHECKPOINT
         self.epochs = FINAL_EPOCHS
-        self.inp_model_path = INPUT_CHECKPOINT_FOR_FINAL_MODEL
-        model = MRIModule.load_from_checkpoint(INPUT_CHECKPOINT_FOR_FINAL_MODEL)
+        self.inp_model_path = (f'models/final_inp/model_{index}.ckpt')
         hparams = model.hparams
         del model
         torch.cuda.empty_cache()

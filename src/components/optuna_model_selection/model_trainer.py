@@ -96,7 +96,7 @@ class ModelTrainer:
         early_stop_callback = EarlyStopping(
             monitor='val_loss',
             min_delta=0.00,
-            patience=9,#! 7 
+            patience=14,#! 7 
             mode='min',
             verbose=True
         )
