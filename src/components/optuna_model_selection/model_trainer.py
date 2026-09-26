@@ -1,5 +1,5 @@
 import lightning.pytorch as pl
-from lightning.pytorch.callbacks import EarlyStopping, ModelCheckpoint, TQDMProgressBar
+from lightning.pytorch.callbacks import EarlyStopping, ModelCheckpoint, TQDMProgressBar, LearningRateMonitor
 from lightning.pytorch.loggers import MLFlowLogger
 from pathlib import Path
 from optuna_integration.pytorch_lightning import PyTorchLightningPruningCallback
@@ -100,11 +100,16 @@ class ModelTrainer:
             mode='min',
             verbose=True
         )
+
+
+        lr_monitor = LearningRateMonitor(logging_interval='epoch')  # or 'step'
+
+        
         self.best_val_loss_path = Path(self.checkpoint_dir, 'best_val_loss.txt')
         self.best_val_loss_callback = BestValLossCallback(self.best_val_loss_path)
         #pruning_callback = PyTorchLightningPruningCallback(self.trial, monitor="val_loss")
 
-        self.callbacks = [self.best_val_loss_callback, self.checkpoint_callback, early_stop_callback, TQDMProgressBar(refresh_rate=20)]
+        self.callbacks = [self.best_val_loss_callback, self.checkpoint_callback, early_stop_callback, TQDMProgressBar(refresh_rate=20), lr_monitor]
 
 
     def _get_def_loggers(self):
