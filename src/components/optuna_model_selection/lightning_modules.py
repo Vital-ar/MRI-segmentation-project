@@ -104,7 +104,7 @@ class MRIModule(pl.LightningModule):
                                           kernel_sizes)"""
 
 
-        self.model = MRIFlexAttentionUNetGroupNorm( #!MRIFlexAttentionUNet(
+        self.model = MRIFlexAttentionUNet( #!MRIFlexAttentionUNetGroupNorm(
             inp_channels,
             first_conv_out_channels,
             num_classes,

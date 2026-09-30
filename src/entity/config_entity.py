@@ -369,15 +369,15 @@ class SelectedModelsCreationEntity(ModelCreationEntity):
             index_10 = False
 
 
-        if index > 100:
+        if index > 1000:
             self.first_conv_out_channels = 64
-            self.depth = 5
-            self.n_encoder_conv_layers = 1
-            self.n_decoder_conv_layers = 1
-            self.kernel_sizes = [5,3,3,3,3,3,3,3,3,5]
+            self.depth = 4
+            self.n_encoder_conv_layers = 2
+            self.n_decoder_conv_layers = 2
+            self.kernel_sizes = [5,3,3,5,3,5,5,3]
             self.empty_mri_ratio = 0.1
-            self.lr = 0.0001
-            self.w = 0.001
+            self.lr = 0.0003885771767668683
+            self.w = 0.006129038398536625
             self.ckpt_inp_model_pathes=None
 
         
