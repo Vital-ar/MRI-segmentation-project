@@ -814,3 +814,39 @@ SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
 SOME TROUBLES WITH STAGE [MODEL SELECTION STAGE]
 [ 2026-09-24 17:40:33,739 ] ::: INFO ::: FILE [lightning.fabric.strategies.launchers.subprocess_script] --- LINE: [224]
 [rank: 3] Child process with PID 16708 terminated with code 1. Forcefully terminating all other processes to avoid zombies \U0001f9df
+[ 2026-09-25 14:13:58,885 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:13:59,947 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:18:33,682 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:18:34,160 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:24:41,307 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:24:41,704 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:24:46,788 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:24:47,058 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:25:14,912 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:25:15,124 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:25:30,534 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:25:30,798 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:29:33,991 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:29:34,257 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-25 14:34:51,670 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-25 14:34:51,883 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-26 08:27:41,451 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-26 08:27:43,004 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated

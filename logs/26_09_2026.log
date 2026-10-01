@@ -180,3 +180,67 @@ dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTIO
 entering the creation of dataset
 [ 2026-09-26 18:01:28,201 ] ::: INFO ::: FILE [root] --- LINE: [53]
 dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-09-28 20:37:04,636 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-28 20:37:04,869 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-28 20:37:05,372 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-28 20:37:05,488 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-28 20:38:39,668 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-28 20:38:39,759 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-28 20:40:50,398 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-28 20:40:50,498 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-28 20:40:50,899 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-28 20:40:50,978 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-28 22:39:05,370 ] ::: INFO ::: FILE [root] --- LINE: [334]
+creation of the model...
+[ 2026-09-28 22:39:05,589 ] ::: INFO ::: FILE [root] --- LINE: [372]
+creation of the model compleated
+[ 2026-09-28 22:44:18,093 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-28 22:44:18,211 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-28 22:46:43,993 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-28 22:46:44,074 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-28 22:46:52,342 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-28 22:46:52,423 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-28 22:47:04,971 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-28 22:47:05,128 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-28 22:57:30,863 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-28 22:57:30,976 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-28 22:58:01,839 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-28 22:58:01,952 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-28 22:59:01,960 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-28 22:59:02,072 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-28 22:59:48,543 ] ::: INFO ::: FILE [root] --- LINE: [334]
+creation of the model...
+[ 2026-09-28 22:59:48,755 ] ::: INFO ::: FILE [root] --- LINE: [372]
+creation of the model compleated
+[ 2026-09-28 23:09:34,578 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-28 23:09:34,678 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-09-28 23:20:37,224 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-09-28 23:20:37,335 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated

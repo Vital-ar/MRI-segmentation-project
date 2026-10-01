@@ -378,7 +378,7 @@ class SelectedModelsCreationEntity(ModelCreationEntity):
             self.empty_mri_ratio = 0.1
             self.lr = 0.0003885771767668683
             self.w = 0.006129038398536625
-            self.ckpt_inp_model_pathes=None
+            self.ckpt_inp_model_pathes= Path(f'models/v4_inp/model-epoch27-val_loss0.36.ckpt')
 
         
 
@@ -430,7 +430,7 @@ class FinalModelCreationEntity(ModelCreationEntity):
         add_data(TRAIN_CSV, DEV_CSV, FINAL_CSV)
         self.train_csv = FINAL_CSV
 
-        self.dev_csv = TEST_CSV
+       
         
         self.checkpoint_dir = FINAL_MODEL_CHECKPOINT
         self.epochs = FINAL_EPOCHS
@@ -439,14 +439,14 @@ class FinalModelCreationEntity(ModelCreationEntity):
         del model
         torch.cuda.empty_cache()
 
-        self.first_conv_out_channels = hparams['first_conv_out_channels']
-        self.depth = hparams['depth']
-        self.n_encoder_conv_layers = hparams['n_encoder_conv_layers']
-        self.n_decoder_conv_layers = hparams['n_decoder_conv_layers']
-        self.kernel_sizes = hparams['kernel_sizes']
-        self.empty_mri_ratio = hparams['empty_mri_ratio']
-        self.lr = hparams['learning_rate']
-        self.w = hparams['weight_decay']
+        self.first_conv_out_channels = 1
+        self.depth = 1
+        self.n_encoder_conv_layers = 1
+        self.n_decoder_conv_layers = 1
+        self.kernel_sizes = 1
+        self.empty_mri_ratio = 1
+        self.lr =1
+        self.w = 1
         
 
         logger.logging.info('Final model creation entity created')
