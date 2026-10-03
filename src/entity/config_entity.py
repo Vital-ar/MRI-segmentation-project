@@ -399,7 +399,7 @@ class SelectedModelsCreationEntity(ModelCreationEntity):
             self.empty_mri_ratio = df.iloc[index]['params_empty_mri_ratio']
             self.lr = df.iloc[index]['params_learning_rate_start']
             self.w=df.iloc[index]['params_weight decay']
-            self.ckpt_inp_model_pathes=Path(f'models/v3_inp/model_{index}.ckpt')
+            self.inp_model_path=Path(f'models/v3_inp/model_{index}.ckpt')
             logger.logging.info('Model creation entity for second version of search created')
 
 
@@ -424,29 +424,40 @@ from src.components.prepare_images import add_data
 class FinalModelCreationEntity(ModelCreationEntity):
 
 
-    def __init__(self, index):
+    def __init__(self):
   
         super().__init__(safety_batch=False)
+
         add_data(TRAIN_CSV, DEV_CSV, FINAL_CSV)
         self.train_csv = FINAL_CSV
-
-       
+        if self.accelerator == 'tpu':
+            self.inp_model_path=Path(f'models/final/inp/model_tpu.ckpt')
+            self.devices = 8
+            self.num_workers = 0
+            self.batch_size = 4
+            self.model_name = 'final_tpu'
+            self.epochs = 50
+            self.accum_batch = 4
+        else:
+            self.inp_model_path=Path(f'models/final/inp/model_gpu.ckpt')
         
-        self.checkpoint_dir = FINAL_MODEL_CHECKPOINT
-        self.epochs = FINAL_EPOCHS
-        self.inp_model_path = (f'models/final_inp/model_{index}.ckpt')
-        hparams = model.hparams
-        del model
-        torch.cuda.empty_cache()
-
-        self.first_conv_out_channels = 1
-        self.depth = 1
-        self.n_encoder_conv_layers = 1
-        self.n_decoder_conv_layers = 1
-        self.kernel_sizes = 1
-        self.empty_mri_ratio = 1
-        self.lr =1
-        self.w = 1
+            self.model_name = 'final_gpu'
+            self.epochs = FINAL_EPOCHS
         
+        self.checkpoint_dir = FINAL_MODEL_DIR
+        
+        #self.inp_model_path = path #Path(f'models/final_inp/model_{index}.ckpt')
+
+        hparams = torch.load(self.inp_model_path, 'cpu', weights_only= False)['hyper_parameters']
+        self.first_conv_out_channels = hparams['first_conv_out_channels']
+        self.depth = hparams['depth']
+        self.n_encoder_conv_layers = hparams['n_encoder_conv_layers']
+        self.n_decoder_conv_layers = hparams['n_decoder_conv_layers']
+        self.kernel_sizes = hparams['kernel_sizes']
+        self.empty_mri_ratio = 0.1
+        self.lr = hparams['learning_rate']
+        self.w = hparams['weight_decay']
+        self.final_checkpoint =  Path(FINAL_MODEL_DIR, self.model_name, 'model-final.ckpt' )    
+        self.index = 'final'
 
         logger.logging.info('Final model creation entity created')

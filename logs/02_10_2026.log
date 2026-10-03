@@ -1,0 +1,306 @@
+[ 2026-10-02 12:11:29,586 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-02 12:11:29,587 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-02 12:11:29,588 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-02 12:11:29,747 ] ::: ERROR ::: FILE [root] --- LINE: [157]
+The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+[ 2026-10-02 12:17:24,260 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-02 12:17:24,262 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-02 12:17:24,262 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-02 12:17:24,563 ] ::: INFO ::: FILE [root] --- LINE: [151]
+the new data from data\preprocessed_data\final_data\dev.csv successfully added to data_csv\final.csv
+[ 2026-10-02 12:23:28,251 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-02 12:23:28,253 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-02 12:23:28,254 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-02 12:23:28,551 ] ::: INFO ::: FILE [root] --- LINE: [151]
+the new data from data\preprocessed_data\final_data\dev.csv successfully added to data_csv\final.csv
+[ 2026-10-02 12:25:33,127 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-02 12:25:33,129 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-02 12:25:33,129 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-02 12:25:33,428 ] ::: INFO ::: FILE [root] --- LINE: [151]
+the new data from data\preprocessed_data\final_data\dev.csv successfully added to data_csv\final.csv
+[ 2026-10-02 12:26:16,412 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-02 12:26:16,412 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-02 12:26:16,412 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-02 12:26:16,692 ] ::: INFO ::: FILE [root] --- LINE: [151]
+the new data from data\preprocessed_data\final_data\dev.csv successfully added to data_csv\final.csv
+[ 2026-10-02 12:26:16,924 ] ::: INFO ::: FILE [root] --- LINE: [460]
+Final model creation entity created
+[ 2026-10-02 12:26:17,019 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-02 12:26:17,123 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-02 12:26:17,136 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-02 12:26:17,136 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 12:26:17,265 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 12:26:17,265 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 12:26:17,275 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 12:26:17,275 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 12:26:17,295 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 12:27:54,008 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-02 12:27:54,008 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-02 12:27:54,008 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-02 12:27:54,281 ] ::: INFO ::: FILE [root] --- LINE: [151]
+the new data from data\preprocessed_data\final_data\dev.csv successfully added to data_csv\final.csv
+[ 2026-10-02 12:27:54,433 ] ::: INFO ::: FILE [root] --- LINE: [460]
+Final model creation entity created
+[ 2026-10-02 12:27:54,555 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-02 12:27:54,669 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-02 12:27:54,679 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-02 12:27:54,679 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 12:27:54,811 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 12:27:54,812 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 12:27:54,823 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 12:27:54,823 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 12:27:54,833 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 12:28:10,967 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-02 12:28:10,968 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-02 12:28:10,969 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-02 12:28:11,276 ] ::: INFO ::: FILE [root] --- LINE: [151]
+the new data from data\preprocessed_data\final_data\dev.csv successfully added to data_csv\final.csv
+[ 2026-10-02 12:28:11,447 ] ::: INFO ::: FILE [root] --- LINE: [461]
+Final model creation entity created
+[ 2026-10-02 12:28:11,563 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-02 12:28:11,670 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-02 12:28:11,682 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-02 12:28:11,682 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 12:28:11,811 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 12:28:11,811 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 12:28:11,823 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 12:28:11,823 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 12:28:11,833 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 12:30:54,457 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-02 12:30:54,459 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-02 12:30:54,459 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-02 12:30:54,731 ] ::: INFO ::: FILE [root] --- LINE: [151]
+the new data from data\preprocessed_data\final_data\dev.csv successfully added to data_csv\final.csv
+[ 2026-10-02 12:30:54,895 ] ::: INFO ::: FILE [root] --- LINE: [461]
+Final model creation entity created
+[ 2026-10-02 12:30:55,004 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-02 12:30:55,110 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-02 12:30:55,121 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-02 12:30:55,121 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 12:30:55,252 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 12:30:55,252 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 12:30:55,262 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 12:30:55,262 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 12:30:55,271 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 12:30:55,282 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-02 12:30:55,398 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-02 12:30:55,424 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-10-02 12:30:55,425 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-02 12:30:55,430 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-10-02 13:05:29,381 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-02 13:05:29,382 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-02 13:05:29,382 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-02 13:05:29,658 ] ::: INFO ::: FILE [root] --- LINE: [151]
+the new data from data\preprocessed_data\final_data\dev.csv successfully added to data_csv\final.csv
+[ 2026-10-02 13:05:29,831 ] ::: INFO ::: FILE [root] --- LINE: [461]
+Final model creation entity created
+[ 2026-10-02 13:05:29,950 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-02 13:05:30,057 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-02 13:05:30,069 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-02 13:05:30,069 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 13:05:30,201 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 13:05:30,201 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 13:05:30,211 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 13:05:30,211 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 13:05:30,220 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 13:05:30,232 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-02 13:05:30,347 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-02 13:05:30,356 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-10-02 13:05:30,356 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-02 13:05:30,358 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-10-02 13:23:43,274 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-02 13:23:43,277 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-02 13:23:43,278 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-02 13:23:43,546 ] ::: INFO ::: FILE [root] --- LINE: [151]
+the new data from data\preprocessed_data\final_data\dev.csv successfully added to data_csv\final.csv
+[ 2026-10-02 13:23:43,721 ] ::: INFO ::: FILE [root] --- LINE: [461]
+Final model creation entity created
+[ 2026-10-02 13:23:43,837 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-02 13:23:43,940 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-02 13:23:43,953 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-02 13:23:43,953 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 13:23:44,085 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 13:23:44,085 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 13:23:44,095 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 13:23:44,095 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 13:23:44,104 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 13:23:44,116 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-02 13:23:44,231 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-02 13:23:44,240 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-10-02 13:23:44,240 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-02 13:23:44,244 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-10-02 13:28:44,503 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-02 13:28:44,504 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-02 13:28:44,505 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-02 13:28:44,780 ] ::: INFO ::: FILE [root] --- LINE: [151]
+the new data from data\preprocessed_data\final_data\dev.csv successfully added to data_csv\final.csv
+[ 2026-10-02 13:28:44,954 ] ::: INFO ::: FILE [root] --- LINE: [461]
+Final model creation entity created
+[ 2026-10-02 13:28:45,068 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-02 13:28:45,171 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-02 13:28:45,184 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-02 13:28:45,184 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 13:28:45,309 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 13:28:45,309 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 13:28:45,319 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 13:28:45,319 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 13:28:45,329 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 13:28:45,340 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-02 13:28:45,452 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-02 13:28:45,462 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-10-02 13:28:45,462 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-02 13:28:45,464 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized
+[ 2026-10-02 13:31:02,002 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-02 13:31:02,003 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-02 13:31:02,003 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-02 13:31:02,291 ] ::: INFO ::: FILE [root] --- LINE: [151]
+the new data from data\preprocessed_data\final_data\dev.csv successfully added to data_csv\final.csv
+[ 2026-10-02 13:31:02,464 ] ::: INFO ::: FILE [root] --- LINE: [461]
+Final model creation entity created
+[ 2026-10-02 13:31:02,582 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-02 13:31:02,687 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-02 13:31:02,698 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-02 13:31:02,699 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 13:31:02,850 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 13:31:02,850 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 13:31:02,866 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 13:31:02,866 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-02 13:31:02,877 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-02 13:31:02,888 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-02 13:31:03,022 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-02 13:31:03,031 ] ::: INFO ::: FILE [root] --- LINE: [121]
+MRI lightning module successfully initialized
+[ 2026-10-02 13:31:03,032 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-02 13:31:03,034 ] ::: INFO ::: FILE [root] --- LINE: [79]
+MRI model trainer successfully initialized

@@ -1,5 +1,7 @@
 import lightning.pytorch as pl
 import torch
+import os
+import numpy as np
 import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
@@ -89,7 +91,8 @@ class MRIModule(pl.LightningModule):
                 depth: int = 3, 
                 n_encoder_conv_layers: int = 2, 
                 n_decoder_conv_layers: int = 2, 
-                kernel_sizes: list | int = 3):
+                kernel_sizes: list | int = 3,
+                model_name = 'unet'):
         
         super().__init__()
 
@@ -118,6 +121,12 @@ class MRIModule(pl.LightningModule):
         self.f1score = F1Score('multilabel', num_labels=3, average='macro')
         self.recall = Recall('multilabel', num_labels = 3, average = 'macro')
         self.precision = Precision('multilabel', num_labels = 3, average = 'macro')
+
+        self.threshold = None
+        threshold_path = f'stats/{self.hparams.model_name}/f1_optimized_threshold.npy'
+        if os.path.exists(threshold_path):
+            self.threshold = torch.from_numpy(np.load(threshold_path)).float()
+
         logger.logging.info(f'MRI lightning module successfully initialized')
 
 
@@ -173,7 +182,11 @@ class MRIModule(pl.LightningModule):
             loss, dice, bce = self.loss_fn(logits, masks)
     
             probs = torch.sigmoid(logits)
-    
+
+            if self.threshold is not None:
+                thresh = self.threshold.view(1, -1, 1, 1)
+                probs = (probs >= thresh).float()
+
             f1_score = self.f1score(probs, masks)
             recall = self.recall(probs, masks)
             precision = self.precision(probs, masks)
@@ -216,10 +229,14 @@ class MRIModule(pl.LightningModule):
         images = batch[0]
         logits = self(images)
         prob = torch.sigmoid(logits)
+        if self.threshold is not None:
+            thresh = self.threshold.view( -1, 1, 1)
+            mask = (prob >= thresh).float()
+        
+        else:
+            mask = (prob > 0.5).int()
 
-        masks = (prob > 0.8).int()
-
-        return masks
+        return mask
 
 
 

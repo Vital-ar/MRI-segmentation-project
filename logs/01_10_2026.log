@@ -1,0 +1,70 @@
+[ 2026-10-01 18:03:52,895 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 18:04:58,015 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 18:06:29,290 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 18:06:29,489 ] ::: INFO ::: FILE [root] --- LINE: [450]
+Final model creation entity created
+[ 2026-10-01 18:06:29,617 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-01 18:06:29,740 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-01 18:06:29,755 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-01 18:06:29,756 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 18:06:29,995 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 18:06:29,995 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 18:06:30,006 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 18:06:30,006 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 18:06:30,015 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 18:08:20,088 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 18:08:20,280 ] ::: INFO ::: FILE [root] --- LINE: [450]
+Final model creation entity created
+[ 2026-10-01 18:08:20,409 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-01 18:08:20,520 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-01 18:08:20,531 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-01 18:08:20,531 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 18:08:20,789 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 18:08:20,789 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 18:08:20,800 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 18:08:20,800 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 18:08:20,811 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 18:08:20,821 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 18:08:20,993 ] ::: INFO ::: FILE [root] --- LINE: [450]
+Final model creation entity created
+[ 2026-10-01 18:08:21,129 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-01 18:08:21,242 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-01 18:08:21,257 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-01 18:08:21,257 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 18:08:21,513 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 18:08:21,513 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 18:08:21,524 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 18:08:21,524 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 18:08:21,533 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION

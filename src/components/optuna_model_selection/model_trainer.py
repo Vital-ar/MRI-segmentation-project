@@ -54,7 +54,8 @@ class ModelTrainer:
                                depth, 
                                n_encoder_conv_layers, 
                                n_decoder_conv_layers, 
-                               kernel_sizes)
+                               kernel_sizes,
+                               model_name)
 
         self.data_module = MRIDataModule(train_csv, 
                                          dev_csv, 
@@ -84,7 +85,7 @@ class ModelTrainer:
 
         self.checkpoint_callback = ModelCheckpoint(
             dirpath = dirpath, 
-            filename ='model-{epoch:02d}-{val_loss:.2f}',
+            filename ='model-final',  #  {epoch:02d}-{val_loss:.2f}',
             monitor = 'val_loss', 
             mode = 'min',    
             verbose = True,           

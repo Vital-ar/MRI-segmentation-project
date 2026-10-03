@@ -30,9 +30,9 @@ CHECKPOINT_DIR = Path('models', 'checkpoints')
 MODEL_NAME = 'MRI-Unet_v3-1' # general model name for different versions e.g. MRI-Unet-1 
 NUMBER_OPTUNA_TRIALS = 40  # optuna study parameter #! change this
 BATCH_SIZE = 16 # dataloader parameter #! set to 32
-NUM_WORKERS = 4 # dataloader parameter #!  SET TO NONE
+NUM_WORKERS = 2 # dataloader parameter #!  SET TO NONE
 DEVICES = 2 # trainer parameter  #!  SET TO NONE
-ACCELERATOR = 'gpu' # trainerr parameter  #!  SET TO NONE
+ACCELERATOR = None # trainerr parameter  #!  SET TO NONE
 OPTUNA_EPOCHS = 4 # lightning trainer parameter
 FINAL_EPOCHS = 40
 LEARNING_RATE = 0.001 # opitmizer parameter
@@ -71,5 +71,6 @@ EFFECTIVE_BATCH_SIZE = 32
 
 V3_EPOCHS = 45
 
-FINAL_CSV = Path('data_csv', 'final_csv')
-FINAL_MODEL_CHECKPOINT = Path('models', 'v3_out') 
+FINAL_CSV = Path('data_csv', 'final.csv')
+FINAL_MODEL_DIR = Path('models', 'final', 'out')
+

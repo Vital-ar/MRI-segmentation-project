@@ -244,3 +244,205 @@ creation of the model compleated
 creation of the model...
 [ 2026-09-28 23:20:37,335 ] ::: INFO ::: FILE [root] --- LINE: [176]
 creation of the model compleated
+[ 2026-10-01 09:01:49,701 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 09:06:59,930 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 09:07:00,196 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-01 09:07:00,317 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-01 09:07:00,356 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-01 09:07:00,357 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:07:00,580 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:07:00,580 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:07:00,594 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:07:00,594 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:07:00,606 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:07:39,370 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 09:07:39,581 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-01 09:07:39,704 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-01 09:07:39,715 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-01 09:07:39,715 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:07:39,867 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:07:39,867 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:07:39,879 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:07:39,879 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:07:39,889 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:08:27,199 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 09:08:27,416 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-01 09:08:27,547 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-01 09:08:27,556 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-01 09:08:27,557 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:08:27,704 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:08:27,704 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:08:27,715 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:08:27,715 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:08:27,727 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:10:54,698 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 09:10:54,892 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-01 09:10:55,017 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-01 09:10:55,028 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-01 09:10:55,028 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:10:55,171 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:10:55,171 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:10:55,191 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:10:55,191 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:10:55,210 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:17:17,514 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 09:17:17,694 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-01 09:17:17,805 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-01 09:17:17,817 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-01 09:17:17,818 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:17:17,986 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:17:17,986 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:17:17,996 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:17:17,996 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:17:18,006 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:27:41,844 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 09:27:42,054 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-01 09:27:42,168 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-01 09:27:42,183 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-01 09:27:42,183 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:27:42,326 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:27:42,326 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:27:42,337 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:27:42,337 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:27:42,347 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:31:43,509 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 09:31:43,704 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-01 09:31:43,812 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-01 09:31:43,823 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-01 09:31:43,823 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:31:43,975 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:31:43,975 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:31:43,985 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 09:31:43,985 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 09:31:43,995 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 13:00:57,581 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 13:00:58,004 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-01 13:00:58,128 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-01 13:00:58,138 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-01 13:00:58,139 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 13:00:58,330 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 13:00:58,330 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 13:00:58,343 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 13:00:58,343 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 13:00:58,354 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 13:01:59,623 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 13:01:59,911 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-01 13:02:00,084 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-01 13:02:00,103 ] ::: INFO ::: FILE [root] --- LINE: [48]
+MRI lightning data module successfully initialized
+[ 2026-10-01 13:02:00,104 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 13:02:00,280 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 13:02:00,280 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 13:02:00,294 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 13:02:00,294 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-01 13:02:00,308 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-01 17:51:07,371 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 17:52:12,230 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 17:52:36,687 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 17:53:12,484 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 17:53:34,823 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 17:57:03,131 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 17:58:23,092 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 17:59:57,999 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 18:01:20,884 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-01 18:01:32,535 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created

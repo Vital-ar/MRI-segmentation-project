@@ -141,7 +141,7 @@ def add_data(old_data_path, new_data_path, destination_path = None):
         old_df = pd.read_csv(old_data_path)
         new_df = pd.concat([new_df, old_df], axis = 0, ignore_index= True)
 
-        if old_df.columns == new_df.columns:
+        if np.prod(old_df.columns == new_df.columns):
 
             if not destination_path:
                 destination_path = old_data_path
