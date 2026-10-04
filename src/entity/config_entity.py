@@ -457,7 +457,10 @@ class FinalModelCreationEntity(ModelCreationEntity):
         self.empty_mri_ratio = 0.1
         self.lr = hparams['learning_rate']
         self.w = hparams['weight_decay']
-        self.final_checkpoint =  Path(FINAL_MODEL_DIR, self.model_name, 'model-final.ckpt' )    
+
         self.index = 'final'
+        mod_name = self.model_name + '-' + self.index
+        self.final_checkpoint =  Path(FINAL_MODEL_DIR, mod_name, 'model-final.ckpt' )    
+    
 
         logger.logging.info('Final model creation entity created')

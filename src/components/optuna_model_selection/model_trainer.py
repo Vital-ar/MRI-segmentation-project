@@ -137,17 +137,18 @@ class ModelTrainer:
         #else:
         #     sync_bn = True
 
-        self.trainer = pl.Trainer(#max_epochs=1,limit_train_batches=1, limit_val_batches=1, #!delete for real run
+        self.trainer = pl.Trainer(max_epochs=36,limit_train_batches=1, limit_val_batches=1, #!delete for real run
              accelerator = accelerator, 
              devices = devices,
              strategy = strategy,
              logger = self.logger,
              callbacks = self.callbacks,  
-             max_epochs = num_epochs, #* uncoment 
+             #max_epochs = num_epochs, #* uncoment 
              enable_progress_bar = True,
              enable_model_summary = True,
              precision='32',
-             accumulate_grad_batches=accum_batch)
+             accumulate_grad_batches=accum_batch
+             )#fast_dev_run = True)#!
         logger.logging.info(f'MRI model lightning trainer successfully initialized')
         self.trainer.fit(self.model, self.data_module, ckpt_path=self.ckpt_path, weights_only=False)
 

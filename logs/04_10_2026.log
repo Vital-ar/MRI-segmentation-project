@@ -1,0 +1,479 @@
+[ 2026-10-04 10:07:04,779 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-10-04 10:07:04,783 ] ::: INFO ::: FILE [root] --- LINE: [10]
+
+----------------stage [FINAL MODEL TRAIN STAGE] started--------------------------
+[ 2026-10-04 10:07:04,783 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-04 10:07:04,784 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-04 10:07:04,784 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-04 10:07:05,051 ] ::: INFO ::: FILE [root] --- LINE: [151]
+the new data from data\preprocessed_data\final_data\dev.csv successfully added to data_csv\final.csv
+[ 2026-10-04 10:07:05,056 ] ::: ERROR ::: FILE [root] --- LINE: [23]
+SOME TROUBLES WITH STAGE [FINAL MODEL TRAIN STAGE]
+[ 2026-10-04 10:08:59,746 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-10-04 10:08:59,750 ] ::: INFO ::: FILE [root] --- LINE: [10]
+
+----------------stage [FINAL MODEL TRAIN STAGE] started--------------------------
+[ 2026-10-04 10:08:59,750 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-04 10:08:59,751 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-04 10:08:59,751 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-04 10:09:00,020 ] ::: INFO ::: FILE [root] --- LINE: [151]
+the new data from data\preprocessed_data\final_data\dev.csv successfully added to data_csv\final.csv
+[ 2026-10-04 10:09:00,359 ] ::: INFO ::: FILE [root] --- LINE: [463]
+Final model creation entity created
+[ 2026-10-04 10:09:00,465 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-04 10:09:00,571 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-04 10:09:00,583 ] ::: INFO ::: FILE [root] --- LINE: [50]
+MRI lightning data module successfully initialized
+[ 2026-10-04 10:09:00,583 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 10:09:00,718 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 10:09:00,718 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 10:09:00,728 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 10:09:00,728 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 10:09:00,737 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 10:09:00,751 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-04 10:09:00,858 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-04 10:09:00,867 ] ::: INFO ::: FILE [root] --- LINE: [130]
+MRI lightning module successfully initialized
+[ 2026-10-04 10:09:00,867 ] ::: INFO ::: FILE [root] --- LINE: [50]
+MRI lightning data module successfully initialized
+[ 2026-10-04 10:09:00,870 ] ::: INFO ::: FILE [root] --- LINE: [80]
+MRI model trainer successfully initialized
+[ 2026-10-04 10:09:45,665 ] ::: INFO ::: FILE [root] --- LINE: [48]
+Strat of model training...
+[ 2026-10-04 10:09:45,679 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [164]
+GPU available: False, used: False
+[ 2026-10-04 10:09:45,679 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [167]
+TPU available: False, using: 0 TPU cores
+[ 2026-10-04 10:09:45,680 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [91]
+\U0001f4a1 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+[ 2026-10-04 10:09:45,680 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [114]
+`Trainer(limit_train_batches=1)` was configured so 1 batch per epoch will be used.
+[ 2026-10-04 10:09:45,681 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [114]
+`Trainer(limit_val_batches=1)` was configured so 1 batch will be used.
+[ 2026-10-04 10:09:45,681 ] ::: INFO ::: FILE [root] --- LINE: [152]
+MRI model lightning trainer successfully initialized
+[ 2026-10-04 10:09:47,248 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 10:09:47,384 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 10:09:47,384 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 10:09:47,393 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 10:09:47,603 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [81]
+Restoring states from the checkpoint path at models\final\inp\model_gpu.ckpt
+[ 2026-10-04 10:09:48,552 ] ::: ERROR ::: FILE [root] --- LINE: [23]
+SOME TROUBLES WITH STAGE [FINAL MODEL TRAIN STAGE]
+[ 2026-10-04 10:13:43,714 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-10-04 10:13:43,718 ] ::: INFO ::: FILE [root] --- LINE: [10]
+
+----------------stage [FINAL MODEL TRAIN STAGE] started--------------------------
+[ 2026-10-04 10:13:43,718 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-04 10:13:43,719 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-04 10:13:43,719 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-04 10:13:43,979 ] ::: INFO ::: FILE [root] --- LINE: [151]
+the new data from data\preprocessed_data\final_data\dev.csv successfully added to data_csv\final.csv
+[ 2026-10-04 10:13:43,980 ] ::: ERROR ::: FILE [root] --- LINE: [23]
+SOME TROUBLES WITH STAGE [FINAL MODEL TRAIN STAGE]
+[ 2026-10-04 10:16:38,116 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-10-04 10:16:38,119 ] ::: INFO ::: FILE [root] --- LINE: [10]
+
+----------------stage [FINAL MODEL TRAIN STAGE] started--------------------------
+[ 2026-10-04 10:16:38,119 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-04 10:16:38,120 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-04 10:16:38,120 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-04 10:16:38,404 ] ::: INFO ::: FILE [root] --- LINE: [151]
+the new data from data\preprocessed_data\final_data\dev.csv successfully added to data_csv\final.csv
+[ 2026-10-04 10:16:38,710 ] ::: INFO ::: FILE [root] --- LINE: [463]
+Final model creation entity created
+[ 2026-10-04 10:16:38,837 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-04 10:16:38,978 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-04 10:16:38,989 ] ::: INFO ::: FILE [root] --- LINE: [50]
+MRI lightning data module successfully initialized
+[ 2026-10-04 10:16:38,990 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 10:16:39,164 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 10:16:39,164 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 10:16:39,177 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 10:16:39,177 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 10:16:39,189 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 10:16:39,200 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-04 10:16:39,336 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-04 10:16:39,348 ] ::: INFO ::: FILE [root] --- LINE: [130]
+MRI lightning module successfully initialized
+[ 2026-10-04 10:16:39,348 ] ::: INFO ::: FILE [root] --- LINE: [50]
+MRI lightning data module successfully initialized
+[ 2026-10-04 10:16:39,351 ] ::: INFO ::: FILE [root] --- LINE: [80]
+MRI model trainer successfully initialized
+[ 2026-10-04 10:17:25,652 ] ::: INFO ::: FILE [root] --- LINE: [48]
+Strat of model training...
+[ 2026-10-04 10:17:25,669 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [164]
+GPU available: False, used: False
+[ 2026-10-04 10:17:25,669 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [167]
+TPU available: False, using: 0 TPU cores
+[ 2026-10-04 10:17:25,670 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [91]
+\U0001f4a1 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+[ 2026-10-04 10:17:25,670 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [114]
+`Trainer(limit_train_batches=1)` was configured so 1 batch per epoch will be used.
+[ 2026-10-04 10:17:25,670 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [114]
+`Trainer(limit_val_batches=1)` was configured so 1 batch will be used.
+[ 2026-10-04 10:17:25,670 ] ::: INFO ::: FILE [root] --- LINE: [152]
+MRI model lightning trainer successfully initialized
+[ 2026-10-04 10:17:27,223 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 10:17:27,365 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 10:17:27,365 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 10:17:27,375 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 10:17:27,544 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [81]
+Restoring states from the checkpoint path at models\final\inp\model_gpu.ckpt
+[ 2026-10-04 10:17:28,730 ] ::: ERROR ::: FILE [root] --- LINE: [23]
+SOME TROUBLES WITH STAGE [FINAL MODEL TRAIN STAGE]
+[ 2026-10-04 11:00:05,747 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-10-04 11:00:05,749 ] ::: INFO ::: FILE [root] --- LINE: [10]
+
+----------------stage [FINAL MODEL TRAIN STAGE] started--------------------------
+[ 2026-10-04 11:00:05,750 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-04 11:00:05,750 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-04 11:00:05,750 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-04 11:00:06,021 ] ::: INFO ::: FILE [root] --- LINE: [151]
+the new data from data\preprocessed_data\final_data\dev.csv successfully added to data_csv\final.csv
+[ 2026-10-04 11:00:06,188 ] ::: INFO ::: FILE [root] --- LINE: [463]
+Final model creation entity created
+[ 2026-10-04 11:00:06,303 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-04 11:00:06,402 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-04 11:00:06,414 ] ::: INFO ::: FILE [root] --- LINE: [50]
+MRI lightning data module successfully initialized
+[ 2026-10-04 11:00:06,414 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 11:00:06,547 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 11:00:06,547 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 11:00:06,556 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 11:00:06,556 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 11:00:06,565 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 11:00:06,576 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-04 11:00:06,689 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-04 11:00:06,697 ] ::: INFO ::: FILE [root] --- LINE: [130]
+MRI lightning module successfully initialized
+[ 2026-10-04 11:00:06,697 ] ::: INFO ::: FILE [root] --- LINE: [50]
+MRI lightning data module successfully initialized
+[ 2026-10-04 11:00:06,700 ] ::: INFO ::: FILE [root] --- LINE: [80]
+MRI model trainer successfully initialized
+[ 2026-10-04 11:00:50,768 ] ::: INFO ::: FILE [root] --- LINE: [48]
+Strat of model training...
+[ 2026-10-04 11:00:50,782 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [164]
+GPU available: False, used: False
+[ 2026-10-04 11:00:50,782 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [167]
+TPU available: False, using: 0 TPU cores
+[ 2026-10-04 11:00:50,783 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [91]
+\U0001f4a1 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+[ 2026-10-04 11:00:50,783 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [114]
+`Trainer(limit_train_batches=1)` was configured so 1 batch per epoch will be used.
+[ 2026-10-04 11:00:50,784 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [114]
+`Trainer(limit_val_batches=1)` was configured so 1 batch will be used.
+[ 2026-10-04 11:00:50,784 ] ::: INFO ::: FILE [root] --- LINE: [152]
+MRI model lightning trainer successfully initialized
+[ 2026-10-04 11:00:52,144 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 11:00:52,280 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 11:00:52,280 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 11:00:52,291 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 11:00:52,455 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [81]
+Restoring states from the checkpoint path at models\final\inp\model_gpu.ckpt
+[ 2026-10-04 11:00:52,927 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [224]
+Restored all states from the checkpoint at models\final\inp\model_gpu.ckpt
+[ 2026-10-04 11:01:34,980 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [192]
+`Trainer.fit` stopped: `max_epochs=35` reached.
+[ 2026-10-04 11:01:39,606 ] ::: ERROR ::: FILE [root] --- LINE: [23]
+SOME TROUBLES WITH STAGE [FINAL MODEL TRAIN STAGE]
+[ 2026-10-04 11:19:47,469 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-10-04 11:19:47,472 ] ::: INFO ::: FILE [root] --- LINE: [10]
+
+----------------stage [FINAL MODEL TRAIN STAGE] started--------------------------
+[ 2026-10-04 11:19:47,472 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-04 11:19:47,473 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-04 11:19:47,473 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-04 11:19:47,754 ] ::: INFO ::: FILE [root] --- LINE: [151]
+the new data from data\preprocessed_data\final_data\dev.csv successfully added to data_csv\final.csv
+[ 2026-10-04 11:19:47,917 ] ::: INFO ::: FILE [root] --- LINE: [463]
+Final model creation entity created
+[ 2026-10-04 11:19:48,028 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-04 11:19:48,141 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-04 11:19:48,152 ] ::: INFO ::: FILE [root] --- LINE: [50]
+MRI lightning data module successfully initialized
+[ 2026-10-04 11:19:48,152 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 11:19:48,279 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 11:19:48,280 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 11:19:48,290 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 11:19:48,290 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 11:19:48,299 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 11:19:48,311 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-04 11:19:48,426 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-04 11:19:48,435 ] ::: INFO ::: FILE [root] --- LINE: [130]
+MRI lightning module successfully initialized
+[ 2026-10-04 11:19:48,435 ] ::: INFO ::: FILE [root] --- LINE: [50]
+MRI lightning data module successfully initialized
+[ 2026-10-04 11:19:48,437 ] ::: INFO ::: FILE [root] --- LINE: [80]
+MRI model trainer successfully initialized
+[ 2026-10-04 11:20:32,515 ] ::: INFO ::: FILE [root] --- LINE: [48]
+Strat of model training...
+[ 2026-10-04 11:20:32,529 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [164]
+GPU available: False, used: False
+[ 2026-10-04 11:20:32,529 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [167]
+TPU available: False, using: 0 TPU cores
+[ 2026-10-04 11:20:32,530 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [91]
+\U0001f4a1 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+[ 2026-10-04 11:20:32,530 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [114]
+`Trainer(limit_train_batches=1)` was configured so 1 batch per epoch will be used.
+[ 2026-10-04 11:20:32,530 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [114]
+`Trainer(limit_val_batches=1)` was configured so 1 batch will be used.
+[ 2026-10-04 11:20:32,531 ] ::: INFO ::: FILE [root] --- LINE: [152]
+MRI model lightning trainer successfully initialized
+[ 2026-10-04 11:20:33,835 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 11:20:33,974 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 11:20:33,974 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 11:20:33,984 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 11:20:34,147 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [81]
+Restoring states from the checkpoint path at models\final\inp\model_gpu.ckpt
+[ 2026-10-04 11:20:34,588 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [224]
+Restored all states from the checkpoint at models\final\inp\model_gpu.ckpt
+[ 2026-10-04 11:21:41,670 ] ::: INFO ::: FILE [lightning.pytorch.callbacks.early_stopping] --- LINE: [305]
+Metric val_loss improved by 0.352 >= min_delta = 0.0. New best score: 0.000
+[ 2026-10-04 11:21:41,672 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [980]
+Epoch 35, global step 18551: 'val_loss' reached 0.00025 (best 0.00025), saving model to 'D:\\learning\\learning\\programing\\portfolio_projects\\1_image\\models\\final\\out\\final_gpu-final\\model-final.ckpt' as top 1
+[ 2026-10-04 11:21:44,228 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [192]
+`Trainer.fit` stopped: `max_epochs=36` reached.
+[ 2026-10-04 11:30:21,905 ] ::: INFO ::: FILE [root] --- LINE: [56]
+model final_gpu-final successfully trained
+[ 2026-10-04 11:30:21,906 ] ::: ERROR ::: FILE [root] --- LINE: [23]
+SOME TROUBLES WITH STAGE [FINAL MODEL TRAIN STAGE]
+[ 2026-10-04 11:32:26,787 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-10-04 11:32:26,789 ] ::: INFO ::: FILE [root] --- LINE: [10]
+
+----------------stage [FINAL MODEL TRAIN STAGE] started--------------------------
+[ 2026-10-04 11:32:26,790 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-04 11:32:26,791 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-04 11:32:26,791 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-04 11:32:27,052 ] ::: INFO ::: FILE [root] --- LINE: [151]
+the new data from data\preprocessed_data\final_data\dev.csv successfully added to data_csv\final.csv
+[ 2026-10-04 11:32:27,219 ] ::: INFO ::: FILE [root] --- LINE: [466]
+Final model creation entity created
+[ 2026-10-04 11:32:27,327 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-04 11:32:27,435 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-04 11:32:27,447 ] ::: INFO ::: FILE [root] --- LINE: [50]
+MRI lightning data module successfully initialized
+[ 2026-10-04 11:32:27,447 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 11:32:27,572 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 11:32:27,572 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 11:32:27,583 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 11:32:27,588 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 11:32:27,597 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 11:32:27,616 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-04 11:32:27,737 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-04 11:32:27,746 ] ::: INFO ::: FILE [root] --- LINE: [130]
+MRI lightning module successfully initialized
+[ 2026-10-04 11:32:27,746 ] ::: INFO ::: FILE [root] --- LINE: [50]
+MRI lightning data module successfully initialized
+[ 2026-10-04 11:32:27,748 ] ::: INFO ::: FILE [root] --- LINE: [80]
+MRI model trainer successfully initialized
+[ 2026-10-04 11:33:11,641 ] ::: INFO ::: FILE [root] --- LINE: [48]
+Strat of model training...
+[ 2026-10-04 11:33:11,656 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [164]
+GPU available: False, used: False
+[ 2026-10-04 11:33:11,656 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [167]
+TPU available: False, using: 0 TPU cores
+[ 2026-10-04 11:33:11,657 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [91]
+\U0001f4a1 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+[ 2026-10-04 11:33:11,657 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [114]
+`Trainer(limit_train_batches=1)` was configured so 1 batch per epoch will be used.
+[ 2026-10-04 11:33:11,657 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [114]
+`Trainer(limit_val_batches=1)` was configured so 1 batch will be used.
+[ 2026-10-04 11:33:11,658 ] ::: INFO ::: FILE [root] --- LINE: [152]
+MRI model lightning trainer successfully initialized
+[ 2026-10-04 11:33:12,912 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 11:33:13,044 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 11:33:13,045 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 11:33:13,053 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 11:33:13,207 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [81]
+Restoring states from the checkpoint path at models\final\inp\model_gpu.ckpt
+[ 2026-10-04 11:33:13,640 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [224]
+Restored all states from the checkpoint at models\final\inp\model_gpu.ckpt
+[ 2026-10-04 11:34:20,272 ] ::: INFO ::: FILE [lightning.pytorch.callbacks.early_stopping] --- LINE: [305]
+Metric val_loss improved by 0.352 >= min_delta = 0.0. New best score: 0.000
+[ 2026-10-04 11:34:20,273 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [980]
+Epoch 35, global step 18551: 'val_loss' reached 0.00025 (best 0.00025), saving model to 'D:\\learning\\learning\\programing\\portfolio_projects\\1_image\\models\\final\\out\\final_gpu-final\\model-final-v1.ckpt' as top 1
+[ 2026-10-04 11:34:22,808 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [192]
+`Trainer.fit` stopped: `max_epochs=36` reached.
+[ 2026-10-04 11:38:30,230 ] ::: INFO ::: FILE [root] --- LINE: [56]
+model final_gpu-final successfully trained
+[ 2026-10-04 11:38:30,230 ] ::: ERROR ::: FILE [root] --- LINE: [23]
+SOME TROUBLES WITH STAGE [FINAL MODEL TRAIN STAGE]
+[ 2026-10-04 12:02:00,425 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-10-04 12:02:00,428 ] ::: INFO ::: FILE [root] --- LINE: [10]
+
+----------------stage [FINAL MODEL TRAIN STAGE] started--------------------------
+[ 2026-10-04 12:02:00,428 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-04 12:02:00,429 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-04 12:02:00,429 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-04 12:02:00,702 ] ::: INFO ::: FILE [root] --- LINE: [151]
+the new data from data\preprocessed_data\final_data\dev.csv successfully added to data_csv\final.csv
+[ 2026-10-04 12:02:00,865 ] ::: INFO ::: FILE [root] --- LINE: [466]
+Final model creation entity created
+[ 2026-10-04 12:02:00,972 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-04 12:02:01,079 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-04 12:02:01,090 ] ::: INFO ::: FILE [root] --- LINE: [50]
+MRI lightning data module successfully initialized
+[ 2026-10-04 12:02:01,091 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 12:02:01,218 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 12:02:01,218 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 12:02:01,228 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 12:02:01,228 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 12:02:01,238 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 12:02:01,250 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-04 12:02:01,368 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-04 12:02:01,376 ] ::: INFO ::: FILE [root] --- LINE: [130]
+MRI lightning module successfully initialized
+[ 2026-10-04 12:02:01,376 ] ::: INFO ::: FILE [root] --- LINE: [50]
+MRI lightning data module successfully initialized
+[ 2026-10-04 12:02:01,378 ] ::: INFO ::: FILE [root] --- LINE: [80]
+MRI model trainer successfully initialized
+[ 2026-10-04 12:02:46,455 ] ::: INFO ::: FILE [root] --- LINE: [48]
+Strat of model training...
+[ 2026-10-04 12:02:46,479 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [164]
+GPU available: False, used: False
+[ 2026-10-04 12:02:46,479 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [167]
+TPU available: False, using: 0 TPU cores
+[ 2026-10-04 12:02:46,480 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [91]
+\U0001f4a1 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+[ 2026-10-04 12:02:46,480 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [114]
+`Trainer(limit_train_batches=1)` was configured so 1 batch per epoch will be used.
+[ 2026-10-04 12:02:46,480 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [114]
+`Trainer(limit_val_batches=1)` was configured so 1 batch will be used.
+[ 2026-10-04 12:02:46,480 ] ::: INFO ::: FILE [root] --- LINE: [152]
+MRI model lightning trainer successfully initialized
+[ 2026-10-04 12:02:47,814 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 12:02:47,951 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 12:02:47,951 ] ::: INFO ::: FILE [root] --- LINE: [21]
+entering the creation of dataset
+[ 2026-10-04 12:02:47,960 ] ::: INFO ::: FILE [root] --- LINE: [53]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-04 12:02:48,168 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [81]
+Restoring states from the checkpoint path at models\final\inp\model_gpu.ckpt
+[ 2026-10-04 12:02:48,638 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [224]
+Restored all states from the checkpoint at models\final\inp\model_gpu.ckpt
+[ 2026-10-04 12:03:56,484 ] ::: INFO ::: FILE [lightning.pytorch.callbacks.early_stopping] --- LINE: [305]
+Metric val_loss improved by 0.352 >= min_delta = 0.0. New best score: 0.000
+[ 2026-10-04 12:03:56,485 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [980]
+Epoch 35, global step 18551: 'val_loss' reached 0.00025 (best 0.00025), saving model to 'D:\\learning\\learning\\programing\\portfolio_projects\\1_image\\models\\final\\out\\final_gpu-final\\model-final-v2.ckpt' as top 1
+[ 2026-10-04 12:03:59,169 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [192]
+`Trainer.fit` stopped: `max_epochs=36` reached.
+[ 2026-10-04 12:13:51,288 ] ::: INFO ::: FILE [root] --- LINE: [56]
+model final_gpu-final successfully trained
+[ 2026-10-04 12:14:57,967 ] ::: INFO ::: FILE [root] --- LINE: [21]
+================stage [FINAL MODEL TRAIN STAGE] ended===========================
+
