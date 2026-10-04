@@ -10,13 +10,15 @@ def final_train():
         logger.logging.info(f'\n----------------stage [{stage_name}] started--------------------------')
 
         entity = FinalModelCreationEntity()
-        #calibrator = ThresholdCalibrator(entity)
+        
         trainer = V2TtrainingComponent(entity)
 
 
-        #calibrator.calc_best_thresh_and_shift()
+        
         trainer()
-        #calibrator()
+        calibrator = ThresholdCalibrator(entity)
+        calibrator.calc_best_thresh_and_shift()
+        calibrator()
 
         logger.logging.info(f'================stage [{stage_name}] ended===========================\n')
     except Exception as e:
