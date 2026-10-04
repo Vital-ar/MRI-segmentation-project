@@ -137,7 +137,7 @@ class ModelTrainer:
         #else:
         #     sync_bn = True
 
-        self.trainer = pl.Trainer(max_epochs=36,limit_train_batches=1, limit_val_batches=1, #!delete for real run
+        self.trainer = pl.Trainer(max_epochs=36,limit_train_batches=8, limit_val_batches=8, #!delete for real run
              accelerator = accelerator, 
              devices = devices,
              strategy = strategy,
