@@ -12,8 +12,8 @@ from src.components.optuna_model_selection.dataset import MRIDataset
 from src.components.optuna_model_selection.model import MRIFlexAttentionUNet, MRIFlexAttentionUNetGroupNorm
 from src.logging import logger
 from src.components.optuna_model_selection.dice_bce_loss import DiceBCELoss
-
-
+import torch.distributed as dist
+ 
 
 
 
@@ -139,15 +139,51 @@ class MRIModule(pl.LightningModule):
 
     def training_step(self, batch, batch_idx = None):
 
+
+        rank = dist.get_rank() if dist.is_initialized() else 0
+        
+        print(
+            f"RANK={rank} | "
+            f"batch={batch_idx} | "
+            f"cuda_device={torch.cuda.current_device()} | "
+            f"model_device={next(self.parameters()).device}",
+            flush=True
+        )
+    
+        
         images, masks = batch
+        print(
+            f"RANK={rank} | batch={batch_idx} | BEFORE FORWARD",
+            flush=True
+        )
+ 
+
+
         logits = self(images)
 
+        print(
+            f"RANK={rank} | batch={batch_idx} | AFTER FORWARD",
+            flush=True
+        )
+        
         loss, dice, bce = self.loss_fn(logits, masks)
+
+        print(
+            f"RANK={rank} | batch={batch_idx} | BEFORE LOG",
+            flush=True
+        )
+        
+                
         
         self.log('train_loss', loss, prog_bar=True, sync_dist=True)
         self.log('train_dice', dice, prog_bar = True, sync_dist=True)
         self.log('train_bce', bce, prog_bar = True, sync_dist=True)
 
+        
+        print(
+            f"RANK={rank} | batch={batch_idx} | AFTER LOG",
+            flush=True
+        )
 
         return loss
 

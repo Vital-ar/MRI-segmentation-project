@@ -146,8 +146,8 @@ class ThresholdCalibrator:
 
                     dist_pos[c] += np.bincount(pos_bins, minlength=self.num_integ_bins)
                     dist_neg[c] += np.bincount(neg_bins, minlength=self.num_integ_bins)
-                print(i)
-                break
+                print(i)#!
+                break#!
                 if i%100 == 0:
                     print(i, 'new batches where added to distribution')
                
