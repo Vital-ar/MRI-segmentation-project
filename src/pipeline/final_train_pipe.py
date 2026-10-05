@@ -10,12 +10,10 @@ def final_train():
         logger.logging.info(f'\n----------------stage [{stage_name}] started--------------------------')
 
         entity = FinalModelCreationEntity()
+        if entity.accelerator == 'tpu':
+            trainer = V2TtrainingComponent(entity)
         
-        trainer = V2TtrainingComponent(entity)
-
-
-        
-        trainer()
+            trainer()
         calibrator = ThresholdCalibrator(entity)
         calibrator.calc_best_thresh_and_shift()
         calibrator()
