@@ -147,9 +147,9 @@ class MRISaverDataset(Dataset):
         entry = self.partial_df.iloc[index]
 
         save_p = Path(entry.out_transformed_mask_path)
-        if not save_p.parent.is_dir():
-            save_p.parent.mkdir(parents=True, exist_ok = True)
-            print('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+        #if not save_p.parent.is_dir():
+        save_p.parent.mkdir(parents=True, exist_ok = True)
+        print('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
 
         img_0 = cv2.imread(entry.prev_path, cv2.IMREAD_UNCHANGED)
         img_1 = cv2.imread(entry.path, cv2.IMREAD_UNCHANGED)
