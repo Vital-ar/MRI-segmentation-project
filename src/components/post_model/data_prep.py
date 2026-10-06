@@ -13,7 +13,6 @@ class PostModelDataCreation:
     def __init__(self, config):
 
         self.device =torch.device('cuda' if config.accelerator == 'gpu' else 'cpu')
-
         ckpt = torch.load(config.base_model_path, 
                                 self.device, weights_only=False)
         state_dict = ckpt['state_dict']
@@ -39,7 +38,8 @@ class PostModelDataCreation:
         
         self.model.load_state_dict(inner_state_dict)
 
-        self.make_post_model_dfs(config.train_csv, config.dev_csv, config.test_csv)
+        self.make_post_model_dfs(config.train_csv, config.dev_csv, config.test_csv, config.detailed_csv)
+        print(config.train_csv)
         self.dataset = MRISaverDataset(self.df,transform=config.transform)
         self.dataloader = DataLoader(self.dataset, config.batch_size , False, num_workers= config.num_workers)
 
@@ -56,9 +56,9 @@ class PostModelDataCreation:
 
     def _make_df(self, df_path: Path, detailed_df_path):
 
-        full_df_path = df_path.parent / (df_path.stem + '_post_model') / df_path.suffix
-
-        if full_df_path.exists:
+        full_df_path = df_path.parent / (df_path.stem + '_post_model' + df_path.suffix)
+        print(full_df_path)
+        if full_df_path.is_file():
             full_df = pd.read_csv(full_df_path)
 
 
@@ -78,7 +78,7 @@ class PostModelDataCreation:
                 return new_path
             
             full_df['collapsed_mask_path'] = full_df['mask_path'].apply(make_collapsed_mask_path)
-            del make_model_mask_path
+            
 
 
             def make_model_mask_path(d):
@@ -87,7 +87,7 @@ class PostModelDataCreation:
                 return new_path
 
             full_df['model_mask_path'] = full_df['mask_path'].apply(make_model_mask_path)
-            del make_model_mask_path
+            
 
 
             def make_out_transformed_mask_path(d):
@@ -96,7 +96,7 @@ class PostModelDataCreation:
                 return new_path
 
             full_df['out_transformed_mask_path'] = full_df['mask_path'].apply(make_out_transformed_mask_path)
-            del make_out_transformed_mask_path
+            
 
             full_df.to_csv(full_df_path, index = False)
 
@@ -112,7 +112,7 @@ class PostModelDataCreation:
                 
                 inp, idx = batch
 
-                all_exist = np.prod([self.dataset.partial_df.model_mask_path[int(id_)].exists() for id_ in idx], dtype = bool)
+                all_exist = np.prod([self.dataset.partial_df.model_mask_path[int(id_)].is_file() for id_ in idx], dtype = bool)
 
                 if not all_exist:
                     inp = inp.to(self.device)
@@ -120,9 +120,9 @@ class PostModelDataCreation:
 
                     for j in range(len(out)):
                         out_mask_path = self.dataset.partial_df.model_mask_path[int(idx[j])]
-                        if not out_mask_path.parent.exists():
+                        if not out_mask_path.parent.is_dir():
                             out_mask_path.parent.mkdir(parents=True, exist_ok = True)
-                        if not out_mask_path.exists():
+                        if not out_mask_path.is_file():
                             torch.save(out[j], out_mask_path)
 
                
@@ -149,9 +149,9 @@ class PostModelDataCreation:
             collapsed_mask = torch.from_numpy(collapsed_mask)
             collapsed_mask = torch.sum(collapsed_mask, dim = 0)
             print(collapsed_mask.shape)
-            if not save.parent.exists():
+            if not save.parent.is_dir():
                 save.parent.mkdir(parents=True, exist_ok = True)
-            if not save.exists():
+            if not save.is_file():
                 torch.save(collapsed_mask, save)
             break
 

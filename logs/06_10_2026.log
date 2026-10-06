@@ -1,0 +1,152 @@
+[ 2026-10-06 11:13:31,910 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-10-06 11:19:16,573 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-10-06 11:23:56,600 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-10-06 11:23:56,602 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [POST MODEL DATA PREPARATION] started--------------------------
+[ 2026-10-06 11:23:56,603 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-06 11:23:56,603 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-06 11:23:56,603 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-06 11:23:56,607 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [POST MODEL DATA PREPARATION]
+[ 2026-10-06 11:25:34,030 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-10-06 11:25:34,033 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [POST MODEL DATA PREPARATION] started--------------------------
+[ 2026-10-06 11:25:34,033 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-06 11:25:34,034 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-06 11:25:34,034 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-06 11:25:34,328 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-06 11:25:34,472 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-06 11:25:34,483 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [POST MODEL DATA PREPARATION]
+[ 2026-10-06 11:28:45,844 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-10-06 11:28:45,847 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [POST MODEL DATA PREPARATION] started--------------------------
+[ 2026-10-06 11:28:45,848 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-06 11:28:45,849 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-06 11:28:45,849 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-06 11:28:46,064 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-06 11:28:46,198 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-06 11:28:46,209 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [POST MODEL DATA PREPARATION]
+[ 2026-10-06 11:28:57,025 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-10-06 11:28:57,030 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [POST MODEL DATA PREPARATION] started--------------------------
+[ 2026-10-06 11:28:57,031 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-06 11:28:57,033 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-06 11:28:57,033 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-06 11:28:57,033 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [POST MODEL DATA PREPARATION]
+[ 2026-10-06 11:29:18,216 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-10-06 11:29:18,220 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [POST MODEL DATA PREPARATION] started--------------------------
+[ 2026-10-06 11:29:18,220 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-06 11:29:18,221 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-06 11:29:18,221 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-06 11:29:18,389 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-06 11:29:18,516 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-06 11:29:18,527 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [POST MODEL DATA PREPARATION]
+[ 2026-10-06 11:29:39,592 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-10-06 11:29:39,595 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [POST MODEL DATA PREPARATION] started--------------------------
+[ 2026-10-06 11:29:39,596 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-06 11:29:39,596 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-06 11:29:39,596 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-06 11:29:39,768 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-06 11:29:39,882 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-06 11:29:39,895 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [POST MODEL DATA PREPARATION]
+[ 2026-10-06 11:31:57,368 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-10-06 11:31:57,371 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [POST MODEL DATA PREPARATION] started--------------------------
+[ 2026-10-06 11:31:57,372 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-06 11:31:57,372 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-06 11:31:57,373 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-06 11:31:57,547 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-06 11:31:57,660 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-06 11:31:57,674 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [POST MODEL DATA PREPARATION]
+[ 2026-10-06 11:41:08,277 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-10-06 11:41:08,281 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [POST MODEL DATA PREPARATION] started--------------------------
+[ 2026-10-06 11:41:08,281 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-06 11:41:08,282 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-06 11:41:08,282 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-06 11:41:08,483 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-06 11:41:08,612 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-06 11:41:09,652 ] ::: ERROR ::: FILE [root] --- LINE: [25]
+SOME TROUBLES WITH STAGE [POST MODEL DATA PREPARATION]
+[ 2026-10-06 11:41:56,184 ] ::: INFO ::: FILE [lightning.fabric.utilities.seed] --- LINE: [57]
+Seed set to 42
+[ 2026-10-06 11:41:56,187 ] ::: INFO ::: FILE [root] --- LINE: [14]
+
+----------------stage [POST MODEL DATA PREPARATION] started--------------------------
+[ 2026-10-06 11:41:56,187 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-06 11:41:56,188 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-06 11:41:56,188 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-06 11:41:56,375 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-06 11:41:56,489 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-06 11:41:59,867 ] ::: INFO ::: FILE [root] --- LINE: [126]
+entering the creation of dataset
+[ 2026-10-06 11:41:59,878 ] ::: INFO ::: FILE [root] --- LINE: [23]
+================stage [POST MODEL DATA PREPARATION] ended===========================
+

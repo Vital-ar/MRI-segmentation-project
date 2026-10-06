@@ -476,4 +476,5 @@ class PostModelDataPrepEntity(ModelCreationEntity):
         self.base_model_path = FINAL_BASE_MODEL_PATH
         self.threshold_path = STATS_DIR/THRESHOLD_FILE
         self.transform = self.dev_transform
+        self.detailed_csv = METADATA_FILE
 
