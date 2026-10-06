@@ -149,6 +149,7 @@ class MRISaverDataset(Dataset):
         save_p = Path(entry.out_transformed_mask_path)
         if not save_p.parent.exists():
             save_p.parent.mkdir(parents=True, exist_ok = True)
+            print('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
 
         img_0 = cv2.imread(entry.prev_path, cv2.IMREAD_UNCHANGED)
         img_1 = cv2.imread(entry.path, cv2.IMREAD_UNCHANGED)
