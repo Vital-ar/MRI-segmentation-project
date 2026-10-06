@@ -58,9 +58,9 @@ class PostModelDataCreation:
 
         stem = df_path.stem.removesuffix('_kaggle')
         if df_path.stem.endswith('_kaggle'):
-            full_df_path = df_path.parent / (df_path.stem + '_post_model' + '_kaggle' + df_path.suffix)
+            full_df_path = df_path.parent / (stem + '_post_model' + '_kaggle' + df_path.suffix)
         else:
-            full_df_path = df_path.parent / (df_path.stem + '_post_model' + df_path.suffix)
+            full_df_path = df_path.parent / (stem + '_post_model' + df_path.suffix)
 
         print(full_df_path)
         if full_df_path.is_file():
