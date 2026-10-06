@@ -63,9 +63,18 @@ POS_WEIGHT_0_2 = [ 75.23487254,  82.03649415, 147.09627935]
 POS_WEIGHT_0_3 = [ 86.12556861,  93.89885046, 168.25289069]
 POS_WEIGHT = POS_WEIGHT_0_1
 EFFECTIVE_BATCH_SIZE = 32
-FINAL_MODEL_DIR = Path('models', 'final', 'out')
+FINAL_MODELS_DIR = Path('models', 'final', 'out')
 
 GPU_DDP = 'ddp_spawn'# optuna crash on auto
 V3_EPOCHS = 60
 
 FINAL_CSV = Path('data_csv', 'final.csv')
+
+
+GPU_FINAL_MODEL_NAME = 'final_gpu'
+TPU_FINAL_MODEL_NAME = 'final_tpu'
+FINAL_INDEX = 'final'
+
+FINAL_BASE_MODEL_PATH = FINAL_MODELS_DIR / (GPU_FINAL_MODEL_NAME + FINAL_INDEX) / 'model-final.ckpt'
+STATS_DIR = Path('stats', GPU_FINAL_MODEL_NAME)
+THRESHOLD_FILE = 'f1_optimized_threshold.npy'

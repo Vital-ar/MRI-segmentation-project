@@ -72,5 +72,12 @@ EFFECTIVE_BATCH_SIZE = 32
 V3_EPOCHS = 45
 
 FINAL_CSV = Path('data_csv', 'final.csv')
-FINAL_MODEL_DIR = Path('models', 'final', 'out')
+FINAL_MODELS_DIR = Path('models', 'final', 'out')
 
+GPU_FINAL_MODEL_NAME = 'final_gpu'
+TPU_FINAL_MODEL_NAME = 'final_tpu'
+FINAL_INDEX = 'final'
+
+FINAL_BASE_MODEL_PATH = FINAL_MODELS_DIR / (GPU_FINAL_MODEL_NAME + FINAL_INDEX) / 'model-final.ckpt'
+STATS_DIR = Path('stats', GPU_FINAL_MODEL_NAME)
+THRESHOLD_FILE = 'f1_optimized_threshold.npy'

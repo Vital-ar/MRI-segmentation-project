@@ -1,6 +1,7 @@
 import torch
 from torchvision import tv_tensors
 from torch.utils.data import Dataset
+from pathlib import Path
 
 from src.logging import logger
 import pandas as pd
@@ -104,3 +105,80 @@ class MRIDataset(Dataset):
                         self.idx = 0
             self.partial_df = self._get_part_df(self.seed_arr[self.idx])
             self.idx += 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+class MRISaverDataset(Dataset):
+
+
+
+    def __init__(self, subset_df, transform = None, random_state =42):
+        logger.logging.info('entering the creation of dataset')
+        
+
+        self.not_empty_df = subset_df[~subset_df.empty_slice].drop('empty_slice', axis = 1)
+        self.empty_df = subset_df[subset_df.empty_slice].drop('empty_slice', axis = 1)
+
+        
+        self.transform = transform
+        self.random_state = random_state
+
+        self.partial_df = subset_df
+
+    
+    def __len__(self):
+
+        return len(self.partial_df)
+
+         
+
+    def __getitem__(self, index): 
+        
+        entry = self.partial_df.iloc[index]
+
+        save_p = Path(entry.out_transformed_mask_path)
+        if not save_p.parent.exists():
+            save_p.parent.mkdir(parents=True, exist_ok = True)
+
+        img_0 = cv2.imread(entry.prev_path, cv2.IMREAD_UNCHANGED)
+        img_1 = cv2.imread(entry.path, cv2.IMREAD_UNCHANGED)
+        img_2 = cv2.imread(entry.next_path, cv2.IMREAD_UNCHANGED)
+
+        img = np.stack([img_0, img_1, img_2])
+        
+        mask = np.load(entry.mask_path)
+
+        img = tv_tensors.Image(torch.from_numpy(img)).to(torch.float32)
+        mask = tv_tensors.Mask(torch.from_numpy(mask)).to(torch.float32)
+
+        min_num = img.min()
+        max_num = img.max()
+        img = (img - min_num)/(max_num - min_num + 1e-8)
+        
+        if self.transform:
+            img, mask = self.transform(img, mask)
+            if not save_p.exists():
+                torch.save(mask, save_p)
+        
+
+        return img, index
+
+    
+
+   
+
+
+
+
+
+

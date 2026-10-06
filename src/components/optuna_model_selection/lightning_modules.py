@@ -242,7 +242,7 @@ class MRIModule(pl.LightningModule):
         prob = torch.sigmoid(logits)
         if self.threshold is not None:
             thresh = self.threshold.view( -1, 1, 1)
-            mask = (prob >= thresh).float()
+            mask = (prob >= thresh).int()
         
         else:
             mask = (prob > 0.5).int()

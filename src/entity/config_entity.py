@@ -435,16 +435,16 @@ class FinalModelCreationEntity(ModelCreationEntity):
             self.devices = 8
             self.num_workers = 0
             self.batch_size = 4
-            self.model_name = 'final_tpu'
+            self.model_name = TPU_FINAL_MODEL_NAME
             self.epochs = 50
             self.accum_batch = 4
         else:
             self.inp_model_path=Path(f'models/final/inp/model_gpu.ckpt')
         
-            self.model_name = 'final_gpu'
+            self.model_name = GPU_FINAL_MODEL_NAME
             self.epochs = FINAL_EPOCHS
         
-        self.checkpoint_dir = FINAL_MODEL_DIR
+        self.checkpoint_dir = FINAL_MODELS_DIR
         
         #self.inp_model_path = path #Path(f'models/final_inp/model_{index}.ckpt')
 
@@ -458,9 +458,22 @@ class FinalModelCreationEntity(ModelCreationEntity):
         self.lr = hparams['learning_rate']
         self.w = hparams['weight_decay']
 
-        self.index = 'final'
+        self.index = FINAL_INDEX
         mod_name = self.model_name + '-' + self.index
-        self.final_checkpoint =  Path(FINAL_MODEL_DIR, mod_name, 'model-final.ckpt' )    
+        self.final_checkpoint =  Path(FINAL_MODELS_DIR, mod_name, 'model-final.ckpt' )    
     
 
         logger.logging.info('Final model creation entity created')
+
+
+
+
+
+class PostModelDataPrepEntity(ModelCreationEntity):
+
+    def __init__(self):
+        super().__init__(False)
+        self.base_model_path = FINAL_BASE_MODEL_PATH
+        self.threshold_path = STATS_DIR/THRESHOLD_FILE
+        self.transform = self.dev_transform
+
