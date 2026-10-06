@@ -128,7 +128,7 @@ class PostModelDataCreation:
                         if not out_mask_path.parent.is_dir():
                             out_mask_path.parent.mkdir(parents=True, exist_ok = True)
                         if not out_mask_path.is_file():
-                            np.savez_compressed(out[j].to(torch.float16).cpu().numpy(), out_mask_path)
+                            np.savez_compressed(out_mask_path, out[j].to(torch.float16).cpu().numpy() )
 
                
 
