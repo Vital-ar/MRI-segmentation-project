@@ -39,7 +39,7 @@ class PostModelDataCreation:
         self.model.load_state_dict(inner_state_dict)
 
         self.make_post_model_dfs(config.train_csv, config.dev_csv, config.test_csv, config.detailed_csv)
-        print(config.train_csv)
+        
         self.dataset = MRISaverDataset(self.df,transform=config.transform)
         self.dataloader = DataLoader(self.dataset, config.batch_size , False, num_workers= config.num_workers)
 
@@ -62,7 +62,6 @@ class PostModelDataCreation:
         else:
             full_df_path = df_path.parent / (stem + '_post_model' + df_path.suffix)
 
-        print(full_df_path)
         if full_df_path.is_file():
             full_df = pd.read_csv(full_df_path)
 
@@ -128,7 +127,7 @@ class PostModelDataCreation:
                         if not out_mask_path.parent.is_dir():
                             out_mask_path.parent.mkdir(parents=True, exist_ok = True)
                         if not out_mask_path.is_file():
-                            torch.save(out[j], out_mask_path)
+                            torch.save(out[j].to(torch.float16), out_mask_path)
 
                
 
@@ -152,7 +151,7 @@ class PostModelDataCreation:
 
             collapsed_mask = np.array(collapsed_mask)
             collapsed_mask = torch.from_numpy(collapsed_mask)
-            collapsed_mask = torch.sum(collapsed_mask, dim = 0)
+            collapsed_mask = torch.sum(collapsed_mask, dim = 0).to(torch.uint8)
             print(collapsed_mask.shape)
             if not save.parent.is_dir():
                 save.parent.mkdir(parents=True, exist_ok = True)
