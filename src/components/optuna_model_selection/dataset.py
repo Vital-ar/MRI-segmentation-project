@@ -167,7 +167,7 @@ class MRISaverDataset(Dataset):
         if self.transform:
             img, mask = self.transform(img, mask)
             if not save_p.is_file():
-                torch.save(mask.to(torch.bool), save_p)
+                np.savez_compressed(save_p, mask.to(torch.bool).cpu().numpy())
         
 
         return img, index

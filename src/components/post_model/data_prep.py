@@ -77,7 +77,7 @@ class PostModelDataCreation:
 
 
             def make_collapsed_mask_path(d):
-                p = d.with_name(re.sub(r'_\d+$', '', d.stem) + '.pt')
+                p = d.with_name(re.sub(r'_\d+$', '', d.stem) + '.npz')
                 new_path = p.parent.with_name('post_model')/ 'collapsed_mask' / p.name
                 return new_path
             
@@ -86,7 +86,7 @@ class PostModelDataCreation:
 
 
             def make_model_mask_path(d):
-                p = d.with_name( d.stem + '.pt')
+                p = d.with_name( d.stem + '.npz')
                 new_path = p.parent.with_name('post_model')/ 'model_mask' / p.name
                 return new_path
 
@@ -95,7 +95,7 @@ class PostModelDataCreation:
 
 
             def make_out_transformed_mask_path(d):
-                p = d.with_name(d.stem + '.pt')
+                p = d.with_name(d.stem + '.npz')
                 new_path = p.parent.with_name('post_model')/ 'out_transformed_mask' / p.name
                 return new_path
 
@@ -117,7 +117,8 @@ class PostModelDataCreation:
                 inp, idx = batch
 
                 all_exist = np.prod([Path(self.dataset.partial_df.model_mask_path[int(id_)]).is_file() for id_ in idx], dtype = bool)
-
+                if idx[0]%10 == 0:
+                    print(idx)
                 if not all_exist:
                     inp = inp.to(self.device)
                     out = self.model(inp)
@@ -127,7 +128,7 @@ class PostModelDataCreation:
                         if not out_mask_path.parent.is_dir():
                             out_mask_path.parent.mkdir(parents=True, exist_ok = True)
                         if not out_mask_path.is_file():
-                            torch.save(out[j].to(torch.float16), out_mask_path)
+                            np.savez_compressed(out[j].to(torch.float16).cpu().numpy(), out_mask_path)
 
                
 
@@ -150,13 +151,12 @@ class PostModelDataCreation:
                 collapsed_mask.append(mask)
 
             collapsed_mask = np.array(collapsed_mask)
-            collapsed_mask = torch.from_numpy(collapsed_mask)
-            collapsed_mask = torch.sum(collapsed_mask, dim = 0).to(torch.uint8)
+            collapsed_mask = np.sum(collapsed_mask, dim = 0, dtype = np.uint8)
             print(collapsed_mask.shape)
             if not save.parent.is_dir():
                 save.parent.mkdir(parents=True, exist_ok = True)
             if not save.is_file():
-                torch.save(collapsed_mask, save)
+                np.savez_compressed(save, collapsed_mask)
             break
 
 
