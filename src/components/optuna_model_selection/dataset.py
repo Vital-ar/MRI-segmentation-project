@@ -147,7 +147,7 @@ class MRISaverDataset(Dataset):
         entry = self.partial_df.iloc[index]
 
         save_p = Path(entry.out_transformed_mask_path)
-        if not save_p.parent.exists():
+        if not save_p.parent.is_dir():
             save_p.parent.mkdir(parents=True, exist_ok = True)
             print('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
 
@@ -168,7 +168,7 @@ class MRISaverDataset(Dataset):
         
         if self.transform:
             img, mask = self.transform(img, mask)
-            if not save_p.exists():
+            if not save_p.is_file():
                 torch.save(mask, save_p)
         
 
