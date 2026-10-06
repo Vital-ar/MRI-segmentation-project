@@ -166,11 +166,18 @@ class PostModelDataCreation:
 
         mandat_col_imgs = self.dataset.partial_df.collapsed_mask_path.unique()
         collapsed_mask_dir = Path(self.dataset.partial_df.collapsed_mask_path[0]).parent
-        num_col_imgs = sum(1 for a in collapsed_mask_dir.iterdir() if a in mandat_col_imgs)
+        if collapsed_mask_dir.is_dir():
+            num_col_imgs = sum(1 for a in collapsed_mask_dir.iterdir() if a in mandat_col_imgs)
+        else: 
+            num_col_imgs = 0
+
 
         model_mask_dir = Path(self.dataset.partial_df.model_mask_path[0]).parent
         mandat_model_imgs = self.dataset.partial_df.model_mask_path.to_numpy()
-        num_imgs = sum(1 for a in model_mask_dir.iterdir() if a in mandat_model_imgs)
+        if model_mask_dir.is_dir():
+            num_imgs = sum(1 for a in model_mask_dir.iterdir() if a in mandat_model_imgs)
+        else:
+            num_imgs = 0
 
         if len(mandat_col_imgs) > num_col_imgs:
 

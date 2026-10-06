@@ -174,3 +174,15 @@ creation of the model...
 creation of the model compleated
 [ 2026-10-06 12:42:09,781 ] ::: INFO ::: FILE [root] --- LINE: [126]
 entering the creation of dataset
+[ 2026-10-06 13:42:26,447 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-06 13:42:26,448 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-06 13:42:26,449 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-06 13:42:26,675 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-06 13:42:26,791 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-06 13:42:27,048 ] ::: INFO ::: FILE [root] --- LINE: [126]
+entering the creation of dataset
