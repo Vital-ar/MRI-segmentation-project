@@ -117,14 +117,14 @@ class PostModelDataCreation:
                 
                 inp, idx = batch
 
-                all_exist = np.prod([self.dataset.partial_df.model_mask_path[int(id_)].is_file() for id_ in idx], dtype = bool)
+                all_exist = np.prod([Path(self.dataset.partial_df.model_mask_path[int(id_)]).is_file() for id_ in idx], dtype = bool)
 
                 if not all_exist:
                     inp = inp.to(self.device)
                     out = self.model(inp)
 
                     for j in range(len(out)):
-                        out_mask_path = self.dataset.partial_df.model_mask_path[int(idx[j])]
+                        out_mask_path = Path(self.dataset.partial_df.model_mask_path[int(idx[j])])
                         if not out_mask_path.parent.is_dir():
                             out_mask_path.parent.mkdir(parents=True, exist_ok = True)
                         if not out_mask_path.is_file():
