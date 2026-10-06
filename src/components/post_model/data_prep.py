@@ -56,7 +56,12 @@ class PostModelDataCreation:
 
     def _make_df(self, df_path: Path, detailed_df_path):
 
-        full_df_path = df_path.parent / (df_path.stem + '_post_model' + df_path.suffix)
+        stem = df_path.stem.removesuffix('_kaggle')
+        if df_path.stem.endswith('_kaggle'):
+            full_df_path = df_path.parent / (df_path.stem + '_post_model' + '_kaggle' + df_path.suffix)
+        else:
+            full_df_path = df_path.parent / (df_path.stem + '_post_model' + df_path.suffix)
+
         print(full_df_path)
         if full_df_path.is_file():
             full_df = pd.read_csv(full_df_path)
