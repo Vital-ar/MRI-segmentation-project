@@ -150,3 +150,27 @@ entering the creation of dataset
 [ 2026-10-06 11:41:59,878 ] ::: INFO ::: FILE [root] --- LINE: [23]
 ================stage [POST MODEL DATA PREPARATION] ended===========================
 
+[ 2026-10-06 12:41:55,222 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-06 12:41:55,223 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-06 12:41:55,223 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-06 12:41:55,404 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-06 12:41:55,531 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-06 12:41:55,823 ] ::: INFO ::: FILE [root] --- LINE: [126]
+entering the creation of dataset
+[ 2026-10-06 12:42:09,241 ] ::: INFO ::: FILE [root] --- LINE: [150]
+accelerator not passed as argument.
+[ 2026-10-06 12:42:09,241 ] ::: INFO ::: FILE [root] --- LINE: [154]
+Tested accelerator: cpu
+[ 2026-10-06 12:42:09,242 ] ::: INFO ::: FILE [root] --- LINE: [145]
+Model creation entity successfully created
+[ 2026-10-06 12:42:09,413 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-06 12:42:09,529 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-06 12:42:09,781 ] ::: INFO ::: FILE [root] --- LINE: [126]
+entering the creation of dataset

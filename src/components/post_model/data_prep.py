@@ -184,6 +184,7 @@ class PostModelDataCreation:
 
 
     def _create_kaggle_dfs_locally_for_data_prep(self):
-        generate_kaggle_csv(self.post_train_df_path, ['path','prev_path','next_path','mask_path'], '/kaggle/input/datasets/vitaliilavryk/mri-segmentation-dataset')
-        generate_kaggle_csv(self.post_val_df_path, ['path','prev_path','next_path','mask_path'], '/kaggle/input/datasets/vitaliilavryk/mri-segmentation-dataset')
-        generate_kaggle_csv(self.post_test_df_path, ['path','prev_path','next_path','mask_path'], '/kaggle/input/datasets/vitaliilavryk/mri-segmentation-dataset')
+        generate_kaggle_csv(self.post_train_df_path, ['path','prev_path','next_path','mask_path'], '/kaggle/input/datasets/vitaliilavryk/mri-segmentation-dataset',['collapsed_mask_path','model_mask_path','out_transformed_mask_path'])
+        generate_kaggle_csv(self.post_val_df_path, ['path','prev_path','next_path','mask_path'], '/kaggle/input/datasets/vitaliilavryk/mri-segmentation-dataset', ['collapsed_mask_path','model_mask_path','out_transformed_mask_path'])
+        generate_kaggle_csv(self.post_test_df_path, ['path','prev_path','next_path','mask_path'], '/kaggle/input/datasets/vitaliilavryk/mri-segmentation-dataset', ['collapsed_mask_path','model_mask_path','out_transformed_mask_path'])
+        
