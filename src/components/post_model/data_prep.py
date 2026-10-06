@@ -7,7 +7,7 @@ from pathlib import Path
 
 from src.components.optuna_model_selection.model import MRIFlexAttentionUNet
 from src.components.optuna_model_selection.dataset import MRISaverDataset
-
+from src.utils import generate_kaggle_csv
 
 class PostModelDataCreation:
     def __init__(self, config):
@@ -47,9 +47,9 @@ class PostModelDataCreation:
 
     def make_post_model_dfs(self, train_df_path, val_df_path, test_df_path, detailed_df_path):
         
-        train_df = self._make_df(train_df_path, detailed_df_path)
-        val_df = self._make_df(val_df_path, detailed_df_path)
-        test_df = self._make_df(test_df_path, detailed_df_path)
+        train_df, self.post_train_df_path = self._make_df(train_df_path, detailed_df_path)
+        val_df, self.post_val_df_path = self._make_df(val_df_path, detailed_df_path)
+        test_df, self.post_test_df_path = self._make_df(test_df_path, detailed_df_path)
         self.df = pd.concat([train_df, val_df, test_df], ignore_index= True)
 
 
@@ -100,7 +100,7 @@ class PostModelDataCreation:
 
             full_df.to_csv(full_df_path, index = False)
 
-        return full_df
+        return full_df, full_df_path
 
 
     def save_model_and_out_mask(self):
@@ -178,3 +178,7 @@ class PostModelDataCreation:
             print('all is perfectly saved')
 
 
+    def _create_kaggle_dfs_locally_for_data_prep(self):
+        generate_kaggle_csv(self.post_train_df_path, ['path','prev_path','next_path','mask_path'], '/kaggle/input/datasets/vitaliilavryk/mri-segmentation-dataset')
+        generate_kaggle_csv(self.post_val_df_path, ['path','prev_path','next_path','mask_path'], '/kaggle/input/datasets/vitaliilavryk/mri-segmentation-dataset')
+        generate_kaggle_csv(self.post_test_df_path, ['path','prev_path','next_path','mask_path'], '/kaggle/input/datasets/vitaliilavryk/mri-segmentation-dataset')
