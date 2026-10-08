@@ -487,3 +487,41 @@ creation of the model...
 creation of the model compleated
 [ 2026-10-08 19:38:39,725 ] ::: INFO ::: FILE [root] --- LINE: [588]
 Batch size 1 is valid
+[ 2026-10-08 19:39:18,215 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-08 19:39:18,239 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-08 19:39:18,244 ] ::: INFO ::: FILE [root] --- LINE: [130]
+MRI lightning module successfully initialized
+[ 2026-10-08 19:39:18,650 ] ::: INFO ::: FILE [root] --- LINE: [569]
+Batch size of 16 . Checking whether it is valid...
+[ 2026-10-08 19:39:18,650 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-08 19:39:18,905 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-08 19:39:30,729 ] ::: INFO ::: FILE [root] --- LINE: [588]
+Batch size 16 is valid
+[ 2026-10-08 19:41:13,434 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-08 19:41:13,548 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-08 19:41:13,560 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-08 19:41:13,572 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-08 19:42:15,501 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-08 19:42:15,607 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-08 19:42:15,616 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-08 19:42:15,626 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-08 19:43:00,275 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-08 19:43:00,378 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-08 19:43:00,387 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-08 19:43:00,396 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated

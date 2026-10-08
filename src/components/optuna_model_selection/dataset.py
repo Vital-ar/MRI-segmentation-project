@@ -233,9 +233,9 @@ class CorrectionDataset(Dataset):
 
         
         img = cv2.imread(entry.path, cv2.IMREAD_UNCHANGED)
-        inp_mask = np.load(entry.model_mask_path)['arr_0']
-        out_mask = np.load(entry.out_transformed_mask_path)['arr_0']
-        summed_mask = np.load(entry.collapsed_mask_path)['arr_0']
+        inp_mask = np.load(entry.model_mask_path, allow_pickle=True)['arr_0']
+        out_mask = np.load(entry.out_transformed_mask_path, allow_pickle=True)['arr_0']
+        summed_mask = np.load(entry.collapsed_mask_path, allow_pickle=True)['arr_0']
     
         
 
