@@ -516,3 +516,101 @@ class CorrectionModelEntity(ModelCreationEntity):
         self.index = 1
         self.model_name = 'Error-correction-model'
         self.empty_mri_ratio = 0.1
+
+
+
+
+
+
+
+
+
+
+
+
+class MRISegmentationEntity:
+
+    def __init__(self,
+                 safety_batch =True):#!set to true
+
+
+        
+        self.batch_size = BATCH_SIZE
+        self.accelerator = ACCELERATOR
+        self.device = torch.device(DEVICE) 
+        self.num_workers = NUM_WORKERS
+        self.random_state = RANDOM_STATE
+        self.base_model_path = BASE_MODEL_CKPT
+        self.correction_model_path = CORRECTION_MODEL_CKPT
+        self.base_thresholds_path = BASE_THRESHOLDS_PATH
+        self.correction_thresholds_path = CORRECTION_THRESHOLDS_PATH
+        self.dev_transform = transforms.Compose([
+            transforms.Resize(256),
+            transforms.CenterCrop(256)
+            ])
+        
+        
+
+        
+        if not self.device:
+            self.device  = torch.device('cuda' if  torch.cuda.is_available()  else 'cpu')
+        
+        if safety_batch:
+            self.safe_batch_size_test()
+        
+        if self.num_workers is None:
+            self.num_workers = 0
+
+        
+
+    def safe_batch_size_test(self):
+    
+        print(f"Benchmarking optimal batch size...")
+        logger.logging.info(f'Batch size of {self.batch_size} . Checking whether it is valid...')
+        device =self.device
+        
+        
+        model = MRIFlexAttentionUNet(3, 64, 3, 4, 3, 3, 5 ).to(device) #established max model hyperparameters
+        
+        model.eval()
+        
+        current_batch = self.batch_size
+        safe_batch = 0
+        with torch.no_grad():
+            while current_batch > safe_batch:
+                try:
+                    dummy_img, outputs, loss = None, None, None
+
+                    dummy_img = torch.randn(current_batch, 3, 256, 256, device=device)
+                    
+                    outputs = model(dummy_img)
+
+                    logger.logging.info(f"Batch size {current_batch} is valid")
+
+                    print(f"Batch size {current_batch} is valid")
+                    safe_batch = current_batch
+        
+                    
+                except RuntimeError as e:
+                    # 3. Catch the specific PyTorch CUDA OOM error
+                    if "out of memory" in str(e).lower():
+                        print(f"Batch size {current_batch} is not valid. Testing batch size of {current_batch//2}")
+                        current_batch = current_batch // 2
+                    else:
+                        raise e # Re-raise if the error is unrelated to memory
+                finally:
+                    del dummy_img, outputs, loss
+
+                    if self.accelerator == 'gpu':
+                        torch.cuda.empty_cache()    
+            
+        del model
+        torch.cuda.empty_cache()
+
+        if safe_batch == 0:
+            raise RuntimeError("Even batch size 1 resulted in OOM. Model is too large for this GPU.")
+        
+        self.batch_size = safe_batch
+    
+
+

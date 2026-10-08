@@ -447,3 +447,43 @@ creation of the model...
 creation of the model compleated
 [ 2026-10-08 13:11:29,608 ] ::: INFO ::: FILE [root] --- LINE: [125]
 entering the creation of dataset
+[ 2026-10-08 13:12:26,259 ] ::: INFO ::: FILE [root] --- LINE: [151]
+accelerator not passed as argument.
+[ 2026-10-08 13:12:26,260 ] ::: INFO ::: FILE [root] --- LINE: [155]
+Tested accelerator: cpu
+[ 2026-10-08 13:12:26,260 ] ::: INFO ::: FILE [root] --- LINE: [146]
+Model creation entity successfully created
+[ 2026-10-08 13:12:26,420 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-08 13:12:26,539 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-08 13:12:26,794 ] ::: INFO ::: FILE [root] --- LINE: [125]
+entering the creation of dataset
+[ 2026-10-08 14:12:03,218 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-08 14:12:03,246 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-08 14:12:20,310 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-08 14:12:20,339 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-08 14:12:20,345 ] ::: INFO ::: FILE [root] --- LINE: [130]
+MRI lightning module successfully initialized
+[ 2026-10-08 19:35:33,841 ] ::: INFO ::: FILE [root] --- LINE: [569]
+Batch size of 1 . Checking whether it is valid...
+[ 2026-10-08 19:37:41,419 ] ::: INFO ::: FILE [root] --- LINE: [569]
+Batch size of 1 . Checking whether it is valid...
+[ 2026-10-08 19:38:38,086 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-08 19:38:38,110 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-08 19:38:38,114 ] ::: INFO ::: FILE [root] --- LINE: [130]
+MRI lightning module successfully initialized
+[ 2026-10-08 19:38:38,553 ] ::: INFO ::: FILE [root] --- LINE: [569]
+Batch size of 1 . Checking whether it is valid...
+[ 2026-10-08 19:38:38,553 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-08 19:38:38,809 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-08 19:38:39,725 ] ::: INFO ::: FILE [root] --- LINE: [588]
+Batch size 1 is valid

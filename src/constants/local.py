@@ -31,7 +31,7 @@ CHECKPOINT_DIR = Path('models', 'checkpoints')
 
 MODEL_NAME = 'MRI-Unet_v2-2' # general model name for different versions e.g. MRI-Unet-1 
 NUMBER_OPTUNA_TRIALS = 40  # optuna study parameter #! change this
-BATCH_SIZE = 1 # dataloader parameter #! set to 32
+BATCH_SIZE = 16 # dataloader parameter #! set to 32
 NUM_WORKERS = 8 # dataloader parameter #!  SET TO NONE
 DEVICES = 1 # trainer parameter  #!  SET TO NONE
 ACCELERATOR = None # trainerr parameter  #!  SET TO NONE
@@ -90,3 +90,11 @@ CORRECTION_TEST_CSV = Path(_FINAL_DATA_DIR, 'test_post_model.csv')
 TRAIN_CSV = Path(_FINAL_DATA_DIR, 'train.csv')
 DEV_CSV = Path(_FINAL_DATA_DIR, 'dev.csv')
 TEST_CSV = Path(_FINAL_DATA_DIR, 'test.csv')
+
+
+
+DEVICE = 'cpu'
+BASE_MODEL_CKPT = FINAL_BASE_MODEL_PATH
+CORRECTION_MODEL_CKPT = None
+BASE_THRESHOLDS_PATH = STATS_DIR / THRESHOLD_FILE
+CORRECTION_THRESHOLDS_PATH = None
