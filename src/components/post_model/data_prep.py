@@ -136,28 +136,35 @@ class PostModelDataCreation:
         
         df = self.dataset.partial_df[~self.dataset.partial_df.empty_slice]    
         grooped_obj = [p for p in df.groupby('collapsed_mask_path', sort = False)['model_mask_path']]
+        dir_path = Path(grooped_obj[0][0]).parent
+        if not dir_path.is_dir():
+            dir_path.mkdir(parents=True, exist_ok = True)
 
-        for gr in grooped_obj:
-            save = gr[0]
+        for k, gr in enumerate(grooped_obj):
+            save = Path(gr[0])
             
-            collapsed_mask = []
-            model_mask_path  = gr[1].to_numpy()
-            
-            for p in model_mask_path:
-                out = torch.load(p, self.device)
-                probs = torch.sigmoid(out) 
-                thresh = self.threshold.view(1, -1, 1, 1)
-                mask = (probs >= thresh).int()
-                collapsed_mask.append(mask)
-
-            collapsed_mask = np.array(collapsed_mask)
-            collapsed_mask = np.sum(collapsed_mask, dim = 0, dtype = np.uint8)
-            print(collapsed_mask.shape)
-            if not save.parent.is_dir():
-                save.parent.mkdir(parents=True, exist_ok = True)
             if not save.is_file():
+                
+                collapsed_mask = []
+                model_mask_path  = gr[1].to_numpy()
+                
+                for p in model_mask_path:
+                    out = torch.from_numpy(np.load(p, self.device)['arr_0'])
+                    probs = torch.sigmoid(out) 
+                    thresh = self.threshold.view(1, -1, 1, 1)
+                    mask = (probs >= thresh).int()
+                    mask = mask.squeeze(0)
+                    collapsed_mask.append(mask)
+                
+                collapsed_mask = np.array(collapsed_mask)
+                
+                collapsed_mask = np.sum(collapsed_mask, axis = 0, dtype = np.uint8)
+                print(collapsed_mask.shape)
                 np.savez_compressed(save, collapsed_mask)
-            break
+                                
+            
+
+            
 
 
 
@@ -166,7 +173,8 @@ class PostModelDataCreation:
         mandat_col_imgs = self.dataset.partial_df.collapsed_mask_path.unique()
         collapsed_mask_dir = Path(self.dataset.partial_df.collapsed_mask_path[0]).parent
         if collapsed_mask_dir.is_dir():
-            num_col_imgs = sum(1 for a in collapsed_mask_dir.iterdir() if a in mandat_col_imgs)
+            num_col_imgs = sum(1 for a in collapsed_mask_dir.iterdir() if str(a) in mandat_col_imgs)
+    
         else: 
             num_col_imgs = 0
 
@@ -174,23 +182,27 @@ class PostModelDataCreation:
         model_mask_dir = Path(self.dataset.partial_df.model_mask_path[0]).parent
         mandat_model_imgs = self.dataset.partial_df.model_mask_path.to_numpy()
         if model_mask_dir.is_dir():
-            num_imgs = sum(1 for a in model_mask_dir.iterdir() if a in mandat_model_imgs)
+            num_imgs = sum(1 for a in model_mask_dir.iterdir() if str(a) in mandat_model_imgs)
+      
         else:
             num_imgs = 0
 
         if len(mandat_col_imgs) > num_col_imgs:
-
+            print('Not enough summed masks')
             if len(self.dataset) > num_imgs:
+                print('Not enough masks, entering save model and mask function')
                 self.save_model_and_out_mask()
-
+            print('Not enough summed masks, entering save model and mask function')
             self.save_collapsed_mask()
 
         if (num_col_imgs == len(mandat_col_imgs)) and (len(self.dataset) > num_imgs) :
-            print('all is perfectly saved')
+            print('all has been perfectly saved')
 
 
     def _create_kaggle_dfs_locally_for_data_prep(self):
-        generate_kaggle_csv(self.post_train_df_path, ['path','prev_path','next_path','mask_path'], '/kaggle/input/datasets/vitaliilavryk/mri-segmentation-dataset',['collapsed_mask_path','model_mask_path','out_transformed_mask_path'])
-        generate_kaggle_csv(self.post_val_df_path, ['path','prev_path','next_path','mask_path'], '/kaggle/input/datasets/vitaliilavryk/mri-segmentation-dataset', ['collapsed_mask_path','model_mask_path','out_transformed_mask_path'])
-        generate_kaggle_csv(self.post_test_df_path, ['path','prev_path','next_path','mask_path'], '/kaggle/input/datasets/vitaliilavryk/mri-segmentation-dataset', ['collapsed_mask_path','model_mask_path','out_transformed_mask_path'])
-        
+        generate_kaggle_csv(self.post_train_df_path, [['path','prev_path','next_path','mask_path'], ['collapsed_mask_path','model_mask_path','out_transformed_mask_path']],
+                             ['/kaggle/input/datasets/vitaliilavryk/mri-segmentation-dataset', '/kaggle/input/datasets/vitaliilavryk/correction-mri-segmentation-dataset'] )
+        generate_kaggle_csv(self.post_val_df_path, [['path','prev_path','next_path','mask_path'], ['collapsed_mask_path','model_mask_path','out_transformed_mask_path']],
+                             ['/kaggle/input/datasets/vitaliilavryk/mri-segmentation-dataset', '/kaggle/input/datasets/vitaliilavryk/correction-mri-segmentation-dataset'])
+        generate_kaggle_csv(self.post_test_df_path, [['path','prev_path','next_path','mask_path'], ['collapsed_mask_path','model_mask_path','out_transformed_mask_path']],
+                             ['/kaggle/input/datasets/vitaliilavryk/mri-segmentation-dataset', '/kaggle/input/datasets/vitaliilavryk/correction-mri-segmentation-dataset'])

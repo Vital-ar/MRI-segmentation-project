@@ -28,6 +28,7 @@ def main():
     from src.pipeline.model_selction_pipe import run_model_selection_pipe
     from src.pipeline.final_train_pipe import final_train
     from src.pipeline.post_model_data_prep_pipe import post_model_data_prep
+    from src.pipeline.correction_model_pipe import post_model_train
 
     import lightning.pytorch as pl
 
@@ -35,7 +36,7 @@ def main():
 
     pl.seed_everything(RANDOM_STATE, workers=True)
 
-    post_model_data_prep()
+    post_model_train()
 
 if __name__ == '__main__':
 

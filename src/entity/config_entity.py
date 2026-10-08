@@ -6,7 +6,7 @@ import torch
 from pathlib import Path
 from torchvision.transforms import v2
 from torch.utils.data import DataLoader
-
+from torchvision import transforms
 from src.logging import logger
 if os.environ.get('KAGGLE_KERNEL_RUN_TYPE', None) is not None:
     from src.constants.kaggle import *
@@ -92,6 +92,7 @@ class ModelCreationEntity:
         self.labels = LABELS
         self.pos_weight = POS_WEIGHT
         self.accum_batch = 1
+        self.inp_model_path = None
 
         self.dev_transform = v2.Compose([
             v2.Resize(256),
@@ -478,3 +479,40 @@ class PostModelDataPrepEntity(ModelCreationEntity):
         self.transform = self.dev_transform
         self.detailed_csv = NEW_METADATA_FILE
 
+
+
+
+
+class CorrectionModelEntity(ModelCreationEntity):
+
+
+    def __init__(self):
+
+        super().__init__(False)
+        self.train_transform = transforms.Compose([
+                                             transforms.Resize(256),
+                                             transforms.CenterCrop(256)
+                                           ])
+
+        self.dev_transform = transforms.Compose([
+                                            transforms.Resize(256),
+                                            transforms.CenterCrop(256)
+                                        ])
+                
+        
+        self.epochs = CORECTION_EPOCHS
+        self.lr = 0.0005
+        self.w = 0.001                 
+        self.inp_channels = 7
+        self.first_conv_out_channels = 32
+        self.num_classes = 3
+        self.depth = 3
+        self.n_encoder_conv_layers = 2
+        self.n_decoder_conv_layers = 2
+        self.kernel_sizes = 3
+        self.train_csv =CORRECTION_TRAIN_CSV
+        self.dev_csv = CORRECTION_DEV_CSV
+        self.test_csv = CORRECTION_TEST_CSV
+        self.index = 1
+        self.model_name = 'Error-correction-model'
+        self.empty_mri_ratio = 0.1

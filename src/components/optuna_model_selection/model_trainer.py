@@ -4,7 +4,7 @@ from lightning.pytorch.loggers import MLFlowLogger
 from pathlib import Path
 from optuna_integration.pytorch_lightning import PyTorchLightningPruningCallback
 
-from src.components.optuna_model_selection.lightning_modules import MRIDataModule, MRIModule
+from src.components.optuna_model_selection.lightning_modules import MRIDataModule, MRIModule, CorrectionDataModule, CorrectionModule
 from src.logging import logger
 
 
@@ -116,7 +116,7 @@ class ModelTrainer:
     def _get_def_loggers(self):
 
             self.logger = MLFlowLogger(
-                experiment_name="MRI_Segmentation_v3-1",
+                experiment_name="MRI_Segmentation_v4-1",
                 tracking_uri=self.database_url, 
                 run_name=self.model_name,
                 log_model=True 
@@ -136,6 +136,7 @@ class ModelTrainer:
         #     sync_bn = False
         #else:
         #     sync_bn = True
+        print(self.model._get_name())
 
         self.trainer = pl.Trainer(#max_epochs=36,limit_train_batches=8, limit_val_batches=8, #!delete for real run
              accelerator = accelerator, 
@@ -173,3 +174,69 @@ class ModelTrainer:
             raise ValueError(f"No checkpoint score recorded for monitored metric. Ensure the validation loop completed.")
         return loss.item(), path 
 
+
+
+class CorrectionModelTrainer(ModelTrainer):
+     
+     def __init__(self, trial, learning_rate=0.001, 
+                  weight_decay=0.01, inp_channels=3, 
+                  first_conv_out_channels=64, num_classes=3, 
+                  depth=3, n_encoder_conv_layers=2, 
+                  n_decoder_conv_layers=2, kernel_sizes = 3, 
+                  train_csv=None, dev_csv=None, test_csv=None, 
+                  batch_size=32, num_workers=2, 
+                  train_empty_mri_ratio=0.2, bce_loss_pos_weight=None, 
+                  train_transform=None, dev_transform=None, 
+                  random_state=42, model_name='unet', 
+                  database_url="sqlite:///mlflow.db", checkpoint_dir='/models/checkpoints', 
+                  ckpt_path=None, drop_last_batch=False):
+          
+          
+          super().__init__(trial, learning_rate, weight_decay, 
+                           inp_channels, first_conv_out_channels, 
+                           num_classes, depth, n_encoder_conv_layers, 
+                           n_decoder_conv_layers, kernel_sizes, 
+                           train_csv, dev_csv, test_csv, 
+                           batch_size, num_workers, train_empty_mri_ratio, 
+                           bce_loss_pos_weight, train_transform, 
+                           dev_transform, random_state, model_name, 
+                           database_url, checkpoint_dir, ckpt_path, drop_last_batch)
+          
+
+
+          self.model = CorrectionModule(bce_loss_pos_weight,
+                                         learning_rate, 
+                                         weight_decay, 
+                                         inp_channels, 
+                                         first_conv_out_channels, 
+                                         num_classes, 
+                                         depth, 
+                                         n_encoder_conv_layers, 
+                                         n_decoder_conv_layers, 
+                                         kernel_sizes,
+                                         model_name)
+          
+          
+          self.data_module = CorrectionDataModule(train_csv, 
+                                            dev_csv, 
+                                            test_csv,
+                                            batch_size,
+                                            train_transform, 
+                                            dev_transform, 
+                                            num_workers, 
+                                            train_empty_mri_ratio, 
+                                            random_state,
+                                            drop_last_batch)
+
+
+
+
+
+     def _get_def_loggers(self):
+     
+        self.logger = MLFlowLogger(
+            experiment_name="Correction-model-unet-v1",
+            tracking_uri=self.database_url, 
+            run_name=self.model_name,
+            log_model=True 
+        )

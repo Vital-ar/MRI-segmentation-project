@@ -145,16 +145,17 @@ def show_mask_img_from_tensor(orig_img_tensor, mask_tensor, alpha=0.5):
 
 
 
-def generate_kaggle_csv(filepath: Path, columns: list, kaggle_dataset_path: str, reverse_cols = None):
+def generate_kaggle_csv(filepath: Path, columns: list, kaggle_dataset_pathes: str|list):
     df = pd.read_csv(filepath)
+    if type(kaggle_dataset_pathes) == str:
+        columns = [columns]
+        kaggle_dataset_pathes = [kaggle_dataset_pathes]
+    for kaggle_dataset_path, col_list in zip(kaggle_dataset_pathes, columns):
+    
+        for col in col_list:
+            df[col] = df[col].apply(lambda f: Path(kaggle_dataset_path, Path(f).parts[1], *Path(f).parts[1:]).as_posix())
 
-    for col in columns:
-        df[col] = df[col].apply(lambda f: Path(kaggle_dataset_path, Path(f).parts[1], *Path(f).parts[1:]).as_posix())
-
-    if reverse_cols is not None:
-        for col in reverse_cols: 
-                df[col] = df[col].apply(lambda f: Path(f).as_posix())
-
+     
     new_filepath = Path(filepath.parent, f"{filepath.stem}_kaggle.csv")
     df.to_csv(new_filepath, index=False)
     df.to_csv(Path('data_csv', f"{filepath.stem}_kaggle.csv"), index=False)

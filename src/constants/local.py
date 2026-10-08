@@ -79,3 +79,14 @@ FINAL_BASE_MODEL_PATH = FINAL_MODELS_DIR / (GPU_FINAL_MODEL_NAME + '-' + FINAL_I
 STATS_DIR = Path('stats', GPU_FINAL_MODEL_NAME)
 THRESHOLD_FILE = 'f1_optimized_threshold.npy'
 NEW_METADATA_FILE = METADATA_FILE
+
+
+
+
+CORECTION_EPOCHS =40
+CORRECTION_TRAIN_CSV = Path(_FINAL_DATA_DIR, 'train_post_model.csv')
+CORRECTION_DEV_CSV = Path(_FINAL_DATA_DIR, 'dev_post_model.csv')
+CORRECTION_TEST_CSV = Path(_FINAL_DATA_DIR, 'test_post_model.csv')
+TRAIN_CSV = Path(_FINAL_DATA_DIR, 'train.csv')
+DEV_CSV = Path(_FINAL_DATA_DIR, 'dev.csv')
+TEST_CSV = Path(_FINAL_DATA_DIR, 'test.csv')

@@ -392,4 +392,25 @@ class MRIFlexAttentionUNetGroupNorm(nn.Module):
 
 
         return self.head(x)
-            
+
+
+
+
+class CorrectionModel(nn.Module):
+
+    def __init__(self, inp_channels: int, first_conv_out_channels: int, num_classes: int, depth: int, n_encoder_conv_layers: int, n_decoder_conv_layers: int,  kernel_sizes: list|int):
+
+        super().__init__()
+        self.att_unet = MRIFlexAttentionUNet(inp_channels, first_conv_out_channels, num_classes, depth, n_encoder_conv_layers, n_decoder_conv_layers,  kernel_sizes)
+
+
+    def forward(self, inp):
+        img, inp_mask, summed_mask = inp 
+        if img.ndim == 3:
+            img = img.unsqueeze(1)
+        
+
+        inp = torch.cat([img, inp_mask, summed_mask], dim = 1)
+        out = self.att_unet(inp)
+        out += inp_mask
+        return out

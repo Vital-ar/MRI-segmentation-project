@@ -8,8 +8,8 @@ from torch.utils.data import DataLoader
 from torchvision.transforms import v2
 from torchmetrics import F1Score, Recall, Precision     
 
-from src.components.optuna_model_selection.dataset import MRIDataset
-from src.components.optuna_model_selection.model import MRIFlexAttentionUNet, MRIFlexAttentionUNetGroupNorm
+from src.components.optuna_model_selection.dataset import MRIDataset, CorrectionDataset
+from src.components.optuna_model_selection.model import MRIFlexAttentionUNet, MRIFlexAttentionUNetGroupNorm, CorrectionModel
 from src.logging import logger
 from src.components.optuna_model_selection.dice_bce_loss import DiceBCELoss
 import torch.distributed as dist
@@ -263,5 +263,134 @@ class MRIModule(pl.LightningModule):
 
             logits = self(image)
             prob = torch.sigmoid(logits)
+
+            if self.threshold is not None:
+                thresh = self.threshold.view( -1, 1, 1)
+                mask = (prob >= thresh).int()
             
-            return (prob > 0.5).int()
+            else:
+                mask = (prob > 0.5).int()
+            return mask
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class CorrectionDataModule(MRIDataModule):
+    def __init__(self, 
+                train_csv,
+                dev_csv,
+                test_csv,
+                batch_size = 32, 
+                train_transform = None,
+                dev_transform = None,
+                num_workers = 2, 
+                train_empty_mri_ratio = 0.2,
+                random_state = 42,
+                drop_last_batch = False):
+            
+        super().__init__(train_csv,
+                        dev_csv,
+                        test_csv,
+                        batch_size, 
+                        train_transform,
+                        dev_transform,
+                        num_workers, 
+                        train_empty_mri_ratio,
+                        random_state,
+                        drop_last_batch = False)
+
+
+
+    def setup(self, stage = None):
+                
+        if stage == 'fit' or stage is None:
+            self.train_ds = CorrectionDataset(self.train_csv, self.train_empty_mri_ratio, self.train_transform, self.random_state)
+            self.dev_ds = CorrectionDataset(self.dev_csv, 1.0, self.dev_transform, self.random_state)
+
+        if stage == 'test' or stage is None:
+            self.test_ds = CorrectionDataset(self.test_csv, 1.0, self.dev_transform, self.random_state)
+
+        
+
+
+        
+    
+
+
+
+
+class CorrectionModule(MRIModule):
+    def __init__(self, bce_loss_pos_weight=None, learning_rate = 0.001, 
+                 weight_decay = 0.01, inp_channels = 3, 
+                 first_conv_out_channels = 64, num_classes = 3, 
+                 depth = 3, n_encoder_conv_layers = 2, 
+                 n_decoder_conv_layers = 2, kernel_sizes = 3, 
+                 model_name='unet'):
+        
+        super().__init__(bce_loss_pos_weight, learning_rate, weight_decay, 
+                         inp_channels, first_conv_out_channels, num_classes, 
+                         depth, n_encoder_conv_layers, n_decoder_conv_layers, 
+                         kernel_sizes, model_name)
+
+        self.model = CorrectionModel(
+                        inp_channels,
+                        first_conv_out_channels,
+                        num_classes,
+                        depth,
+                        n_encoder_conv_layers,
+                        n_decoder_conv_layers,
+                        kernel_sizes
+                     )
+        logger.logging.info(f'Correction lightning module successfully initialized')
+
+
+
+    def get_img_masks(self, img, inp_mask, summed_mask):
+    
+        self.eval()
+        with torch.no_grad():
+
+            if img.ndim == 2:
+                img = img.unsqueeze(0)
+                img = img.unsqueeze(0)
+
+            if img.ndim == 3:
+                img = img.unsqueeze(0)
+
+            if inp_mask.ndim == 3:
+                inp_mask = inp_mask.unsqueeze(0)
+
+            if summed_mask.ndim == 3:
+                summed_mask = summed_mask.unsqueeze(0)
+
+            img = img.to(self.device)
+            inp_mask = inp_mask.to(self.device)
+            summed_mask = summed_mask.to(self.device)
+
+            logits = self((img, inp_mask, summed_mask))
+            prob = torch.sigmoid(logits)
+
+            if self.threshold is not None:
+                thresh = self.threshold.view( -1, 1, 1)
+                mask = (prob >= thresh).int()
+            
+            else:
+                mask = (prob > 0.5).int()
+            return mask
+
+
+        

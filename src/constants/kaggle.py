@@ -82,3 +82,10 @@ FINAL_BASE_MODEL_PATH = FINAL_MODELS_DIR / (GPU_FINAL_MODEL_NAME + '-' + FINAL_I
 STATS_DIR = Path('stats', GPU_FINAL_MODEL_NAME)
 THRESHOLD_FILE = 'f1_optimized_threshold.npy'
 NEW_METADATA_FILE = Path('data_csv', 'final_dataframe.csv')
+
+
+
+CORECTION_EPOCHS =40
+CORRECTION_TRAIN_CSV = Path('data_csv', 'train_post_model_kaggle.csv')
+CORRECTION_DEV_CSV = Path('data_csv', 'dev_post_model_kaggle.csv')
+CORRECTION_TEST_CSV = Path('data_csv', 'test_post_model_kaggle.csv')
