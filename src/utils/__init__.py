@@ -150,12 +150,18 @@ def generate_kaggle_csv(filepath: Path, columns: list, kaggle_dataset_pathes: st
     if type(kaggle_dataset_pathes) == str:
         columns = [columns]
         kaggle_dataset_pathes = [kaggle_dataset_pathes]
+    i = 0
     for kaggle_dataset_path, col_list in zip(kaggle_dataset_pathes, columns):
-    
+        
         for col in col_list:
-            df[col] = df[col].apply(lambda f: Path(kaggle_dataset_path, Path(f).parts[1], *Path(f).parts[1:]).as_posix())
+            if i != 1:
+                df[col] = df[col].apply(lambda f: Path(kaggle_dataset_path, Path(f).parts[1], *Path(f).parts[1:]).as_posix())
+            else:
+                df[col] = df[col].apply(lambda f: Path(kaggle_dataset_path, *Path(f).parts[1:]).as_posix())
 
-     
+            
+        i+=1
+
     new_filepath = Path(filepath.parent, f"{filepath.stem}_kaggle.csv")
     df.to_csv(new_filepath, index=False)
     df.to_csv(Path('data_csv', f"{filepath.stem}_kaggle.csv"), index=False)

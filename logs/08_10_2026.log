@@ -435,3 +435,15 @@ Epoch 7, global step 64: 'val_loss' was not in top 1
 Epoch 8, global step 72: 'val_loss' was not in top 1
 [ 2026-10-08 12:43:08,564 ] ::: INFO ::: FILE [lightning.pytorch.utilities.rank_zero] --- LINE: [936]
 Epoch 9, global step 80: 'val_loss' was not in top 1
+[ 2026-10-08 13:11:29,058 ] ::: INFO ::: FILE [root] --- LINE: [151]
+accelerator not passed as argument.
+[ 2026-10-08 13:11:29,060 ] ::: INFO ::: FILE [root] --- LINE: [155]
+Tested accelerator: cpu
+[ 2026-10-08 13:11:29,060 ] ::: INFO ::: FILE [root] --- LINE: [146]
+Model creation entity successfully created
+[ 2026-10-08 13:11:29,218 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-08 13:11:29,352 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-08 13:11:29,608 ] ::: INFO ::: FILE [root] --- LINE: [125]
+entering the creation of dataset
