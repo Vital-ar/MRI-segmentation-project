@@ -16,3 +16,6 @@ mlflow
 dvc-s3
 dagshub
 optuna-integration
+plotly
+scikit-image
+ipywidgets 

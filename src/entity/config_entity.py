@@ -506,14 +506,14 @@ class CorrectionModelEntity(ModelCreationEntity):
         self.inp_channels = 7
         self.first_conv_out_channels = 32
         self.num_classes = 3
-        self.depth = 3
+        self.depth = 4
         self.n_encoder_conv_layers = 2
         self.n_decoder_conv_layers = 2
         self.kernel_sizes = 3
         self.train_csv =CORRECTION_TRAIN_CSV
         self.dev_csv = CORRECTION_DEV_CSV
         self.test_csv = CORRECTION_TEST_CSV
-        self.index = 1
+        self.index = 2
         self.model_name = 'Error-correction-model'
         self.empty_mri_ratio = 0.1
 
