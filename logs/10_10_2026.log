@@ -142,3 +142,75 @@ dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTIO
 entering the creation of correction dataset
 [ 2026-10-10 09:10:15,456 ] ::: INFO ::: FILE [root] --- LINE: [211]
 dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-10 15:48:23,018 ] ::: INFO ::: FILE [root] --- LINE: [151]
+accelerator not passed as argument.
+[ 2026-10-10 15:48:23,019 ] ::: INFO ::: FILE [root] --- LINE: [155]
+Tested accelerator: cpu
+[ 2026-10-10 15:48:23,019 ] ::: INFO ::: FILE [root] --- LINE: [146]
+Model creation entity successfully created
+[ 2026-10-10 15:48:23,460 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-10 15:48:23,610 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-10 15:48:23,624 ] ::: INFO ::: FILE [root] --- LINE: [50]
+MRI lightning data module successfully initialized
+[ 2026-10-10 15:48:23,624 ] ::: INFO ::: FILE [root] --- LINE: [178]
+entering the creation of correction dataset
+[ 2026-10-10 15:48:23,661 ] ::: INFO ::: FILE [root] --- LINE: [211]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-10 15:48:23,661 ] ::: INFO ::: FILE [root] --- LINE: [178]
+entering the creation of correction dataset
+[ 2026-10-10 15:48:23,679 ] ::: INFO ::: FILE [root] --- LINE: [211]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-10 15:48:23,679 ] ::: INFO ::: FILE [root] --- LINE: [178]
+entering the creation of correction dataset
+[ 2026-10-10 15:48:23,696 ] ::: INFO ::: FILE [root] --- LINE: [211]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-10 15:48:23,716 ] ::: INFO ::: FILE [root] --- LINE: [151]
+accelerator not passed as argument.
+[ 2026-10-10 15:48:23,716 ] ::: INFO ::: FILE [root] --- LINE: [155]
+Tested accelerator: cpu
+[ 2026-10-10 15:48:23,717 ] ::: INFO ::: FILE [root] --- LINE: [146]
+Model creation entity successfully created
+[ 2026-10-10 15:48:24,013 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-10 15:48:24,136 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-10 15:48:24,147 ] ::: INFO ::: FILE [root] --- LINE: [50]
+MRI lightning data module successfully initialized
+[ 2026-10-10 15:48:24,147 ] ::: INFO ::: FILE [root] --- LINE: [178]
+entering the creation of correction dataset
+[ 2026-10-10 15:48:24,165 ] ::: INFO ::: FILE [root] --- LINE: [211]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-10 15:48:24,165 ] ::: INFO ::: FILE [root] --- LINE: [178]
+entering the creation of correction dataset
+[ 2026-10-10 15:48:24,181 ] ::: INFO ::: FILE [root] --- LINE: [211]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-10 15:48:24,181 ] ::: INFO ::: FILE [root] --- LINE: [178]
+entering the creation of correction dataset
+[ 2026-10-10 15:48:24,197 ] ::: INFO ::: FILE [root] --- LINE: [211]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-10 15:48:24,217 ] ::: INFO ::: FILE [root] --- LINE: [151]
+accelerator not passed as argument.
+[ 2026-10-10 15:48:24,218 ] ::: INFO ::: FILE [root] --- LINE: [155]
+Tested accelerator: cpu
+[ 2026-10-10 15:48:24,218 ] ::: INFO ::: FILE [root] --- LINE: [146]
+Model creation entity successfully created
+[ 2026-10-10 15:48:24,494 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-10 15:48:24,588 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-10 15:48:24,598 ] ::: INFO ::: FILE [root] --- LINE: [50]
+MRI lightning data module successfully initialized
+[ 2026-10-10 15:48:24,598 ] ::: INFO ::: FILE [root] --- LINE: [178]
+entering the creation of correction dataset
+[ 2026-10-10 15:48:24,617 ] ::: INFO ::: FILE [root] --- LINE: [211]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-10 15:48:24,617 ] ::: INFO ::: FILE [root] --- LINE: [178]
+entering the creation of correction dataset
+[ 2026-10-10 15:48:24,632 ] ::: INFO ::: FILE [root] --- LINE: [211]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION
+[ 2026-10-10 15:48:24,632 ] ::: INFO ::: FILE [root] --- LINE: [178]
+entering the creation of correction dataset
+[ 2026-10-10 15:48:24,657 ] ::: INFO ::: FILE [root] --- LINE: [211]
+dataset successfully created. DO NOT FORGT TO USE ---> on_epoch_end <--- FUNCTION

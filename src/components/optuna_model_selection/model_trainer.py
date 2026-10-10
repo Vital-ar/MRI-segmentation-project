@@ -240,3 +240,36 @@ class CorrectionModelTrainer(ModelTrainer):
             run_name=self.model_name,
             log_model=True 
         )
+
+     def _get_def_callbacks(self):
+        dirpath = Path(self.checkpoint_dir, self.model_name)
+    
+        self.checkpoint_callback = ModelCheckpoint(
+            dirpath = dirpath, 
+            filename ='model-final',  #  {epoch:02d}-{val_loss:.2f}',
+            monitor = 'val_f1_score', 
+            mode = 'max',    
+            verbose = True,           
+            save_last = True,
+            every_n_epochs = 1
+        )
+    
+    
+        early_stop_callback = EarlyStopping(
+            monitor='val_f1_score',
+            min_delta=0.00,
+            patience=14,#! 7 
+            mode='max',
+            verbose=True
+        )
+
+
+        lr_monitor = LearningRateMonitor(logging_interval='epoch')  # or 'step'
+
+        
+        self.best_val_loss_path = Path(self.checkpoint_dir, 'best_val_loss.txt')
+        self.best_val_loss_callback = BestValLossCallback(self.best_val_loss_path)
+        #pruning_callback = PyTorchLightningPruningCallback(self.trial, monitor="val_loss")
+
+        self.callbacks = [self.best_val_loss_callback, self.checkpoint_callback, early_stop_callback, TQDMProgressBar(refresh_rate=20), lr_monitor]
+

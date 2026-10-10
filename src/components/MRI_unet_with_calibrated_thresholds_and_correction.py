@@ -99,7 +99,6 @@ class MRISegmentationModel:
 
         if config.base_thresholds_path is not None:
             base_thresholds = np.load(config.base_thresholds_path)
-            print('yessssssssssssssssssssssssssssssssssssssssssssssssssssssddrx')
 
         else:
             base_thresholds = np.array([0.5,0.5,0.5])
@@ -107,7 +106,7 @@ class MRISegmentationModel:
         if config.correction_thresholds_path is not None:
             correction_thresholds = np.load(config.correction_thresholds_path)
         else:
-            correction_thresholds = np.array([0.5,0.5,0.5])
+            correction_thresholds = np.array([0.97866, 0.98422, 0.98606])
 
         self.base_thresholds = torch.as_tensor(base_thresholds, dtype=torch.float32, device=config.device).view(1, -1, 1, 1)
         self.correction_thresholds = torch.as_tensor(correction_thresholds, dtype=torch.float32, device=config.device).view(1, -1, 1, 1)
