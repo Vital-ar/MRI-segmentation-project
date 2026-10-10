@@ -85,7 +85,7 @@ NEW_METADATA_FILE = Path('data_csv', 'final_dataframe.csv')
 
 
 
-CORECTION_EPOCHS =45
+CORECTION_EPOCHS = 100
 CORRECTION_TRAIN_CSV = Path('data_csv', 'train_post_model_kaggle.csv')
 CORRECTION_DEV_CSV = Path('data_csv', 'dev_post_model_kaggle.csv')
 CORRECTION_TEST_CSV = Path('data_csv', 'test_post_model_kaggle.csv')

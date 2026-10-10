@@ -501,15 +501,15 @@ class CorrectionModelEntity(ModelCreationEntity):
                 
         
         self.epochs = CORECTION_EPOCHS
-        self.lr = 0.0005
-        self.w = 0.001                 
+        self.lr = 0.000005
+        self.w = 0.0005                 
         self.inp_channels = 7
-        self.first_conv_out_channels = 32
+        self.first_conv_out_channels = 64
         self.num_classes = 3
         self.depth = 4
-        self.n_encoder_conv_layers = 2
-        self.n_decoder_conv_layers = 2
-        self.kernel_sizes = 3
+        self.n_encoder_conv_layers = 1
+        self.n_decoder_conv_layers = 1
+        self.kernel_sizes = [3,5,5,3,5,3,3,5]
         self.train_csv =CORRECTION_TRAIN_CSV
         self.dev_csv = CORRECTION_DEV_CSV
         self.test_csv = CORRECTION_TEST_CSV
@@ -540,8 +540,8 @@ class MRISegmentationEntity:
         self.device = torch.device(DEVICE) 
         self.num_workers = NUM_WORKERS
         self.random_state = RANDOM_STATE
-        self.base_model_path = BASE_MODEL_CKPT
-        self.correction_model_path = CORRECTION_MODEL_CKPT
+        self.base_model_path = 'models/final/out/final_gpu-final/model-final-v2.ckpt'
+        self.correction_model_path = 'models/final/out/final_gpu-final/model-final (1).ckpt'#CORRECTION_MODEL_CKPT
         self.base_thresholds_path = BASE_THRESHOLDS_PATH
         self.correction_thresholds_path = CORRECTION_THRESHOLDS_PATH
         self.dev_transform = transforms.Compose([
@@ -614,3 +614,27 @@ class MRISegmentationEntity:
     
 
 
+# class FinalModelCreationEntity(ModelCreationEntity):
+
+
+#     def __init__(self):
+  
+#         super().__init__(safety_batch=False)
+
+        
+    
+#         self.inp_model_path=Path(f'models/final/out/final_gpu-final/last (7).ckpt')
+    
+#         #self.inp_model_path = path #Path(f'models/final_inp/model_{index}.ckpt')
+
+#         hparams = torch.load(self.inp_model_path, 'cpu', weights_only= False)['hyper_parameters']
+#         self.first_conv_out_channels = hparams['first_conv_out_channels']
+#         self.depth = hparams['depth']
+#         self.n_encoder_conv_layers = hparams['n_encoder_conv_layers']
+#         self.n_decoder_conv_layers = hparams['n_decoder_conv_layers']
+#         self.kernel_sizes = hparams['kernel_sizes']
+#         self.empty_mri_ratio = 0.1
+#         self.lr = hparams['learning_rate']
+#         self.w = hparams['weight_decay']
+#         self.inp_channels = 7
+#         self.class_names = LABELS.values[1]

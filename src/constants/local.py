@@ -42,8 +42,8 @@ WEIGHT_DECAY = 0.001 # optimizer parameter
 INPUT_CHANNELS = 3 # model input parameter
 NUM_CLASSES = 3 # model output parmaeter
 LABELS = {
-    0: ['red', 'small_bowel'],
-    1: ['green', 'large_bowel'],
+    0: ['red', 'large_bowel'],
+    1: ['green', 'small_bowel'],
     2: ['blue', 'stomach']
 }
 
