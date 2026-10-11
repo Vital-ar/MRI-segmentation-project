@@ -50,7 +50,7 @@ class BaseModelDataset(Dataset):
 
 
 class MRISegmentationModel:
-    def __init__(self, config):
+    def __init__(self, config, use_correction_model = True):
 
 
         self.device = config.device
@@ -72,30 +72,7 @@ class MRISegmentationModel:
             kernel_sizes = hparams['kernel_sizes']
         )
         base_model.load_state_dict(inner_state_dict)
-
-
-        state_dict = torch.load(config.correction_model_path, 
-                                'cpu', weights_only=False)['state_dict']
-        inner_state_dict = {
-            k[len("model."):]: v for k, v in state_dict.items() if k.startswith("model.")
-        }
-        
-        hparams = torch.load(config.correction_model_path, 'cpu', weights_only= False)['hyper_parameters']
-        correction_model = CorrectionModel(
-            inp_channels=hparams['inp_channels'],
-            first_conv_out_channels = hparams['first_conv_out_channels'],
-            num_classes=3,
-            depth = hparams['depth'],
-            n_encoder_conv_layers = hparams['n_encoder_conv_layers'],
-            n_decoder_conv_layers = hparams['n_decoder_conv_layers'],
-            kernel_sizes = hparams['kernel_sizes']
-        )
-
-        correction_model.load_state_dict(inner_state_dict)
-
-
         self.base_model = base_model.to(self.device).eval()
-        self.correction_model = correction_model.to(self.device).eval()
 
         if config.base_thresholds_path is not None:
             base_thresholds = np.load(config.base_thresholds_path)
@@ -103,15 +80,40 @@ class MRISegmentationModel:
         else:
             base_thresholds = np.array([0.5,0.5,0.5])
 
-        if config.correction_thresholds_path is not None:
-            correction_thresholds = np.load(config.correction_thresholds_path)
-        else:
-            correction_thresholds = np.array([0.97866, 0.98422, 0.98606])
-
         self.base_thresholds = torch.as_tensor(base_thresholds, dtype=torch.float32, device=config.device).view(1, -1, 1, 1)
-        self.correction_thresholds = torch.as_tensor(correction_thresholds, dtype=torch.float32, device=config.device).view(1, -1, 1, 1)
 
 
+
+        if use_correction_model:
+            state_dict = torch.load(config.correction_model_path, 
+                                    'cpu', weights_only=False)['state_dict']
+            inner_state_dict = {
+                k[len("model."):]: v for k, v in state_dict.items() if k.startswith("model.")
+            }
+            
+            hparams = torch.load(config.correction_model_path, 'cpu', weights_only= False)['hyper_parameters']
+            correction_model = CorrectionModel(
+                inp_channels=hparams['inp_channels'],
+                first_conv_out_channels = hparams['first_conv_out_channels'],
+                num_classes=3,
+                depth = hparams['depth'],
+                n_encoder_conv_layers = hparams['n_encoder_conv_layers'],
+                n_decoder_conv_layers = hparams['n_decoder_conv_layers'],
+                kernel_sizes = hparams['kernel_sizes']
+            )
+
+            correction_model.load_state_dict(inner_state_dict)
+            self.correction_model = correction_model.to(self.device).eval()
+
+        
+            if config.correction_thresholds_path is not None:
+                correction_thresholds = np.load(config.correction_thresholds_path)
+            else:
+                correction_thresholds = np.array([0.97866, 0.98422, 0.98606])
+
+            self.correction_thresholds = torch.as_tensor(correction_thresholds, dtype=torch.float32, device=config.device).view(1, -1, 1, 1)
+
+        self.use_correction_model = use_correction_model
         self.config = config
         
         
@@ -149,20 +151,23 @@ class MRISegmentationModel:
         summed_masks = summed_masks.float() / torch.Tensor([74,61,45], device = self.device).view(3,1,1).float()
         self.summed_masks = summed_masks.unsqueeze(0).expand(self.config.batch_size, *self.out_shape)
 
-        final_logits = []
-        for imgs, masks in zip(correction_imgs, correction_inp_masks):
-            imgs = imgs.to(self.device)
-            masks = masks.to(self.device)
-            print(imgs.shape, masks.shape, self.summed_masks.shape)
-            logits = self.correction_model((imgs, masks, self.summed_masks))
-            final_logits.append(logits)
+        if self.use_correction_model:
+            final_logits = []
+            for imgs, masks in zip(correction_imgs, correction_inp_masks):
+                imgs = imgs.to(self.device)
+                masks = masks.to(self.device)
+                print(imgs.shape, masks.shape, self.summed_masks.shape)
+                logits = self.correction_model((imgs, masks, self.summed_masks))
+                final_logits.append(logits)
 
-        self.final_logits =torch.cat(final_logits, dim = 0)
-        final_probs = torch.sigmoid(self.final_logits)
-        self.final_masks = (final_probs >= self.correction_thresholds).bool().cpu()
-
+            self.final_logits =torch.cat(final_logits, dim = 0)
+            final_probs = torch.sigmoid(self.final_logits)
+            self.final_masks = (final_probs >= self.correction_thresholds).bool().cpu()
+        else:
+            self.final_masks = (torch.cat(correction_inp_masks, dim = 0) >= self.base_thresholds).bool()
+            
         self.slices = torch.cat(correction_imgs, dim = 0)
-        return self.final_masks, (torch.cat(correction_inp_masks, dim = 0) >= self.base_thresholds).bool()
+        return self.final_masks
 
 
 

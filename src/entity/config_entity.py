@@ -22,7 +22,7 @@ from lightning.pytorch.accelerators import TPUAccelerator
 
 import optuna
 
-
+import dvc.api
 
 
 
@@ -540,10 +540,66 @@ class MRISegmentationEntity:
         self.device = torch.device(DEVICE) 
         self.num_workers = NUM_WORKERS
         self.random_state = RANDOM_STATE
-        self.base_model_path = 'models/final/out/final_gpu-final/model-final-v2.ckpt'
-        self.correction_model_path = 'models/final/out/final_gpu-final/model-final (1).ckpt'#CORRECTION_MODEL_CKPT
+        self.base_model_path = Path('data/models/base_model.ckpt')
+        self.correction_model_path = Path('data/models/correction_model.ckpt')
         self.base_thresholds_path = BASE_THRESHOLDS_PATH
         self.correction_thresholds_path = CORRECTION_THRESHOLDS_PATH
+
+        dag_repo_url = DAGSHUB_REPO
+        dag_base_model_path = DAGSHUB_BASE_MODEL
+        dag_correction_model_path = DAGSHUB_CORRECTION_MODEL
+        dag_base_threshold_path = DAGSHUB_BASE_THRESHOLDS
+        dag_correction_threshold_path = DAGSHUB_CORRECTION_THRESHOLDS
+
+        if not self.base_model_path.is_file():
+            print('base model checkpoint not found loccaly, downloading from dagshub repo')
+            with dvc.api.open(
+                path=dag_base_model_path,
+                repo=dag_repo_url,
+                mode="rb"
+                ) as f:
+                ckpt = torch.load(f, 'cpu')
+                torch.save(ckpt, self.base_model_path)
+
+            
+
+        if not self.correction_model_path.is_file():
+            print('correction model checkpoint not found loccaly, downloading from dagshub repo')
+            with dvc.api.open(
+                path=dag_correction_model_path,
+                repo=dag_repo_url,
+                mode="rb"
+                ) as f:
+                ckpt = torch.load(f, 'cpu')
+                torch.save(ckpt, self.correction_model_path)
+
+
+        if not self.base_thresholds_path.is_file():
+            print('base model thresholds not found loccaly, downloading from dagshub repo')
+            with dvc.api.open(
+                path=dag_base_threshold_path,
+                repo=dag_repo_url,
+                mode="rb"
+                ) as f:
+                thresh = np.load(f, 'cpu')
+                np.save(thresh, self.base_thresholds_path)
+
+
+        if not self.correction_thresholds_path.is_file():
+            print('correction model thresholds not found loccaly, downloading from dagshub repo')
+            with dvc.api.open(
+                path=dag_correction_threshold_path,
+                repo=dag_repo_url,
+                mode="rb"
+                ) as f:
+                thresh = np.load(f, 'cpu')
+                np.save(thresh, self.correction_thresholds_path)
+
+        
+            
+            
+
+        
         self.dev_transform = transforms.Compose([
             transforms.Resize(256),
             transforms.CenterCrop(256)
