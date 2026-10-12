@@ -5,7 +5,7 @@ import numpy as np
 
 class MRISegmentator:
     def __init__(self, use_correction_model = True):
-        self.segmentator = MRISegmentationModel(MRISegmentationEntity, use_correction_model)
+        self.segmentator = MRISegmentationModel(MRISegmentationEntity(), use_correction_model)
         print('Segmentatator successfully initialized')
 
     def __call__(self, mri_dir: Path,save_masks = False, save_mask_path: Path = None, visualization = False):
