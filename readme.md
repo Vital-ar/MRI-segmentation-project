@@ -4,7 +4,7 @@ A two-stage deep learning pipeline that localizes the **large bowel**, **small b
 
 - Experiment tracking and data: [DagsHub](https://dagshub.com/Vital-ar/MRI-segmentation-project)
 - Source code: [GitHub](https://github.com/Vital-ar/MRI-segmentation-project)
-- Author on Kaggle: [Vitalii Lavryk](https://www.kaggle.com/vitaliilavryk/)
+- Kaggle project notebooks and datasets: [Kaggle](https://www.kaggle.com/vitaliilavryk/)
 
 ---
 
@@ -30,7 +30,7 @@ A two-stage deep learning pipeline that localizes the **large bowel**, **small b
 
 The project solves the task defined by the **UW-Madison GI Tract Image Segmentation** dataset: given MRI slices of a patient's abdomen, mark the pixels that belong to the large bowel, the small bowel and the stomach. Precise segmentation of these organs is the basis for planning radiation therapy, where the beam has to be aimed at a tumor while sparing healthy gastrointestinal tissue.
 
-The project was built as a learning exercise. The goal was to create something with many different moving parts and to implement almost everything from scratch, with very little help from AI tools. It covers csv and MRI Image data preprocessing, tools to make training efficient, a flexible attention U-Net, a custom loss, a hyperparameter search, multi-accelerator training (CPU, multi-GPU, TPU), probability threshold calibration, a second-stage error correction model, and an interactive inference tool.
+The project was built as a learning exercise. The goal was to create something with many different moving parts and to implement almost everything from scratch, with very little help from AI tools. You will find dozens of interesting functions and modules while explorint this projects files. It covers csv and MRI Image data preprocessing, tools to make training efficient, a flexible attention U-Net, a custom loss, a hyperparameter search, multi-accelerator training (CPU, multi-GPU, TPU), probability threshold calibration, a second-stage error correction model, and an interactive inference tool.
 
 ## Approach in brief
 
@@ -94,7 +94,7 @@ The optimal thresholds are very high (roughly 0.97 to 0.99). The probability his
 | Dev | 4 | 12 |
 | Train | remaining cases | remaining scans |
 
-**Empty slices:** most slices at the top and bottom of a scan contain none of the target organs. A configurable fraction of such slices (`empty_mri_ratio`) is kept in the training set. This fraction is one of the tuned hyperparameters, and the final models use 0.1.
+**Empty slices:** most slices at the top and bottom of a scan contain none of the target organs. A configurable fraction of such slices (`empty_mri_ratio`) is kept in the training set, the slices in this fraction change dynamically at every train epoch end. This fraction is one of the tuned hyperparameters, and the final models use 0.1.
 
 **Why three slices?** The base model uses three consecutive slices as input. Larger context windows were not tried, because memory usage was already a bottleneck with three slices.
 
