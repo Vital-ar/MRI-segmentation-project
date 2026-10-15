@@ -23,6 +23,7 @@ from lightning.pytorch.accelerators import TPUAccelerator
 import optuna
 
 import dvc.api
+import urllib
 
 
 
@@ -545,7 +546,7 @@ class MRISegmentationEntity:
         self.base_thresholds_path = BASE_THRESHOLDS_PATH
         self.correction_thresholds_path = CORRECTION_THRESHOLDS_PATH
 
-        dag_repo_url = DAGSHUB_REPO
+        dag_repo_url = DAGSHUB_API_REPO
         dag_base_model_path = DAGSHUB_BASE_MODEL
         dag_correction_model_path = DAGSHUB_CORRECTION_MODEL
         dag_base_threshold_path = DAGSHUB_BASE_THRESHOLDS
@@ -553,49 +554,52 @@ class MRISegmentationEntity:
 
         if not self.base_model_path.is_file():
             print('base model checkpoint not found loccaly, downloading from dagshub repo')
-            with dvc.api.open(
-                path=dag_base_model_path,
-                repo=dag_repo_url,
-                mode="rb"
-                ) as f:
-                ckpt = torch.load(f, 'cpu')
-                torch.save(ckpt, self.base_model_path)
-
+            # with dvc.api.open(
+            #     path=dag_base_model_path,
+            #     repo=dag_repo_url,
+            #     mode="rb"
+            #     ) as f:
+            #     ckpt = torch.load(f, 'cpu')
+            #     torch.save(ckpt, self.base_model_path)
+            if not self.base_model_path.parent.is_dir():
+                self.base_model_path.parent.mkdir(parents = True, exist_ok = True)
+            urllib.request.urlretrieve(dag_repo_url+dag_base_model_path, self.base_model_path)
+        else:
+            print('base model checkpoint found loccaly')
             
 
         if not self.correction_model_path.is_file():
+
             print('correction model checkpoint not found loccaly, downloading from dagshub repo')
-            with dvc.api.open(
-                path=dag_correction_model_path,
-                repo=dag_repo_url,
-                mode="rb"
-                ) as f:
-                ckpt = torch.load(f, 'cpu')
-                torch.save(ckpt, self.correction_model_path)
+            if not self.correction_model_path.parent.is_dir():
+                self.correction_model_path.parent.mkdir(parents = True, exist_ok = True)
+            urllib.request.urlretrieve(dag_repo_url+dag_correction_model_path, self.correction_model_path)
+
+        else:
+            print('correction model checkpoint found loccaly')
 
 
         if not self.base_thresholds_path.is_file():
+
             print('base model thresholds not found loccaly, downloading from dagshub repo')
-            with dvc.api.open(
-                path=dag_base_threshold_path,
-                repo=dag_repo_url,
-                mode="rb"
-                ) as f:
-                thresh = np.load(f, 'cpu')
-                np.save(thresh, self.base_thresholds_path)
+            if not self.base_thresholds_path.parent.is_dir():
+                self.base_thresholds_path.parent.mkdir(parents = True, exist_ok = True)
+            urllib.request.urlretrieve(dag_repo_url+dag_base_threshold_path, self.base_thresholds_path)
+
+        else:
+            print('base model thresholds found loccaly')
 
 
         if not self.correction_thresholds_path.is_file():
-            print('correction model thresholds not found loccaly, downloading from dagshub repo')
-            with dvc.api.open(
-                path=dag_correction_threshold_path,
-                repo=dag_repo_url,
-                mode="rb"
-                ) as f:
-                thresh = np.load(f, 'cpu')
-                np.save(thresh, self.correction_thresholds_path)
 
-        
+            print('correction model thresholds not found loccaly, downloading from dagshub repo')
+            if not self.correction_thresholds_path.parent.is_dir():
+                self.correction_thresholds_path.parent.mkdir(parents = True, exist_ok = True)
+            urllib.request.urlretrieve(str(dag_repo_url+dag_correction_threshold_path), self.correction_thresholds_path)
+
+        else:
+            print('correction model thresholds found loccaly')
+    
             
             
 
@@ -669,28 +673,3 @@ class MRISegmentationEntity:
         self.batch_size = safe_batch
     
 
-
-# class FinalModelCreationEntity(ModelCreationEntity):
-
-
-#     def __init__(self):
-  
-#         super().__init__(safety_batch=False)
-
-        
-    
-#         self.inp_model_path=Path(f'models/final/out/final_gpu-final/last (7).ckpt')
-    
-#         #self.inp_model_path = path #Path(f'models/final_inp/model_{index}.ckpt')
-
-#         hparams = torch.load(self.inp_model_path, 'cpu', weights_only= False)['hyper_parameters']
-#         self.first_conv_out_channels = hparams['first_conv_out_channels']
-#         self.depth = hparams['depth']
-#         self.n_encoder_conv_layers = hparams['n_encoder_conv_layers']
-#         self.n_decoder_conv_layers = hparams['n_decoder_conv_layers']
-#         self.kernel_sizes = hparams['kernel_sizes']
-#         self.empty_mri_ratio = 0.1
-#         self.lr = hparams['learning_rate']
-#         self.w = hparams['weight_decay']
-#         self.inp_channels = 7
-#         self.class_names = LABELS.values[1]

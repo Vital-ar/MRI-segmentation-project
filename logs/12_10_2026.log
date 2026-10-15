@@ -1,0 +1,48 @@
+[ 2026-10-12 13:46:49,518 ] ::: INFO ::: FILE [root] --- LINE: [629]
+Batch size of 16 . Checking whether it is valid...
+[ 2026-10-12 13:46:49,519 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-12 13:46:49,765 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-12 13:47:02,025 ] ::: INFO ::: FILE [root] --- LINE: [648]
+Batch size 16 is valid
+[ 2026-10-12 13:47:02,594 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-12 13:47:02,731 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-12 13:47:02,819 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-12 13:47:02,828 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-12 14:07:56,213 ] ::: INFO ::: FILE [root] --- LINE: [629]
+Batch size of 16 . Checking whether it is valid...
+[ 2026-10-12 14:07:56,213 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-12 14:07:56,474 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-12 14:08:09,630 ] ::: INFO ::: FILE [root] --- LINE: [648]
+Batch size 16 is valid
+[ 2026-10-12 14:08:10,227 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-12 14:08:10,340 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-12 14:08:10,452 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-12 14:08:10,462 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-12 23:24:49,044 ] ::: INFO ::: FILE [root] --- LINE: [629]
+Batch size of 16 . Checking whether it is valid...
+[ 2026-10-12 23:24:49,044 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-12 23:24:49,350 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-12 23:25:02,303 ] ::: INFO ::: FILE [root] --- LINE: [648]
+Batch size 16 is valid
+[ 2026-10-12 23:25:02,772 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-12 23:25:02,876 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated
+[ 2026-10-12 23:25:03,027 ] ::: INFO ::: FILE [root] --- LINE: [138]
+creation of the model...
+[ 2026-10-12 23:25:03,036 ] ::: INFO ::: FILE [root] --- LINE: [176]
+creation of the model compleated

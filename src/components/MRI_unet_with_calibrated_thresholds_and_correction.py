@@ -10,6 +10,7 @@ import plotly.graph_objects as go
 from scipy.ndimage import gaussian_filter
 from skimage.measure import marching_cubes
 from ipywidgets import interact, IntSlider, Dropdown
+from dash import Dash, dcc, html, Input, Output
 
 
 from torch.utils.data import Dataset, DataLoader
@@ -197,7 +198,7 @@ class MRISegmentationModel:
         masks: (N, C, H, W) or (C, N, H, W)
         """
 
-        if masks == None:
+        if masks is None:
             masks = self.final_masks
 
         masks = self._to_numpy(masks)
@@ -291,7 +292,7 @@ class MRISegmentationModel:
         return figures
 
 
-    def visualize_mri_overlay(self,
+    def visualize_mri_overlay_kaggle(self,
         mri = None,
         masks = None,
         class_names=("Large bowel", "Small bowel", "Stomach"),
@@ -309,10 +310,10 @@ class MRISegmentationModel:
 
         sigma=0 shows the original mask without smoothing.
         """
-        if mri == None:
+        if mri is None:
             mri = self.slices
 
-        if masks == None:
+        if masks is None:
             masks = self.final_masks
 
         
@@ -407,7 +408,6 @@ class MRISegmentationModel:
 
             fig.show()
 
-        # Use an interactive notebook widget to select slice and class.
         interact(
             show_slice,
             slice_idx=IntSlider(
@@ -420,3 +420,132 @@ class MRISegmentationModel:
                 description="Class",
             ),
         )
+
+
+
+
+    def visualize_mri_overlay(self,
+            mri=None,
+            masks=None,
+            class_names=("Large bowel", "Small bowel", "Stomach"),
+            colors=("red", "lime", "dodgerblue"),
+            alpha=0.4,
+            threshold=0.5,
+            sigma=0,
+        ):
+            """
+            Interactive slice viewer launched via a local Dash server.
+            Works directly from cmd/terminal.
+            """
+            if mri is None:
+                mri = self.slices
+            if masks is None:
+                masks = self.final_masks
+
+            mri = self._to_numpy(mri)
+            masks = self._to_numpy(masks)
+
+            if mri.ndim != 3:
+                raise ValueError(f"Expected MRI (N,H,W), got {mri.shape}")
+            if masks.ndim != 4:
+                raise ValueError(f"Expected 4D masks, got {masks.shape}")
+
+            if masks.shape[0] == mri.shape[0]:
+                masks = np.moveaxis(masks, 1, 0)
+
+            if masks.shape[1:] != mri.shape:
+                raise ValueError(
+                    f"MRI shape {mri.shape} doesn't match masks "
+                    f"volume shape {masks.shape[1:]}"
+                )
+
+            n_classes = masks.shape[0]
+            max_slice = mri.shape[0] - 1
+
+            # 1. Initialize Dash App
+            app = Dash(__name__)
+
+            # 2. Define the UI Layout (Replaces IntSlider and Dropdown)
+            app.layout = html.Div([
+                dcc.Graph(id='mri-viewer', style={'height': '80vh'}),
+                
+                html.Div([
+                    html.Label("Slice Index:"),
+                    dcc.Slider(
+                        min=0, max=max_slice, step=1, value=0,
+                        id='slice-slider',
+                        marks={i: str(i) for i in range(0, max_slice + 1, max(1, max_slice // 10))}
+                    )
+                ], style={'padding': '10px'}),
+                
+                html.Div([
+                    html.Label("Segmentation Class:"),
+                    dcc.Dropdown(
+                        options=list(class_names[:n_classes]),
+                        value=class_names[0],
+                        id='class-dropdown',
+                        clearable=False
+                    )
+                ], style={'padding': '10px', 'width': '300px'})
+            ])
+
+            # 3. Define the Callback (Replaces @interact)
+            @app.callback(
+                Output('mri-viewer', 'figure'),
+                Input('slice-slider', 'value'),
+                Input('class-dropdown', 'value')
+            )
+            def update_figure(slice_idx, class_name):
+                class_idx = class_names.index(class_name)
+
+                img = mri[slice_idx].astype(np.float32)
+                mask_volume = masks[class_idx].astype(np.float32)
+
+                # Normalize only for display.
+                lo, hi = np.percentile(img, [1, 99])
+                img_display = np.clip((img - lo) / (hi - lo + 1e-8), 0, 1)
+
+                if sigma > 0:
+                    mask_volume = gaussian_filter(mask_volume, sigma=sigma)
+
+                mask_slice = mask_volume[slice_idx] >= threshold
+
+                fig = go.Figure()
+
+                # Original MRI in grayscale
+                fig.add_trace(go.Heatmap(
+                    z=img_display,
+                    colorscale="Gray",
+                    zmin=0, zmax=1,
+                    showscale=False,
+                    name="Original MRI",
+                    hovertemplate="x: %{x}<br>y: %{y}<br>Intensity: %{z:.3f}<extra></extra>",
+                ))
+
+                # Transparent overlay
+                overlay = np.where(mask_slice, 1.0, np.nan)
+                fig.add_trace(go.Heatmap(
+                    z=overlay,
+                    colorscale=[
+                        [0, colors[class_idx % len(colors)]],
+                        [1, colors[class_idx % len(colors)]],
+                    ],
+                    opacity=alpha,
+                    showscale=False,
+                    name=class_names[class_idx],
+                    hoverinfo="skip",
+                ))
+
+                fig.update_layout(
+                    title=f"MRI slice {slice_idx} — {class_names[class_idx]}",
+                    xaxis_title="Width",
+                    yaxis_title="Height",
+                    yaxis=dict(autorange="reversed", scaleanchor="x"),
+                    margin=dict(l=20, r=20, t=50, b=20),
+                )
+                
+                return fig
+
+            # 4. Launch the application
+            print("Launching MRI viewer. Press Ctrl+C in cmd to stop.")
+            app.run(debug=True, use_reloader=False)

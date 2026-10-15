@@ -102,8 +102,8 @@ CORRECTION_THRESHOLDS_PATH = STATS_DIR / CORRECTION_THRESHOLD_FILE
 
 
 DAGSHUB_REPO = "https://github.com/Vital-ar/MRI-segmentation-project" #"https://dagshub.com/Vital-ar/MRI-segmentation-project"
-
+DAGSHUB_API_REPO = "https://dagshub.com/api/v1/repos/Vital-ar/MRI-segmentation-project/raw/main/"
 DAGSHUB_BASE_MODEL = 'data/models/base_model.ckpt'
 DAGSHUB_CORRECTION_MODEL = 'data/models/correction_model.ckpt'
-DAGSHUB_BASE_THRESHOLDS = BASE_THRESHOLDS_PATH
-DAGSHUB_CORRECTION_THRESHOLDS = CORRECTION_THRESHOLDS_PATH
+DAGSHUB_BASE_THRESHOLDS = 'data/stats/base_threshold.npy'
+DAGSHUB_CORRECTION_THRESHOLDS = 'data/stats/correction_threshold.npy'

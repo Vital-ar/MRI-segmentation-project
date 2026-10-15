@@ -1,6 +1,5 @@
 from src.pipeline.mrisegmentator import MRISegmentator
 from pathlib import Path
-from src.entity.config_entity import MRISegmentationEntity
 
 
 def _yes_no(message):
@@ -14,9 +13,13 @@ def _yes_no(message):
 
         else:
             print(f'Invalid syntax: {temp_var}. Try again')
+
+    return var
+
+
 def main():
     use_correction_model = _yes_no('Do you want to use correction model on top of base model? \n(it leeds for longer inference but slightly better results) (y,n):')
-    segmentator_class = MRISegmentator(MRISegmentationEntity, use_correction_model=use_correction_model)
+    segmentator_class = MRISegmentator(use_correction_model=use_correction_model)
     more_dir = True
     index = 0
     segmentators = {}
@@ -28,7 +31,7 @@ def main():
                 print(f'There is no such directory: {mri_dir}, try again')
                 mri_dir = None
 
-        save_out = _yes_no('Do you want to save output masks? (y/n)')
+        save_out = _yes_no('Do you want to save output masks? (y/n): ')
        
         save_mask_path = None
         if save_out:
@@ -41,10 +44,10 @@ def main():
         segmentators[index] = segmentator_class(mri_dir, save_out, save_mask_path, visualization)
         index+=1
 
-        more_dir = _yes_no('Do you want to insert more MRI folders masks? (y/n)')
+        more_dir = _yes_no('Do you want to insert more MRI folders masks? (y/n): ')
 
 
-    interactive = _yes_no('Do you want to investigate your MRIs interactively? (y/n):')
+    interactive = _yes_no('Do you want to investigate your MRIs interactively? (y/n): ')
     while interactive:
         print(f"\nAvailable segmented MRI indices: {list(segmentators.keys())}")
         chosen_index_str = input("Choose an index to investigate (or 'q' to quit): ")

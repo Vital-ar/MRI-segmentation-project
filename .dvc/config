@@ -1,5 +1,5 @@
 [core]
-    remote = public
+    remote = origin
 ['remote "origin"']
     url = s3://dvc
     endpointurl = https://dagshub.com/Vital-ar/MRI-segmentation-project.s3

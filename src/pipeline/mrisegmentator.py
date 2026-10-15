@@ -15,9 +15,10 @@ class MRISegmentator:
             self.segmentator.visualize_mri_overlay()
         if save_masks:
             if save_mask_path is None:
-                save_masks_path = mri_dir.parent / (mri_dir.name + '_masks.npz')
+                save_mask_path = mri_dir.parent / (mri_dir.name + '_masks.npz')
 
-            if not save_masks_path.parent.is_dir():
+
+            if not save_mask_path.parent.is_dir():
                 save_mask_path.parent.mkdir(parents = True, exist_ok=True)
             np.savez_compressed(save_mask_path, self.segmentator.final_masks.numpy())
         return self.segmentator
